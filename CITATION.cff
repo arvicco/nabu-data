@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: >-
+  If you use datasets from this repository, please cite it as below,
+  alongside the upstream works named in each dataset's sources.bib.
+title: "nabu-data"
+type: dataset
+authors:
+  - given-names: Ar
+    family-names: Vicco
+    email: arvicco@nabu.ac
+repository-code: "https://github.com/arvicco/nabu-data"
+license: CC-BY-4.0
+abstract: >-
+  Derived linguistic datasets over ancient-language corpora —
+  form-to-lemma tables, segmentation layers, script-neutralization
+  rules — grouped by language, published as CSV with Frictionless
+  Data Package v2 manifests carrying full derivation provenance.
+  Produced by Nabu (https://github.com/arvicco/nabu).
