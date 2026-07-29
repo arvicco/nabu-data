@@ -1,0 +1,161 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "xct-segmentation",
+  "title": "Segmented Classical Tibetan, curated slice (eval'd against SOAS gold)",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Digital Derge Kangyur (Esukhia/Barom proofreading of the UVA-SOAS 2013 eKangyur)",
+      "path": "https://github.com/Esukhia/derge-kangyur",
+      "version": "a582cf471b7c85a101035071078032f106a8e536",
+      "licenses": [
+        {
+          "name": "Public Domain — README §License verbatim: \"This work is a mechanical reproduction of a Public Domain work, and as such is also in the Public Domain.\" README-only declaration, no LICENSE file (recorded honestly). Cite: ཆོས་ཀྱི་འབྱུང་གནས། [1721–31], བཀའ་འགྱུར་སྡེ་དགེ་པར་མ།, etexts combined and proofread by Esukhia on behalf of Barom Theksum Choling, 2012–2018, github.com/Esukhia/derge-kangyur."
+        }
+      ]
+    },
+    {
+      "title": "SOAS Classical Tibetan gold POS corpus (Tibetan in Digital Communication)",
+      "path": "https://zenodo.org/records/574878",
+      "version": "d2b4fbb36a39b6344690168a0aad20472fa22ab725db14ea089304f36429aff8",
+      "licenses": [
+        {
+          "name": "CC BY 4.0 (Zenodo record 574878 license cc-by-4.0, DOI 10.5281/zenodo.574878; cite the deposit + the SOAS project 'Tibetan in Digital Communication', AHRC AH/J00152X/1; tag set Garrett et al. 2014/2015)"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "segmentation",
+      "path": "segmentation.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "URN",
+            "type": "string"
+          },
+          {
+            "name": "Passage_SHA256",
+            "type": "string"
+          },
+          {
+            "name": "Position",
+            "type": "integer"
+          },
+          {
+            "name": "Form",
+            "type": "string"
+          },
+          {
+            "name": "Offset",
+            "type": "integer"
+          },
+          {
+            "name": "Tier",
+            "type": "string"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "segmentation-conllu",
+      "path": "segmentation.conllu",
+      "format": "conllu",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build xct/segmentation",
+    "nabu_version": "1.3.0",
+    "derivation": {
+      "inputs": {
+        "derge-kangyur": {
+          "canonical_sha": "a582cf471b7c85a101035071078032f106a8e536",
+          "cone": "derge-kangyur"
+        },
+        "soas-tibetan": {
+          "canonical_sha": "d2b4fbb36a39b6344690168a0aad20472fa22ab725db14ea089304f36429aff8",
+          "cone": "soas-tibetan"
+        }
+      },
+      "recipe": "xct/segmentation v1: curated slice = every live soas-tibetan document (gold segmentation + POS verbatim from Zenodo 574878) + urn:nabu:derge-kangyur:toh21 silver-segmented by a pure-Ruby unigram-cost Viterbi segmenter over tsheg-bar units (closed attached-clitic class འིས/འི/འོ/འང/འམ/ར/ས split only on a known stem, max word span 5 tsheg-bars, unknown pseudo-count 0.05) trained on the SOAS gold token counts alone (external lexica measured unhelpful or harmful in the 2026-07-29 spike and deliberately excluded); eval = leave-one-text-out cross-validation against the SOAS gold, boundary F1 over line-interior token starts, published in the manifest nabu.eval block. Offsets index the passage's NFC text; Passage_SHA256 anchors each row to the exact catalog passage bytes.",
+      "fingerprint": "319b3e1be1400399343dc5b0de208cfa77f60adf0aae96c24757a09172eefcae"
+    },
+    "anchoring": {
+      "kind": "passage-urn"
+    },
+    "tier": "silver",
+    "counts": {
+      "rows": 319163
+    },
+    "eval": {
+      "boundary_precision": 0.9374,
+      "boundary_recall": 0.9881,
+      "boundary_f1": 0.9621,
+      "token_f1": 0.9094,
+      "texts": 4,
+      "lines": 991,
+      "tokens": 318230,
+      "protocol": "leave-one-text-out cross-validation",
+      "contamination": "clean — each fold's segmenter is trained only on the other texts' gold counts, never on the text it is scored on",
+      "against": "soas-tibetan gold segmentation (Zenodo 574878)"
+    }
+  }
+}
