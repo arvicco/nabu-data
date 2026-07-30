@@ -47,7 +47,7 @@ vs silver/automatic) in the manifest and, where relevant, per row.
 | `jpn/kyujitai-fold` | Kyūjitai↔shinjitai fold table (Unihan jinmeiyō + KANJIDIC2 lanes) — 741 pairs | CC BY-SA 4.0 | **published** |
 | `lzh/kanripo-gaiji` | The Kanripo gaiji display ladder — 427 faithful mappings + 562 substitutes, hand-curated over KR-Gaiji | CC BY-SA 4.0 | **published** |
 | `lat/sabellic-loans` | Sabellic (Oscan/Umbrian/Sabine) → Latin loanword table — 85 lemmas with relation flags and Old Italic etyma | CC BY-SA 4.0 | **published** |
-| `sux/value-signs` | Cuneiform value→sign table flattened from the Oracc Sign List (ex-OGSL, CC0) — one row per (value, sign) pair with codepoints, deprecation and ambiguity in-band, plus sign and print-concordance sidecars | CC BY 4.0 | in preparation |
+| `sux/value-signs` | Cuneiform value→sign table flattened from the Oracc Sign List (ex-OGSL, CC0) — one row per (value, sign) pair with codepoints, deprecation and ambiguity in-band, plus sign and print-concordance sidecars | CC BY 4.0 | **published** |
 
 ## Licensing
 
