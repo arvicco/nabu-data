@@ -1,0 +1,148 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "zho-hani-fold",
+  "title": "Han traditional↔simplified↔z-variant fold table (from Unihan)",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Unihan — the Unicode Han Database",
+      "path": "https://www.unicode.org/Public/UCD/latest/ucd/Unihan.zip",
+      "version": "8bf47834ffe25d222e298d4f8c890621546bd0b59e8be631c3dd28f2cb35eabf",
+      "licenses": [
+        {
+          "name": "Unicode License V3 (unicode.org/license.txt: \"Permission is hereby granted, free of charge, … to deal in the Data Files or Software without restriction …\" with notice preservation; © 1991-2026 Unicode, Inc.)"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "pairs",
+      "path": "pairs.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Variant",
+            "type": "string"
+          },
+          {
+            "name": "Traditional",
+            "type": "string"
+          },
+          {
+            "name": "Variant_Codepoint",
+            "type": "string"
+          },
+          {
+            "name": "Traditional_Codepoint",
+            "type": "string"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "refusals",
+      "path": "refusals.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Form",
+            "type": "string"
+          },
+          {
+            "name": "Reason",
+            "type": "string"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build zho/hani-fold",
+    "nabu_version": "1.3.0",
+    "derivation": {
+      "inputs": {
+        "unihan": {
+          "canonical_sha": "8bf47834ffe25d222e298d4f8c890621546bd0b59e8be631c3dd28f2cb35eabf",
+          "cone": "unihan"
+        }
+      },
+      "recipe": "hani-fold v1: canonical/unihan/Unihan_Variants.txt resolved through Nabu::Ops::HaniFoldBuilder — the SAME seam `rake fold:hani` compiles into Nabu::Hani (one resolution path, two consumers). kTraditionalVariant/kSimplifiedVariant/kZVariant only; kSemanticVariant, kSpecializedSemanticVariant and kSpoofingVariant are structurally excluded (different words / security data, never orthography). Conservative resolution: z-cluster union-find, single-target direct folds, multi-targets resolved only within one z-cluster, reverse-only kSimplifiedVariant evidence, chains composed to fixed points, cycles to the lowest codepoint; every ambiguity is REFUSED and published per-row in refusals.csv. Codepoints NFC at build; pairs sorted by variant codepoint; ID minted from the variant codepoint (U+4E9A → U-4E9A).",
+      "fingerprint": "0985e171ddd25e83facf63644ad80c6c40092985c8a4aa78358f93730a8091dc"
+    },
+    "anchoring": {
+      "kind": "none"
+    },
+    "tier": "gold-derived",
+    "counts": {
+      "rows": 6528
+    }
+  }
+}

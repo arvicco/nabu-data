@@ -1,0 +1,158 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "jpn-kyujitai-fold",
+  "title": "Japanese kyūjitai↔shinjitai reform-pair census (Unihan jinmeiyō + KANJIDIC2 jōyō lanes)",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Unihan — the Unicode Han Database",
+      "path": "https://www.unicode.org/Public/UCD/latest/ucd/Unihan.zip",
+      "version": "8bf47834ffe25d222e298d4f8c890621546bd0b59e8be631c3dd28f2cb35eabf",
+      "licenses": [
+        {
+          "name": "Unicode License V3 (unicode.org/license.txt: \"Permission is hereby granted, free of charge, … to deal in the Data Files or Software without restriction …\" with notice preservation; © 1991-2026 Unicode, Inc.)"
+        }
+      ]
+    },
+    {
+      "title": "EDRDG — KANJIDIC2 + JMdict (Electronic Dictionary Research and Development Group)",
+      "path": "http://ftp.edrdg.org/pub/Nihongo/",
+      "version": "9ef970a92e19d35c481808f6dae3663c70c984ebc9f05b1834354c5fabb92ea9",
+      "licenses": [
+        {
+          "name": "CC BY-SA 4.0 (verbatim, edrdg.org/edrdg/licence.html: \"The dictionary files are made available under a Creative Commons Attribution-ShareAlike Licence (V4.0).\"; © James William Breen and the EDRDG)"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "pairs",
+      "path": "pairs.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Old_Form",
+            "type": "string"
+          },
+          {
+            "name": "New_Form",
+            "type": "string"
+          },
+          {
+            "name": "Lane",
+            "type": "string"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "refusals",
+      "path": "refusals.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Form",
+            "type": "string"
+          },
+          {
+            "name": "Reason",
+            "type": "string"
+          },
+          {
+            "name": "Detail",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build jpn/kyujitai-fold",
+    "nabu_version": "1.3.0",
+    "derivation": {
+      "inputs": {
+        "edrdg": {
+          "canonical_sha": "9ef970a92e19d35c481808f6dae3663c70c984ebc9f05b1834354c5fabb92ea9",
+          "cone": "edrdg"
+        },
+        "unihan": {
+          "canonical_sha": "8bf47834ffe25d222e298d4f8c890621546bd0b59e8be631c3dd28f2cb35eabf",
+          "cone": "unihan"
+        }
+      },
+      "recipe": "jpn/kyujitai-fold v1: two-lane kyūjitai↔shinjitai pair census rendered through Nabu::Ops::JpnFoldBuilder — the same resolution seam `rake fold:jpn` compiles into Nabu::Jpn, Nabu's jpn search fold. Lane 1 (jinmeiyo): Unihan kJinmeiyoKanji 1:1 reform pairs, NFC-identity compat pointers dropped. Lane 2 (kanjidic): KANJIDIC2 jis208/jis213 variant edges (decoded through the held JIS X 0213 table; jis212 refused — a different standard) whose target is jōyō = KANJIDIC2 grade 1–6/8 ∩ Unihan kJoyoKanji (D38-b), reform merges admitted per the 2026-07-21 owner ruling; one-to-many ambiguous olds and jinmeiyō-lane conflicts refused into refusals.csv. A kanjidic edge duplicating a jinmeiyō pair is emitted once, under lane jinmeiyo.",
+      "fingerprint": "2d87174a7f206f8e9d979a57c79a9550d7248a65d1b84533539e57971303420a"
+    },
+    "anchoring": {
+      "kind": "none"
+    },
+    "tier": "gold",
+    "counts": {
+      "rows": 744
+    }
+  }
+}

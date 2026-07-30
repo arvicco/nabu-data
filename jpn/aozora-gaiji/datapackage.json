@@ -1,0 +1,128 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "jpn-aozora-gaiji",
+  "title": "Aozora Bunko gaiji composition census with derived IDS lane",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [],
+  "resources": [
+    {
+      "name": "descriptions",
+      "path": "descriptions.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Description",
+            "type": "string"
+          },
+          {
+            "name": "Count",
+            "type": "integer"
+          },
+          {
+            "name": "Resolution",
+            "type": "string"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "ids",
+      "path": "ids.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Description",
+            "type": "string"
+          },
+          {
+            "name": "IDS",
+            "type": "string"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build jpn/aozora-gaiji",
+    "nabu_version": "1.3.0",
+    "derivation": {
+      "inputs": {},
+      "recipe": "aozora-gaiji v1: the checked-in composition-description census (config/gaiji/aozora-descriptions.tsv, sha256 bb5f4e6d1bca6b8b09eb9d13ed3a07c959bb352e506a5b7e31ecded9c71cee8e; snapshotted read-only from the live Aozora corpus — snapshot provenance in the TSV header) published as descriptions.csv (occurrence Count + Resolution status per formula, desc-sorted); ids.csv derives the IDS lane through Nabu::Ops::AozoraIdsBuilder — the SAME grammar `rake gaiji:aozora_ids` compiles for the display ladder (single ＋ between two literal Han ideographs → ⿰, single ／ → ⿱, everything else refused by class, never guessed); ID = g-<sha256(desc)[0,12]>",
+      "fingerprint": "1e075f0ef0ed99d61fc7c7601fbc224e7df2c286b8defad6285944befd9ea8e3"
+    },
+    "anchoring": {
+      "kind": "none"
+    },
+    "tier": "gold",
+    "counts": {
+      "rows": 827
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "lat-sabellic-loans",
+  "title": "Sabellic → Latin loanword table (en.wiktionary curation)",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [],
+  "resources": [
+    {
+      "name": "loans",
+      "path": "loans.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Language_ID",
+            "type": "string"
+          },
+          {
+            "name": "Form",
+            "type": "string"
+          },
+          {
+            "name": "Relation",
+            "type": "string"
+          },
+          {
+            "name": "Etymon_Language",
+            "type": "string"
+          },
+          {
+            "name": "Etymon",
+            "type": "string"
+          },
+          {
+            "name": "Etymon_Translit",
+            "type": "string"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build lat/sabellic-loans",
+    "nabu_version": "1.3.0",
+    "derivation": {
+      "inputs": {},
+      "recipe": "sabellic-loans v1: config/sabellic_loans.yml (sha256 4d93ef54fa8fc35bf729df9af0fbacd2984d88d3cb0850f24315784a1adb5b95) flattened to one row per curated Latin lemma × Sabellic source language, YAML order kept; Relation verbatim from the curation (borrowed = explicit category membership, derived = superset-only), etyma and transliterations verbatim (leading * = reconstructed, empty = no form cited), values NFC-normalized; ID = <source language>-<Latin lemma>.",
+      "fingerprint": "975dcb1320633d0d8cdac2028168de648094ec7b37055ef21b4eb60f59ab9c6a"
+    },
+    "anchoring": {
+      "kind": "none"
+    },
+    "tier": "gold",
+    "counts": {
+      "rows": 86
+    }
+  }
+}
