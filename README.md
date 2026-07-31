@@ -48,6 +48,7 @@ vs silver/automatic) in the manifest and, where relevant, per row.
 | `lzh/kanripo-gaiji` | The Kanripo gaiji display ladder — 427 faithful mappings + 562 substitutes, hand-curated over KR-Gaiji | CC BY-SA 4.0 | **published** |
 | `lat/sabellic-loans` | Sabellic (Oscan/Umbrian/Sabine) → Latin loanword table — 85 lemmas with relation flags and Old Italic etyma | CC BY-SA 4.0 | **published** |
 | `sux/value-signs` | Cuneiform value→sign table flattened from the Oracc Sign List (ex-OGSL, CC0) — one row per (value, sign) pair with codepoints, deprecation and ambiguity in-band, plus sign and print-concordance sidecars | CC BY 4.0 | **published** |
+| `xct/actib-anchors` | The first re-publication: stable anchors for ACTib's segmented eKangyur — 461,301 rows tying every Derge Kangyur passage (URN + content fingerprint) to its ACTib (volume, page, line), match census in-band (99.51% exact), plus the 2,245-row divergence/proofreading table | CC BY 4.0 | **published** |
 
 ## Licensing
 
