@@ -65,7 +65,8 @@ disqualifying by policy.
 Each dataset's manifest and `sources.bib` name the upstream works it
 derives from and their licenses — cite those alongside this
 repository. Repository citation metadata: [CITATION.cff](CITATION.cff).
-Versioned releases will carry Zenodo DOIs; cite the version DOI of the
+Versioned releases carry Zenodo DOIs (v1.0.0 is the first tagged
+release, cut in sync with Nabu v1.4.0); cite the version DOI of the
 release you used.
 
 ## The two-way loop
