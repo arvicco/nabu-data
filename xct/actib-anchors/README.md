@@ -54,13 +54,15 @@ Canonical inputs at derivation:
 - `actib` @ `aef84458e2ecb0cd06e9e9f956533c3a79682926e0b8b457b7f1e7f16aab5b6e`
 - `derge-kangyur` @ `a582cf471b7c85a101035071078032f106a8e536`
 
-Recipe: xct/actib-anchors v1: anchor every live derge-kangyur passage (page.line citation grain) to its ACTib v2.0 SegPOS-eKangyur seg line (Zenodo 3951503): Esukhia volume N reads BDRC volume I1KG(9126+N) after the tail permutation {100→101, 101→102, 102→100}; folio→physical-page by walking each canonical volume's citation brackets in order (every new folio side increments the page counter, duplicated x-folio sides included, so [33xa]/[33xb] shift later folios; {D/T} Tohoku markers keep per-document folio maps so a mid-volume folio restart — the vol-31 Toh 11 seam, the census's vol-31 correction — resolves per document); line from ACTib's inline p<N>/ln<N> tokens (<utt> dropped); compare whitespace-free NFC letter streams — equal = exact, containment = partial, otherwise near with the exact Levenshtein distance in the Distance column; an absent ACTib line is missing, an unparseable ref is censused as badref, never guessed. The seg+POS token content is NOT republished: rows carry only the (ACTib_Volume, ACTib_Page, ACTib_Line) join key into the DOI-cited artifact plus the URN + Passage_SHA256 anchor into Nabu; near/partial rows republish both folded text forms in divergences.csv as the proofreading census.
+Recipe: xct/actib-anchors v1: anchor every live derge-kangyur passage (page.line citation grain) to its ACTib v2.0 SegPOS-eKangyur seg line (Zenodo 3951503): Esukhia volume N reads BDRC volume I1KG(9126+N) after the tail permutation {100→101, 101→102, 102→100}; folio→physical-page by walking each canonical volume's citation brackets in order (every new folio side increments the page counter, duplicated x-folio sides included, so [33xa]/[33xb] shift later folios; {D/T} Tohoku markers keep per-document folio maps so a mid-volume folio restart — the vol-31 Toh 11 seam, the census's vol-31 correction — resolves per document); line from ACTib's inline p<N>/ln<N> tokens (<utt> dropped); compare whitespace-free NFC letter streams — equal = exact, containment = partial, otherwise near with the exact Levenshtein distance in the Distance column; an absent ACTib line is missing, an unparseable ref is censused as badref, never guessed. The seg+POS token content is NOT republished: rows carry only the (ACTib_Volume, ACTib_Page, ACTib_Line) join key into the DOI-cited artifact plus the URN + Passage_SHA256 anchor into Nabu; near/partial rows republish both folded text forms in divergences.csv as the proofreading census. v1.1 layout (D55-b): anchors sharded per volume as anchors/<ACTib_Volume>.csv, each shard a self-contained CSV with its own header.
 
-Derivation fingerprint: `5ebc02f0b426aba6642595cc109c641752705dcd0133e2c162175e90efcfbf24`.
+Derivation fingerprint: `c95c31be483806d6bfbcb0e56945f870225a70e8ad2f31e2f82cef1ae92dd7eb`.
 
 ## What a row means — the two-way anchoring contract
 
-Each `anchors.csv` row ties one Derge Kangyur passage to one ACTib line.
+Each anchor row (`anchors/<ACTib_Volume>.csv` — one shard per volume,
+every shard self-contained with its own header) ties one Derge
+Kangyur passage to one ACTib line.
 On the Nabu side, `URN` + `Passage_SHA256` name the exact catalog
 passage bytes (rows apply only where the sha matches). On the ACTib
 side, `(ACTib_Volume, ACTib_Page, ACTib_Line)` is the join key:
@@ -101,8 +103,17 @@ the per-line divergence list a proofreader can act on directly.
 
 ## Loading
 
+    import glob
     import pandas as pd
-    anchors = pd.read_csv("anchors.csv", keep_default_na=False)
+    anchors = pd.concat(
+        (pd.read_csv(p, keep_default_na=False) for p in sorted(glob.glob("anchors/*.csv"))),
+        ignore_index=True)
+
+Note for tool authors: the datapackage declares ONE `anchors`
+resource whose `path` is the ordered shard list; every shard
+repeats the header (self-contained files beat strict multipart
+concatenation for direct pandas/glob use — a deliberate, stated
+deviation).
 
 How to cite: reference ACTib (Meelen, Hill & Faggionato — the `actib`
 key in `sources.bib`, DOI 10.5281/zenodo.3951503) alongside this
