@@ -9,6 +9,8 @@ authors:
     family-names: Vicco
     email: arvicco@nabu.ac
 repository-code: "https://github.com/arvicco/nabu-data"
+version: 1.0.0
+date-released: "2026-08-01"
 license: CC-BY-4.0
 abstract: >-
   Derived linguistic datasets over ancient-language corpora —
