@@ -1,5 +1,8 @@
 # nabu-data
 
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21757475-blue.svg)](https://doi.org/10.5281/zenodo.21757475)
+
+
 Derived linguistic datasets over ancient-language corpora — form→lemma
 tables, segmentation layers, metrical scansions, script-neutralization
 and orthography fold tables, curated loanword and glyph censuses —
@@ -65,9 +68,11 @@ disqualifying by policy.
 Each dataset's manifest and `sources.bib` name the upstream works it
 derives from and their licenses — cite those alongside this
 repository. Repository citation metadata: [CITATION.cff](CITATION.cff).
-Versioned releases carry Zenodo DOIs (v1.0.0 is the first tagged
-release, cut in sync with Nabu v1.4.0); cite the version DOI of the
-release you used.
+Versioned releases carry Zenodo DOIs — the concept DOI
+[10.5281/zenodo.21757475](https://doi.org/10.5281/zenodo.21757475)
+always resolves to the latest version; cite the version DOI of the
+release you used (v1.0.0, the first tagged release, cut in sync with
+Nabu v1.4.0: [10.5281/zenodo.21757476](https://doi.org/10.5281/zenodo.21757476)).
 
 ## The two-way loop
 
