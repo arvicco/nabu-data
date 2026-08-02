@@ -1,0 +1,236 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "roa-opt-cantigas",
+  "title": "Cantigas Medievais Galego-Portuguesas — the Littera edition as structured tables (verse lines, cantigas, authors, cancioneiro concordance)",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cantigas Medievais Galego-Portuguesas (Projeto Littera)",
+      "path": "https://cantigas.fcsh.unl.pt",
+      "version": "46dcaac9688533c07ed3510bab87e5d0cdff113e787b390fcc86b0b15237ba33",
+      "licenses": [
+        {
+          "name": "Free with attribution — the coordinator's grant (Graça Videira Lopes, Projeto Littera, IEM/FCSH-NOVA, 2026-07-27, №45-2): \"Our site is free for all. So, with full attribution, you can do whatever you like with the data.\" Cite (the project's own format): Lopes, Graça Videira; Ferreira, Manuel Pedro et al. (2011–), Cantigas Medievais Galego Portuguesas [online database]. Lisboa: Instituto de Estudos Medievais, FCSH/NOVA. [Information retrieved on (date)] Available at: cantigas.fcsh.unl.pt."
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "lines",
+      "path": "lines.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "URN",
+            "type": "string"
+          },
+          {
+            "name": "Passage_SHA256",
+            "type": "string"
+          },
+          {
+            "name": "Cantiga_ID",
+            "type": "string"
+          },
+          {
+            "name": "Line",
+            "type": "integer"
+          },
+          {
+            "name": "Stanza",
+            "type": "integer"
+          },
+          {
+            "name": "Number_Gap",
+            "type": "integer"
+          },
+          {
+            "name": "Primary_Text",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "cantigas",
+      "path": "cantigas.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Cdcant",
+            "type": "integer"
+          },
+          {
+            "name": "URN",
+            "type": "string"
+          },
+          {
+            "name": "Incipit",
+            "type": "string"
+          },
+          {
+            "name": "Author_ID",
+            "type": "string"
+          },
+          {
+            "name": "Genre",
+            "type": "string"
+          },
+          {
+            "name": "Form",
+            "type": "string"
+          },
+          {
+            "name": "Rubric",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "authors",
+      "path": "authors.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Cdaut",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "manuscripts",
+      "path": "manuscripts.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Cantiga_ID",
+            "type": "string"
+          },
+          {
+            "name": "Cancioneiro",
+            "type": "string"
+          },
+          {
+            "name": "Number",
+            "type": "string"
+          },
+          {
+            "name": "Parenthesized",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build roa-opt/cantigas",
+    "nabu_version": "1.4.0",
+    "derivation": {
+      "inputs": {
+        "cantigas": {
+          "canonical_sha": "46dcaac9688533c07ed3510bab87e5d0cdff113e787b390fcc86b0b15237ba33",
+          "cone": "cantigas"
+        }
+      },
+      "recipe": "roa-opt/cantigas v1: every live cantigas catalog row projected to four tables, documents in numeric cdcant order, passages in sequence order — lines.csv one row per verse line (URN + Passage_SHA256 anchor; Line/Stanza = the EDITION's own numbering, cross-checked against the printed every-5th ordinals at ingest; Number_Gap = the P56-1 refrain-gap annotation where the edition's numbering runs ahead of the display; Primary_Text = the passage bytes); cantigas.csv one row per cantiga (Cdcant, incipit, Author_ID -> authors.csv, normalized genre, '; '-joined form lines, rubric; the unattributed page keeps an empty Author_ID); authors.csv the distinct (cdaut, name) registry in cdaut order; manuscripts.csv one row per (cantiga, witness) from the sigla lines — commas split witnesses, '(…)' becomes Parenthesized=true, the leading capital run is Cancioneiro, the remainder is Number VERBATIM (a slash run like 575/576 stays ONE witness; bis/letter/= forms kept as printed; a bare siglum has an empty Number; anything else fails loudly). IDs l-<cdcant>-<line> / c-<cdcant> / a-<cdaut> / m-<cdcant>-<siglum>-<number>, positional -<n> on verbatim repeats.",
+      "fingerprint": "8fb9ee89a18cb1d7769c47cbe114d8098807a85771d29ff8e08571f542ee335a"
+    },
+    "anchoring": {
+      "kind": "urn+sha"
+    },
+    "tier": "gold",
+    "counts": {
+      "rows": 39336
+    },
+    "eval": {
+      "documents": 1682,
+      "lines": 34162,
+      "printed_number_confirmed": 6125,
+      "number_gap_lines": 7,
+      "number_gap_total": 8,
+      "empty_lines": 1,
+      "unattributed": 1,
+      "against": "the Littera edition's own printed line numbers (one every 5th verse): the parser cross-checked every printed ordinal at ingest and quarantined any mid-stanza drift (P56-1), so the counted lines sit on verified anchors; number_gap/empty_lines/unattributed carry the P56-1 quirk census from the catalog metadata, re-derived at build time"
+    }
+  }
+}

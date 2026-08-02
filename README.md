@@ -52,6 +52,7 @@ vs silver/automatic) in the manifest and, where relevant, per row.
 | `lat/sabellic-loans` | Sabellic (Oscan/Umbrian/Sabine) → Latin loanword table — 85 lemmas with relation flags and Old Italic etyma | CC BY-SA 4.0 | **published** |
 | `sux/value-signs` | Cuneiform value→sign table flattened from the Oracc Sign List (ex-OGSL, CC0) — one row per (value, sign) pair with codepoints, deprecation and ambiguity in-band, plus sign and print-concordance sidecars | CC BY 4.0 | **published** |
 | `xct/actib-anchors` | The first re-publication: stable anchors for ACTib's segmented eKangyur — 461,301 rows tying every Derge Kangyur passage (URN + content fingerprint) to its ACTib (volume, page, line), match census in-band (99.51% exact), plus the 2,245-row divergence/proofreading table | CC BY 4.0 | **published** |
+| `roa-opt/cantigas` | The first machine-readable edition of the complete secular Galician-Portuguese lyric (Projeto Littera, by written grant) — 34,162 verse lines with stanza structure and citation-fidelity eval in-band, 1,682 cantigas, 158 authors, and the 3,333-row corpus-wide cancioneiro concordance | CC BY 4.0 | **published** |
 
 ## Licensing
 
