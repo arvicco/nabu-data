@@ -1,0 +1,157 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "mul-places-lpf",
+  "title": "Referenced places as Linked Places Format v1.3 + LP-TSV (the gazetteer-exchange shape)",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Pleiades — ancient-world gazetteer (place resolver instrument)",
+      "path": "https://pleiades.stoa.org/",
+      "version": "d5170d25c3a3e6ad8f950922d0099f2c05c74aa074a64ea8962aef72b361b310",
+      "licenses": [
+        {
+          "name": "CC BY 3.0 (downloads page verbatim: \"Creative Commons Attribution 3.0 License (cc-by)\")"
+        }
+      ]
+    },
+    {
+      "title": "Trismegistos TexRelations — the cross-project concordance crosswalk (links instrument)",
+      "path": "https://www.trismegistos.org/dataservices/",
+      "version": "c935b7e95adcc403edb8ad18da4082234b9d4b30ee80ffc76bcceba09b53b3cf",
+      "licenses": [
+        {
+          "name": "CC BY-SA 4.0 (dataservices page verbatim: \"open access to our data on a CC BY-SA 4.0 license\") — the house BY-SA class"
+        }
+      ]
+    },
+    {
+      "title": "CIGS — Cuneiform Inscriptions Geographical Site Index (gazetteer instrument)",
+      "path": "https://zenodo.org/records/14568765",
+      "version": "29878f18cc54b523aa86887a3ec25505b5523e21280f215280c39224ad063c54",
+      "licenses": [
+        {
+          "name": "CC BY 4.0 (Zenodo record verbatim: \"Creative Commons Attribution 4.0 International\")"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "places_lpf",
+      "path": "places.lpf.geojson",
+      "format": "geojson",
+      "mediatype": "application/geo+json"
+    },
+    {
+      "name": "places_tsv",
+      "path": "places.tsv",
+      "format": "tsv",
+      "mediatype": "text/tab-separated-values"
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build mul/places-lpf",
+    "nabu_version": "1.4.0",
+    "derivation": {
+      "inputs": {
+        "cigs": {
+          "canonical_sha": "29878f18cc54b523aa86887a3ec25505b5523e21280f215280c39224ad063c54",
+          "cone": "cigs"
+        },
+        "pleiades": {
+          "canonical_sha": "d5170d25c3a3e6ad8f950922d0099f2c05c74aa074a64ea8962aef72b361b310",
+          "cone": "pleiades"
+        },
+        "trismegistos": {
+          "canonical_sha": "c935b7e95adcc403edb8ad18da4082234b9d4b30ee80ffc76bcceba09b53b3cf",
+          "cone": "trismegistos"
+        }
+      },
+      "recipe": "places-lpf v1: LPF v1.3 FeatureCollection + LP-TSV v0.5 at claim grain over the published axis slice (license classes open+attribution), titles/coords from place_index, closeMatch from place_crosswalk; collection sha256=6f6661539011221981a7dfae54272e8d95a662b655040287f05a1093e76a6ab4",
+      "fingerprint": "857cb9d51a1eab27bce281c21ea28259c67c2510116699b7ccd9d01fddb5cc3d"
+    },
+    "anchoring": {
+      "kind": "none"
+    },
+    "tier": "gold-derived",
+    "counts": {
+      "rows": 14619
+    },
+    "eval": {
+      "features": 7309,
+      "with_geometry": 3115,
+      "with_when": 6150,
+      "with_links": 1069,
+      "excluded_rows": {
+        "nc": 2330
+      },
+      "unmapped_place_types": {
+        "unlocated": 239,
+        "label": 36,
+        "people": 10,
+        "architecturalcomplex": 7,
+        "unknown": 5,
+        "topos": 2,
+        "mosque": 2,
+        "deme-attic": 2,
+        "peninsula": 2,
+        "volcano": 2,
+        "false toponym": 2,
+        "castle": 2,
+        "earthwork": 1,
+        "palace-complex": 1,
+        "citadel": 1,
+        "tumulus": 1,
+        "aqueduct": 1,
+        "labeled feature": 1,
+        "forum": 1,
+        "archipelago": 1
+      }
+    }
+  }
+}

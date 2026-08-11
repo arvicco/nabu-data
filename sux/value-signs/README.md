@@ -1,6 +1,6 @@
 # Cuneiform value→sign table from the Oracc Sign List (readings, codepoints, concordances)
 
-`sux/value-signs` — gold tier, anchoring: none. Produced by `nabu data build sux/value-signs` (Nabu 1.3.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`sux/value-signs` — gold tier, anchoring: none. Produced by `nabu data build sux/value-signs` (Nabu 1.4.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/).
 

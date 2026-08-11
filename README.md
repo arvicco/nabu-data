@@ -22,7 +22,10 @@ in-band (the manifest's `nabu.eval` block), not hidden.
 ## Layout
 
 ```
-<language-code>/          ISO 639-3-based (san, xct, grc, …)
+<language-code>/          ISO 639-3-based (san, xct, grc, …);
+                          datasets spanning the whole multilingual
+                          catalog file under mul/ (ISO 639-3's
+                          special code "Multiple languages")
   <feature>/
     datapackage.json      Frictionless Data Package v2 manifest
                           (schema, license, attribution chain,
@@ -30,6 +33,9 @@ in-band (the manifest's `nabu.eval` block), not hidden.
     README.md             what / why / how to load / how to cite
     *.csv                 the data (CLDF-compatible nomenclature)
     sources.bib           upstream attribution, BibTeX
+    LICENSE               only where the dataset's license differs
+                          from the repository default (CC BY-SA
+                          datasets carry their own license text)
 ```
 
 Sentence-shaped datasets additionally ship CoNLL-U projections. Honesty
@@ -53,6 +59,13 @@ vs silver/automatic) in the manifest and, where relevant, per row.
 | `sux/value-signs` | Cuneiform value→sign table flattened from the Oracc Sign List (ex-OGSL, CC0) — one row per (value, sign) pair with codepoints, deprecation and ambiguity in-band, plus sign and print-concordance sidecars | CC BY 4.0 | **published** |
 | `xct/actib-anchors` | The first re-publication: stable anchors for ACTib's segmented eKangyur — 461,301 rows tying every Derge Kangyur passage (URN + content fingerprint) to its ACTib (volume, page, line), match census in-band (99.51% exact), plus the 2,245-row divergence/proofreading table | CC BY 4.0 | **published** |
 | `roa-opt/cantigas` | The first machine-readable edition of the complete secular Galician-Portuguese lyric (Projeto Littera, by written grant) — 34,162 verse lines with stanza structure and citation-fidelity eval in-band, 1,682 cantigas, 158 authors, and the 3,333-row corpus-wide cancioneiro concordance | CC BY 4.0 | **published** |
+| `mul/lect-assignments` | Per-document historical-stage (lect) assignments across the whole multilingual catalog — 482,287 URN-anchored rows with basis and note in-band; the corpus-scale stage stratification no other project publishes | CC BY-SA 4.0 | **published** |
+| `mul/place-refs` | Per-document place references, gazetteer-ready — 969,929 (URN, namespaced claim) rows over 7,309 places, verbatim names and upstream-vs-registry basis in-band | CC BY-SA 4.0 | **published** |
+| `mul/places-lpf` | The referenced places as Linked Places Format v1.3 + LP-TSV (the WHG upload shapes) — 7,309 Features with cited attested spellings, coordinates, when-spans and closeMatch links | CC BY-SA 4.0 | **published** |
+| `mul/document-dates` | Normalized document datings — 703,372 signed year-span rows with the verbatim upstream dating string riding every row | CC BY-SA 4.0 | **published** |
+| `mul/char-postings` | Han character × corpus doc-frequency census — 38,397 rows spanning Classical Chinese, Japanese, Old Tibetan and Old Japanese collections | CC BY-SA 4.0 | **published** |
+| `sux/sign-table` | Compiled cuneiform sign cards — one row per OSL sign with codepoints, print-list numbers, CDLI readings and per-source attestation doc-counts over the open corpora | CC BY 4.0 | **published** |
+| `egy/unikemet-signs` | The Egyptian sign spine — 5,067 Unicode hieroglyph codepoints with Gardiner-style codes, descriptions, functions, values and the JSesh/Hieroglyphica/IFAO concordances | CC BY 4.0 | **published** |
 
 ## Licensing
 
@@ -60,9 +73,10 @@ The repository's default license is [CC BY 4.0](LICENSE), and most
 datasets carry it. **Some datasets are CC BY-SA 4.0 instead** — they
 derive from share-alike upstreams (Wiktionary, KANJIDIC2/EDRDG,
 KR-Gaiji) and inherit that condition; each such dataset says so
-explicitly in its `datapackage.json` and README, and for those the
-repository default does not apply. **The per-dataset manifest is
-always the authoritative license statement.** Nothing here derives
+explicitly in its `datapackage.json` and README **and carries its own
+`LICENSE` file** (the CC BY-SA 4.0 text) in its directory, and for
+those the repository default does not apply. **The per-dataset
+manifest is always the authoritative license statement.** Nothing here derives
 from non-commercial or no-derivatives sources — such inputs are
 disqualifying by policy.
 

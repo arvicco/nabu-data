@@ -1,0 +1,149 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "egy-unikemet-signs",
+  "title": "The Egyptian sign spine — Unikemet codepoints with Gardiner codes and tool concordances",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Unikemet — Unicode Egyptian Hieroglyph data (sign spine instrument)",
+      "path": "https://www.unicode.org/Public/17.0.0/ucd/Unikemet.txt",
+      "version": "71ed7b909ee1d5aa198e5e423ff9c29e5e92ceabe21fdaa9fcbbebc6f7a7c185",
+      "licenses": [
+        {
+          "name": "UNICODE LICENSE V3 (unicode.org/license.txt, verbatim: \"Permission is hereby granted, free of charge, to any person obtaining a copy of data files and any associated documentation…\") — MIT-style, the Unihan class"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "unikemet_signs",
+      "path": "unikemet-signs.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Codepoint",
+            "type": "string"
+          },
+          {
+            "name": "Glyph",
+            "type": "string"
+          },
+          {
+            "name": "Gardiner",
+            "type": "string"
+          },
+          {
+            "name": "UniK",
+            "type": "string"
+          },
+          {
+            "name": "Core",
+            "type": "string"
+          },
+          {
+            "name": "Description",
+            "type": "string"
+          },
+          {
+            "name": "Functions",
+            "type": "string"
+          },
+          {
+            "name": "Values",
+            "type": "string"
+          },
+          {
+            "name": "JSesh",
+            "type": "string"
+          },
+          {
+            "name": "Hieroglyphica",
+            "type": "string"
+          },
+          {
+            "name": "IFAO",
+            "type": "string"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build egy/unikemet-signs",
+    "nabu_version": "1.4.0",
+    "derivation": {
+      "inputs": {
+        "unikemet": {
+          "canonical_sha": "71ed7b909ee1d5aa198e5e423ff9c29e5e92ceabe21fdaa9fcbbebc6f7a7c185",
+          "cone": "unikemet"
+        }
+      },
+      "recipe": "unikemet-signs v1: flatten Unikemet.txt to one row per codepoint, tag values verbatim (multi-occurrence tags ;-joined), file order",
+      "fingerprint": "dae4d9e5083abf2c506c08bcfe1ef86b279c954d2a6e38b9fe713c6f3fb6774c"
+    },
+    "anchoring": {
+      "kind": "none"
+    },
+    "tier": "gold-derived",
+    "counts": {
+      "rows": 5068
+    }
+  }
+}
