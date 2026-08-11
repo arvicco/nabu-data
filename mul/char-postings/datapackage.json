@@ -1,0 +1,109 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "mul-char-postings",
+  "title": "Han character × corpus doc-frequency census (the graded-reading substrate)",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [],
+  "resources": [
+    {
+      "name": "char_postings",
+      "path": "char-postings.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Char",
+            "type": "string"
+          },
+          {
+            "name": "Language_ID",
+            "type": "string"
+          },
+          {
+            "name": "Count",
+            "type": "integer"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build mul/char-postings",
+    "nabu_version": "1.4.0",
+    "derivation": {
+      "inputs": {},
+      "recipe": "char-postings v1: project the fulltext char_postings census at (source, character) grain, license classes open+attribution only, ordered (source, codepoint); published-slice sha256=b6b68af12fd3f144fa9d6b23df80b0ee3f7bad3374a79da62263c090b17ff4dc",
+      "fingerprint": "fb58acd8b2edca2daeecb9904618c8454d246a3d42f7f2ea667a1a155dbb486c"
+    },
+    "anchoring": {
+      "kind": "none"
+    },
+    "tier": "gold-derived",
+    "counts": {
+      "rows": 38398
+    },
+    "eval": {
+      "postings_rows": 62582,
+      "published_rows": 38397,
+      "excluded_rows": {
+        "nc": 24185
+      },
+      "distinct_chars": 27605
+    }
+  }
+}

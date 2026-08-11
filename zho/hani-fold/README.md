@@ -1,6 +1,6 @@
 # Han traditional↔simplified↔z-variant fold table (from Unihan)
 
-`zho/hani-fold` — gold-derived tier, anchoring: none. Produced by `nabu data build zho/hani-fold` (Nabu 1.3.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`zho/hani-fold` — gold-derived tier, anchoring: none. Produced by `nabu data build zho/hani-fold` (Nabu 1.4.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/).
 

@@ -126,7 +126,7 @@
   ],
   "nabu": {
     "producer": "nabu data build zho/hani-fold",
-    "nabu_version": "1.3.0",
+    "nabu_version": "1.4.0",
     "derivation": {
       "inputs": {
         "unihan": {

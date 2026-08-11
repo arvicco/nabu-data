@@ -1,0 +1,141 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "mul-place-refs",
+  "title": "Per-document place references across the multilingual catalog, gazetteer-ready",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "nabu-places — the place-matching decisions registry",
+      "path": "https://github.com/arvicco/nabu-places",
+      "version": "b196b9a41270ab7831383e3a853d35391fc712ab",
+      "licenses": [
+        {
+          "name": "CC BY 4.0 (repo LICENSE verbatim: \"Creative Commons Attribution 4.0 International (CC BY 4.0)\")"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "place_refs",
+      "path": [
+        "place-refs/part-001.csv",
+        "place-refs/part-002.csv",
+        "place-refs/part-003.csv",
+        "place-refs/part-004.csv"
+      ],
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "URN",
+            "type": "string"
+          },
+          {
+            "name": "Place_Ref",
+            "type": "string"
+          },
+          {
+            "name": "Place_Name",
+            "type": "string"
+          },
+          {
+            "name": "Basis",
+            "type": "string"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build mul/place-refs",
+    "nabu_version": "1.4.0",
+    "derivation": {
+      "inputs": {
+        "nabu-places": {
+          "canonical_sha": "b196b9a41270ab7831383e3a853d35391fc712ab",
+          "cone": "nabu-places"
+        }
+      },
+      "recipe": "place-refs v1: project document_axes.place_ref through Nabu::PlaceRefs at (document, claim) grain, license classes open+attribution only, ordered (urn, axis row), sharded ≤250000 rows/file (№R-29); published-slice sha256=b4d2a9e76455a0ef26661d8fffc06d2f295c36d633eb58aa7ba76c8b1d308b51",
+      "fingerprint": "17ed9a0cf18e17a4ab0ca2a40f915a5a362907e33e14bb561b8799f419d9d607"
+    },
+    "anchoring": {
+      "kind": "document-urn"
+    },
+    "tier": "gold-derived",
+    "counts": {
+      "rows": 969930
+    },
+    "eval": {
+      "axis_rows": 586770,
+      "published_rows": 969929,
+      "excluded_rows": {
+        "nc": 2330,
+        "unparseable": 47
+      },
+      "distinct_places": 7309,
+      "claims_by_namespace": {
+        "cigs": 329123,
+        "geonames": 8689,
+        "pleiades": 566489,
+        "tm": 65628
+      }
+    }
+  }
+}

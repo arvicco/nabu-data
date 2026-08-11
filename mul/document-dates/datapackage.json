@@ -1,0 +1,117 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "mul-document-dates",
+  "title": "Normalized document datings across the multilingual catalog, verbatim raw in-band",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [],
+  "resources": [
+    {
+      "name": "document_dates",
+      "path": "document-dates.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "URN",
+            "type": "string"
+          },
+          {
+            "name": "Not_Before",
+            "type": "integer"
+          },
+          {
+            "name": "Not_After",
+            "type": "integer"
+          },
+          {
+            "name": "Precision",
+            "type": "string"
+          },
+          {
+            "name": "Date_Raw",
+            "type": "string"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build mul/document-dates",
+    "nabu_version": "1.4.0",
+    "derivation": {
+      "inputs": {},
+      "recipe": "document-dates v1: project dated document_axes rows at URN grain, license classes open+attribution only, ordered (urn, axis row); published-slice sha256=cb1c2946833bff5e3b52949dfea5c5853a10748a923e0157d5df5366a1ed691d",
+      "fingerprint": "b47b4cc325763d635ed1224b6a061903da77a233084e6c93920182f5301ded52"
+    },
+    "anchoring": {
+      "kind": "document-urn"
+    },
+    "tier": "gold-derived",
+    "counts": {
+      "rows": 703378
+    },
+    "eval": {
+      "dated_axis_rows": 772749,
+      "published_rows": 703377,
+      "excluded_rows": {
+        "nc": 38859,
+        "odbl": 30513
+      }
+    }
+  }
+}

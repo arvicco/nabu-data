@@ -1,0 +1,151 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "sux-sign-table",
+  "title": "Compiled cuneiform sign cards — OSL identity, concordances, attestation counts",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OSL — the Oracc Sign List (cuneiform sign/value/codepoint instrument)",
+      "path": "https://github.com/oracc/osl",
+      "version": "7749a4bd8589491b987ab3da31660ef4abca5012",
+      "licenses": [
+        {
+          "name": "CC0, stated verbatim in the osl.asl header: \"CC0: osl.asl and its associated files are placed in the public domain under a CC0 licence.\" (Veldhuis & Tinney, the Oracc Sign List, ex-OGSL)"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "sign_table",
+      "path": "sign-table.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Sign_Name",
+            "type": "string"
+          },
+          {
+            "name": "OID",
+            "type": "string"
+          },
+          {
+            "name": "Codepoints",
+            "type": "string"
+          },
+          {
+            "name": "Values",
+            "type": "string"
+          },
+          {
+            "name": "Lists",
+            "type": "string"
+          },
+          {
+            "name": "CDLI_Readings",
+            "type": "string"
+          },
+          {
+            "name": "Count_cdli",
+            "type": "integer"
+          },
+          {
+            "name": "Count_oracc",
+            "type": "integer"
+          },
+          {
+            "name": "Count_tlhdig",
+            "type": "integer"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build sux/sign-table",
+    "nabu_version": "1.4.0",
+    "derivation": {
+      "inputs": {
+        "osl": {
+          "canonical_sha": "7749a4bd8589491b987ab3da31660ef4abca5012",
+          "cone": "osl"
+        }
+      },
+      "recipe": "sign-table v1: one card per top-level OSL sign (identity, codepoints, list numbers, CDLI readings) + per-source attestation doc-counts over cdli/oracc/tlhdig (value/logogram tokens only, distinct-doc grain); counts sha256=0fb2ab8d9c9a99bf947ae82ab3588db5d7de15b823eae5ea4a5e5690f6345c39",
+      "fingerprint": "77f19929f0bc18cf52bd23cab9ca38456059f006e95e101ec0d82b671452696f"
+    },
+    "anchoring": {
+      "kind": "none"
+    },
+    "tier": "gold-derived",
+    "counts": {
+      "rows": 3304
+    },
+    "eval": {
+      "signs": 3303,
+      "counting": {
+        "docs_counted": 272303,
+        "tokens_resolved": 21114549,
+        "tokens_unresolved": 2557830,
+        "tokens_out_of_scope": 3498049,
+        "scope": "value tokens and bare logogram names; compounds/qualified/numbers out of scope; corpora: cdli/oracc/tlhdig"
+      }
+    }
+  }
+}
