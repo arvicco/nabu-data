@@ -1,0 +1,111 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "mul-language-dossiers",
+  "title": "Curated language dossiers — the human-written name/family/context per language",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [],
+  "resources": [
+    {
+      "name": "language_dossiers",
+      "path": "language-dossiers.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Language_ID",
+            "type": "string"
+          },
+          {
+            "name": "Parameter_ID",
+            "type": "string"
+          },
+          {
+            "name": "Value",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build mul/language-dossiers",
+    "nabu_version": "1.5.0",
+    "derivation": {
+      "inputs": {},
+      "recipe": "language-dossiers v1: publish the curated dossier layer (name, family, context, extra lanes, provenance) from local/shelves/local-language, one CLDF ValueTable row per (code, attribute), code order; section accretions (iecor/witness/lect-ladder) excluded as per-install derivable; published-slice sha256=afc708bbdb1816a2fac6cbc74b1e3a9ca43958e1d671fc1213e7d828eb87895a",
+      "fingerprint": "dc20efe7e630059ad0965d344eacf8c57df83679f9fedcd7a918e0483b678ad7"
+    },
+    "anchoring": {
+      "kind": "language-code"
+    },
+    "tier": "curated",
+    "counts": {
+      "rows": 2443
+    },
+    "eval": {
+      "dossiers_scanned": 619,
+      "dossiers_published": 619,
+      "published_rows": 2442,
+      "rows_by_parameter": {
+        "context": 619,
+        "family": 595,
+        "name": 619,
+        "period": 1,
+        "provenance": 607,
+        "scripts": 1
+      },
+      "wikipedia_derived_dossiers": 444
+    }
+  }
+}
