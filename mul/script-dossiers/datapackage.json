@@ -83,8 +83,8 @@
     "nabu_version": "1.5.0",
     "derivation": {
       "inputs": {},
-      "recipe": "script-dossiers v1: publish the curated per-script dossiers (name, context, desk conventions) from config/script_dossiers.yml, one tidy row per (tag, attribute), tag order; the registry drift guard pins tags == the nabu-lects scripts table; published-slice sha256=9d1b304ec60d38fb16565685529e7283a77b6fa3cf57a80533e75898d641d981",
-      "fingerprint": "9fcc1df416105ba9e4db5d5f774382ad25757b4d0907ae04d3cda2cb167653ef"
+      "recipe": "script-dossiers v1: publish the curated per-script dossiers (name, context, desk conventions) from config/script_dossiers.yml, one tidy row per (tag, attribute), tag order; the registry drift guard pins tags == the nabu-lects scripts table; published-slice sha256=05eb0a2b4d637ee2da4ec16e6c676f793e928bc0ce3957d7424a1847057fead9",
+      "fingerprint": "e1e2fe3622cb471f27186569e705f069fa8fd93ed5576abdffd33487490a50e4"
     },
     "anchoring": {
       "kind": "script-tag"
