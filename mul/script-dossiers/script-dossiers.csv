@@ -25,7 +25,7 @@ egyp-desk,egyp,desk,The Egyptian card (`nabu char 𓅃` or a Gardiner-style code
 ethi-name,ethi,name,Ethiopic (Geʿez)
 ethi-context,ethi,context,"The Ethiopian syllabary — an abugida since the 4th c. CE vocalization, written left-to-right (unusual for a Semitic-derived script); the liturgical Geʿez literature and the Beta maṣāḥǝft manuscript corpus run on it."
 glag-name,glag,name,Glagolitic
-glag-context,glag,context,"The FIRST Slavic alphabet, devised by Cyril and Methodius (860s CE), with an angular Croatian line that lived into the early modern period; most of the oldest Church Slavonic monuments are Glagolitic. Its letters carry numeral values in their OWN alphabet order (not the Cyrillic-mirrored-Greek order — that table is deferred until entered against a checked source)."
+glag-context,glag,context,"The FIRST Slavic alphabet, devised by Cyril and Methodius (860s CE), with an angular Croatian line that lived into the early modern period; most of the oldest Church Slavonic monuments are Glagolitic. Its letters carry numeral values in their OWN alphabet order, not the Cyrillic-mirrored Greek order (the numerals table renders them; P88-B4)."
 glag-desk,glag,desk,Glagolitic appears in the OCS dictionary shelves as variant forms rather than passage text; the search hint layer names the absence of a cross-script fold honestly.
 goth-name,goth,name,Gothic
 goth-context,goth,context,Wulfila's 4th-c. CE alphabet for the Gothic Bible — Greek uncial base with Latin and runic admixture; almost everything surviving in it is the Bible translation. Every letter doubles as a numeral; two letters are numeral-only.
