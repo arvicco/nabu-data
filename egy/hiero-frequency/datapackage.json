@@ -1,0 +1,120 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "egy-hiero-frequency",
+  "title": "Egyptian hieroglyph frequencies — Gardiner codes censused from AES, per subcorpus",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "AES — Ancient Egyptian Sentences (TLA/BBAW snapshot, January 2018)",
+      "path": "https://github.com/simondschweitzer/aes",
+      "licenses": [
+        {
+          "name": "CC BY-SA 4.0 (verbatim, repo README: \"All files: CC-BY-SA 4.0\")"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "hiero_frequency",
+      "path": "hiero-frequency.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Gardiner",
+            "type": "string"
+          },
+          {
+            "name": "Subcorpus",
+            "type": "string"
+          },
+          {
+            "name": "Tokens",
+            "type": "integer"
+          },
+          {
+            "name": "Docs",
+            "type": "integer"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build egy/hiero-frequency",
+    "nabu_version": "1.6.0",
+    "derivation": {
+      "inputs": {},
+      "recipe": "hiero-frequency v1: census Gardiner codes from aes hiero_inventar annotations at (code, subcorpus) grain, token + attesting-doc counts, `all` roll-up per code, live rows only; doc-attestation sha256=cb1fce54622a03235f1e70565efe3618625805995f912004f15b11cbaaeab2b0",
+      "fingerprint": "9d8ffb14f9ae9d9b9e6bf50b301b5f6a9252801e863e4060ea9f53060366bf92"
+    },
+    "anchoring": {
+      "kind": "none"
+    },
+    "tier": "gold-derived",
+    "counts": {
+      "rows": 8266
+    },
+    "eval": {
+      "documents_scanned": 26011,
+      "documents_with_signs": 2900,
+      "tokens_counted": 732112
+    }
+  }
+}

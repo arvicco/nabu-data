@@ -1,6 +1,6 @@
 # Kanripo gaiji display ladder — faithful/IDS/substitute resolutions for &KR…; references
 
-`lzh/kanripo-gaiji` — gold tier, anchoring: none. Produced by `nabu data build lzh/kanripo-gaiji` (Nabu 1.3.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`lzh/kanripo-gaiji` — gold tier, anchoring: none. Produced by `nabu data build lzh/kanripo-gaiji` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/). This dataset is CC BY-SA 4.0 (inherited share-alike from its inputs); the repository's default license does not apply to it.
 

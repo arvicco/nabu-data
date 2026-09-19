@@ -142,8 +142,7 @@
         "anchors/I1KG9225.csv",
         "anchors/I1KG9226.csv",
         "anchors/I1KG9227.csv",
-        "anchors/I1KG9228.csv",
-        "anchors/I1KG9229.csv"
+        "anchors/I1KG9228.csv"
       ],
       "schema": {
         "fields": [
@@ -272,7 +271,7 @@
   ],
   "nabu": {
     "producer": "nabu data build xct/actib-anchors",
-    "nabu_version": "1.3.0",
+    "nabu_version": "1.6.0",
     "derivation": {
       "inputs": {
         "actib": {
@@ -292,26 +291,25 @@
     },
     "tier": "gold-derived",
     "counts": {
-      "rows": 463547
+      "rows": 461146
     },
     "eval": {
-      "passages": 461304,
-      "compared": 461199,
-      "exact": 458954,
-      "near": 836,
-      "partial": 1409,
-      "missing": 102,
+      "passages": 458972,
+      "compared": 458868,
+      "exact": 456692,
+      "near": 771,
+      "partial": 1405,
+      "missing": 101,
       "badref": 3,
-      "exact_rate": 0.9951,
+      "exact_rate": 0.9953,
       "distance_histogram": {
-        "1": 603,
-        "2": 165,
+        "1": 541,
+        "2": 163,
         "3": 52,
         "4": 11,
         "5": 1,
         "6": 2,
-        "8": 1,
-        "32": 1
+        "8": 1
       },
       "against": "ACTib v2.0 SegPOS-eKangyur seg layer (Zenodo record 3951503), whitespace-free NFC letter streams, exact/containment/Levenshtein classification — a passage with no ACTib content at its mapped line is censused missing, never guessed"
     }

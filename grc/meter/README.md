@@ -1,6 +1,6 @@
 # Greek metrical scansions (Hypotactic) anchored to Perseus CTS passages
 
-`grc/meter` — gold-derived tier, anchoring: passage-urn. Produced by `nabu data build grc/meter` (Nabu 1.3.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`grc/meter` — gold-derived tier, anchoring: passage-urn. Produced by `nabu data build grc/meter` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/).
 
@@ -14,13 +14,13 @@ re-derive after hypotactic / perseus-greek / first1k-greek syncs (the stale-inge
 
 Canonical inputs at derivation:
 
-- `first1k-greek` @ `4c9c843d80ee94b4371f52add5f7d68bbfe7ba4c`
+- `first1k-greek` @ `8ee111eb44ecef4120c844e10749178d95d1f30c`
 - `hypotactic` @ `d167c561107fc636ffd00198ffd1296edaf93451`
-- `perseus-greek` @ `91595f89e15b4d3000cd93efcf8990720c8be2b9`
+- `perseus-greek` @ `df7270e5df9c6e4e14c85a11a0a4b7f4a1a9f59e`
 
 Recipe: grc/meter v1: resolve every line of canonical/hypotactic/tsv/*.tsv (D. Chamberlain's Greek scansions; the file NAME carries the work via the curated filename→CTS crosswalk published as works.csv — upstream has no citation column) onto the held live grc passages of perseus-greek + first1k-greek by EXACT folded-text match (the house grc search-form fold reduced to letters only; no fuzzy matching — unmatched lines are censused in nabu.eval, never guessed); one row per anchored passage (Homer's verbatim formulaic repeats dedupe to the first-held occurrence; a repeated line still counts as matched); Primary_Text carries Hypotactic's own TSV line bytes (CC BY 4.0), NEVER the Perseus/First1K passage bytes (those corpora are CC-BY-SA — anchoring is by URN + Passage_SHA256 only, so no share-alike text enters this CC BY dataset).
 
-Derivation fingerprint: `c57f9bac1d421e7d9c99033f176ac9a9587c917e651aa0fe40d2a88da9dbb764`.
+Derivation fingerprint: `91f35032d6c35740cc1da167b76da381ab992bf8552fb5e6ee4893f325de347b`.
 
 ## What a row means — the anchoring contract
 
@@ -45,12 +45,12 @@ work under it).
 
 ## The resolution census — the honesty stat
 
-34408 of 62989 upstream lines
-(54.63%) resolved onto
-33194 held passages
+34370 of 62989 upstream lines
+(54.57%) resolved onto
+33156 held passages
 (79 works matched, 9 files
 unmatched);
-28581 lines found no held passage and are
+28619 lines found no held passage and are
 censused, never guessed. Matching is exact on the folded letter sequence
 (accents/breathings/punctuation/elision spelling neutralized) — the same
 numbers ride `datapackage.json` under `nabu.eval`.

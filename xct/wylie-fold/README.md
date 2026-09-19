@@ -1,6 +1,8 @@
 # Tibetan script ↔ EWTS (Wylie) neutralization rule table
 
-`xct/wylie-fold` — gold tier, anchoring: none. Produced by `nabu data build xct/wylie-fold` (Nabu 1.3.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`xct/wylie-fold` — gold tier, anchoring: none. Produced by `nabu data build xct/wylie-fold` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+
+License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/).
 
 A hand-curated transliteration rule table letting Tibetan-script and Wylie-romanized text meet in one query space — doubles as the source for Nabu's generated Tibetan transcoder module.
 

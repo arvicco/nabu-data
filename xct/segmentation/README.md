@@ -1,6 +1,8 @@
 # Segmented Classical Tibetan, curated slice (eval'd against SOAS gold)
 
-`xct/segmentation` — silver tier, anchoring: passage-urn. Produced by `nabu data build xct/segmentation` (Nabu 1.3.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`xct/segmentation` — silver tier, anchoring: passage-urn. Produced by `nabu data build xct/segmentation` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+
+License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/).
 
 Tsheg-bar/word segmentation over a curated Derge slice with the segmenter's error rate measured against the SOAS gold corpus and published in-band — the calibration ground for any full-canon layer.
 

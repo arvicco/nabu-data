@@ -1,6 +1,8 @@
 # Sanskrit form→lemma table derived from DCS gold annotations
 
-`san/form-lemma` — gold-derived tier, anchoring: none. Produced by `nabu data build san/form-lemma` (Nabu 1.3.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`san/form-lemma` — gold-derived tier, anchoring: none. Produced by `nabu data build san/form-lemma` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+
+License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/).
 
 Bridges inflected surface forms (and unsandhied padapāṭha forms) to lemmas using only human-annotated gold data — powers dictionary-headword lookup for query expansion (the successor to Nabu's rule-generated Sanskrit stem variants).
 
@@ -38,5 +40,7 @@ of Sanskrit (DCS)*, 2010–2024, https://github.com/OliverHellwig/sanskrit
 `datapackage.json` provenance block.
 
 Derivation note: rows are read from Nabu's catalog — the ingested, gold-gated
-DCS chapters, a pure function of `canonical/dcs` — so run `nabu sync dcs`
-before building; the recorded cone sha then names exactly the ingested bytes.
+DCS chapters, a pure function of `canonical/dcs`. `nabu data build` refuses to
+build when `canonical/dcs` has changed since the catalog last ingested it
+(re-ingest with `nabu sync dcs`), so the recorded cone sha names exactly the
+ingested bytes.

@@ -1,6 +1,6 @@
 # Per-document historical-stage (lect) assignments across the multilingual catalog
 
-`mul/lect-assignments` — gold-derived tier, anchoring: document-urn. Produced by `nabu data build mul/lect-assignments` (Nabu 1.4.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`mul/lect-assignments` — gold-derived tier, anchoring: document-urn. Produced by `nabu data build mul/lect-assignments` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/). This dataset is CC BY-SA 4.0 (inherited share-alike from its inputs); the repository's default license does not apply to it.
 
@@ -18,6 +18,6 @@ re-derive after journal-moving events (a sync wave re-running lect rules, new ow
 
 Own authorship — no canonical corpus inputs.
 
-Recipe: lect-assignments v1: project the lect journal at URN grain, license classes open+attribution only, ordered (urn, code); published-slice sha256=efdc0cc621fae8ff61af78b35b7acef3101fa60422b351ae57e27d0efacb2b40
+Recipe: lect-assignments v1: project the lect journal at URN grain, license classes open+attribution only, ordered (urn, code); published-slice sha256=d312649da025e31dc5a9d3eec8430094c14951e00ec80adb3741b53da455961c
 
-Derivation fingerprint: `ef4a1e07fbb6f82d2eb7d31f4aa5e9b34ef4c145bb7b5851e62744d15532b175`.
+Derivation fingerprint: `5fd4b13c38c28cfb9a24770cc040d0948214bf8f44bc4323ebf53137ec567913`.

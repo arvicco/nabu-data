@@ -1,6 +1,6 @@
 # Aozora Bunko gaiji composition census with derived IDS lane
 
-`jpn/aozora-gaiji` — gold tier, anchoring: none. Produced by `nabu data build jpn/aozora-gaiji` (Nabu 1.3.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`jpn/aozora-gaiji` — gold tier, anchoring: none. Produced by `nabu data build jpn/aozora-gaiji` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/).
 

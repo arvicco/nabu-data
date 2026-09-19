@@ -92,25 +92,26 @@
   ],
   "nabu": {
     "producer": "nabu data build mul/document-dates",
-    "nabu_version": "1.4.0",
+    "nabu_version": "1.6.0",
     "derivation": {
       "inputs": {},
-      "recipe": "document-dates v1: project dated document_axes rows at URN grain, license classes open+attribution only, ordered (urn, axis row); published-slice sha256=cb1c2946833bff5e3b52949dfea5c5853a10748a923e0157d5df5366a1ed691d",
-      "fingerprint": "b47b4cc325763d635ed1224b6a061903da77a233084e6c93920182f5301ded52"
+      "recipe": "document-dates v1: project dated document_axes rows at URN grain, license classes open+attribution only, ordered (urn, axis row); published-slice sha256=f6499bcb447d00fd87e329563f7225aa598fc3c250dbb88307942160576c672b",
+      "fingerprint": "7f8873308e7c35eb7263da6140d147d5d5bc35a904b4dc55e5560629b5efa49e"
     },
     "anchoring": {
       "kind": "document-urn"
     },
     "tier": "gold-derived",
     "counts": {
-      "rows": 703378
+      "rows": 769196
     },
     "eval": {
-      "dated_axis_rows": 772749,
-      "published_rows": 703377,
+      "dated_axis_rows": 1334830,
+      "published_rows": 769195,
       "excluded_rows": {
-        "nc": 38859,
-        "odbl": 30513
+        "nc": 532807,
+        "odbl": 30513,
+        "research_private": 2315
       }
     }
   }

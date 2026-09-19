@@ -92,24 +92,24 @@
   ],
   "nabu": {
     "producer": "nabu data build mul/lect-assignments",
-    "nabu_version": "1.4.0",
+    "nabu_version": "1.6.0",
     "derivation": {
       "inputs": {},
-      "recipe": "lect-assignments v1: project the lect journal at URN grain, license classes open+attribution only, ordered (urn, code); published-slice sha256=efdc0cc621fae8ff61af78b35b7acef3101fa60422b351ae57e27d0efacb2b40",
-      "fingerprint": "ef4a1e07fbb6f82d2eb7d31f4aa5e9b34ef4c145bb7b5851e62744d15532b175"
+      "recipe": "lect-assignments v1: project the lect journal at URN grain, license classes open+attribution only, ordered (urn, code); published-slice sha256=d312649da025e31dc5a9d3eec8430094c14951e00ec80adb3741b53da455961c",
+      "fingerprint": "5fd4b13c38c28cfb9a24770cc040d0948214bf8f44bc4323ebf53137ec567913"
     },
     "anchoring": {
       "kind": "document-urn"
     },
     "tier": "gold-derived",
     "counts": {
-      "rows": 482288
+      "rows": 363749
     },
     "eval": {
-      "journal_rows": 508238,
-      "published_rows": 482287,
+      "journal_rows": 387294,
+      "published_rows": 363748,
       "excluded_rows": {
-        "nc": 25951
+        "nc": 23546
       }
     }
   }
