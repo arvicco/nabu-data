@@ -1,4 +1,4 @@
-cff-version: 1.2.0
+cff-version: 1.3.0
 message: >-
   If you use datasets from this repository, please cite it as below,
   alongside the upstream works named in each dataset's sources.bib.
@@ -9,9 +9,9 @@ authors:
     family-names: Vicco
     email: arvicco@nabu.ac
 repository-code: "https://github.com/arvicco/nabu-data"
-version: 1.2.0
+version: 1.3.0
 doi: 10.5281/zenodo.21757475
-date-released: "2026-08-31"
+date-released: "2026-09-19"
 license: CC-BY-4.0
 abstract: >-
   Derived linguistic datasets over ancient-language corpora —
