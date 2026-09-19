@@ -1,0 +1,110 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "mul-kind-classifications",
+  "title": "Per-document kind classifications (the fourth axis) across the multilingual catalog",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [],
+  "resources": [
+    {
+      "name": "kind_classifications",
+      "path": "kind-classifications.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "URN",
+            "type": "string"
+          },
+          {
+            "name": "Value",
+            "type": "string"
+          },
+          {
+            "name": "Kind_Raw",
+            "type": "string"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build mul/kind-classifications",
+    "nabu_version": "1.6.0",
+    "derivation": {
+      "inputs": {},
+      "recipe": "kind-classifications v1: project facet=kind document_facets rows at URN grain (config/kind_classes.yml + kind_map.yml folds, №R-63/№R-66), license classes open+attribution only, unmapped excluded, ordered (urn, facet row); published-slice sha256=220b7184ccca5d5ffd962c7710c29ee3c12bb6f899424e80248c696d113d5187",
+      "fingerprint": "1aa7332d1e71df60b5164133f9d100a109bbd9ad2eb2136c397eb393a5d85799"
+    },
+    "anchoring": {
+      "kind": "document-urn"
+    },
+    "tier": "gold-derived",
+    "counts": {
+      "rows": 730333
+    },
+    "eval": {
+      "kind_rows": 1965340,
+      "published_rows": 730332,
+      "excluded_rows": {
+        "nc": 1220477,
+        "research_private": 368
+      },
+      "unmapped_rows_excluded": 14163
+    }
+  }
+}

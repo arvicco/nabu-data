@@ -1,6 +1,8 @@
 # Tibetan verb stem → paradigm-lemma map (from the Tibetan Verb Database)
 
-`xct/verb-lemma` — gold-derived tier, anchoring: none. Produced by `nabu data build xct/verb-lemma` (Nabu 1.3.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`xct/verb-lemma` — gold-derived tier, anchoring: none. Produced by `nabu data build xct/verb-lemma` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+
+License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/).
 
 Maps the 2,491 TVD stem tuples (present/past/future/imperative, grammarians' disagreements kept uncollapsed) to a paradigm lemma, enabling verb-form-aware lookup across Classical Tibetan. The table half only: the anchored layer over the canon is deferred behind xct/segmentation.
 

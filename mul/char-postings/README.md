@@ -1,6 +1,6 @@
 # Han character × corpus doc-frequency census (the graded-reading substrate)
 
-`mul/char-postings` — gold-derived tier, anchoring: none. Produced by `nabu data build mul/char-postings` (Nabu 1.4.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`mul/char-postings` — gold-derived tier, anchoring: none. Produced by `nabu data build mul/char-postings` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/). This dataset is CC BY-SA 4.0 (inherited share-alike from its inputs); the repository's default license does not apply to it.
 
@@ -18,6 +18,6 @@ re-derive after CJK-lane syncs (the census rebuilds with the fulltext index); th
 
 Own authorship — no canonical corpus inputs.
 
-Recipe: char-postings v1: project the fulltext char_postings census at (source, character) grain, license classes open+attribution only, ordered (source, codepoint); published-slice sha256=b6b68af12fd3f144fa9d6b23df80b0ee3f7bad3374a79da62263c090b17ff4dc
+Recipe: char-postings v1: project the fulltext char_postings census at (source, character) grain, license classes open+attribution only, ordered (source, codepoint); published-slice sha256=4e9c2ac0f60e06a305092c7a6f0a5424c14f2bc6daee603ce65cd3810c793bee
 
-Derivation fingerprint: `fb58acd8b2edca2daeecb9904618c8454d246a3d42f7f2ea667a1a155dbb486c`.
+Derivation fingerprint: `d9b1b2693bb1456aca9d283a016ce8645e055575a1fdca7042d2bf0ed7d3b9ca`.

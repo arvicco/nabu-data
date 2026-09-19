@@ -1,6 +1,6 @@
 # Normalized document datings across the multilingual catalog, verbatim raw in-band
 
-`mul/document-dates` — gold-derived tier, anchoring: document-urn. Produced by `nabu data build mul/document-dates` (Nabu 1.4.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`mul/document-dates` — gold-derived tier, anchoring: document-urn. Produced by `nabu data build mul/document-dates` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/). This dataset is CC BY-SA 4.0 (inherited share-alike from its inputs); the repository's default license does not apply to it.
 
@@ -18,6 +18,6 @@ re-derive after dating-moving events (sync waves, infer-dates rule changes — t
 
 Own authorship — no canonical corpus inputs.
 
-Recipe: document-dates v1: project dated document_axes rows at URN grain, license classes open+attribution only, ordered (urn, axis row); published-slice sha256=cb1c2946833bff5e3b52949dfea5c5853a10748a923e0157d5df5366a1ed691d
+Recipe: document-dates v1: project dated document_axes rows at URN grain, license classes open+attribution only, ordered (urn, axis row); published-slice sha256=f6499bcb447d00fd87e329563f7225aa598fc3c250dbb88307942160576c672b
 
-Derivation fingerprint: `b47b4cc325763d635ed1224b6a061903da77a233084e6c93920182f5301ded52`.
+Derivation fingerprint: `7f8873308e7c35eb7263da6140d147d5d5bc35a904b4dc55e5560629b5efa49e`.

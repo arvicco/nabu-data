@@ -84,26 +84,28 @@
   ],
   "nabu": {
     "producer": "nabu data build mul/char-postings",
-    "nabu_version": "1.4.0",
+    "nabu_version": "1.6.0",
     "derivation": {
       "inputs": {},
-      "recipe": "char-postings v1: project the fulltext char_postings census at (source, character) grain, license classes open+attribution only, ordered (source, codepoint); published-slice sha256=b6b68af12fd3f144fa9d6b23df80b0ee3f7bad3374a79da62263c090b17ff4dc",
-      "fingerprint": "fb58acd8b2edca2daeecb9904618c8454d246a3d42f7f2ea667a1a155dbb486c"
+      "recipe": "char-postings v1: project the fulltext char_postings census at (source, character) grain, license classes open+attribution only, ordered (source, codepoint); published-slice sha256=4e9c2ac0f60e06a305092c7a6f0a5424c14f2bc6daee603ce65cd3810c793bee",
+      "fingerprint": "d9b1b2693bb1456aca9d283a016ce8645e055575a1fdca7042d2bf0ed7d3b9ca"
     },
     "anchoring": {
       "kind": "none"
     },
     "tier": "gold-derived",
     "counts": {
-      "rows": 38398
+      "rows": 129803
     },
     "eval": {
-      "postings_rows": 62582,
-      "published_rows": 38397,
+      "postings_rows": 214585,
+      "published_rows": 129802,
       "excluded_rows": {
-        "nc": 24185
+        "nc": 84308,
+        "odbl": 40,
+        "research_private": 435
       },
-      "distinct_chars": 27605
+      "distinct_chars": 34320
     }
   }
 }

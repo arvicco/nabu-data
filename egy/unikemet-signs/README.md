@@ -1,6 +1,6 @@
 # The Egyptian sign spine — Unikemet codepoints with Gardiner codes and tool concordances
 
-`egy/unikemet-signs` — gold-derived tier, anchoring: none. Produced by `nabu data build egy/unikemet-signs` (Nabu 1.4.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`egy/unikemet-signs` — gold-derived tier, anchoring: none. Produced by `nabu data build egy/unikemet-signs` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/).
 
