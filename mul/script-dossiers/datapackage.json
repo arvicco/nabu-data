@@ -80,7 +80,7 @@
   ],
   "nabu": {
     "producer": "nabu data build mul/script-dossiers",
-    "nabu_version": "1.5.0",
+    "nabu_version": "1.6.0",
     "derivation": {
       "inputs": {},
       "recipe": "script-dossiers v1: publish the curated per-script dossiers (name, context, desk conventions) from config/script_dossiers.yml, one tidy row per (tag, attribute), tag order; the registry drift guard pins tags == the nabu-lects scripts table; published-slice sha256=05eb0a2b4d637ee2da4ec16e6c676f793e928bc0ce3957d7424a1847057fead9",

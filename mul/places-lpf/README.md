@@ -1,6 +1,6 @@
 # Referenced places as Linked Places Format v1.3 + LP-TSV (the gazetteer-exchange shape)
 
-`mul/places-lpf` — gold-derived tier, anchoring: none. Produced by `nabu data build mul/places-lpf` (Nabu 1.4.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`mul/places-lpf` — gold-derived tier, anchoring: none. Produced by `nabu data build mul/places-lpf` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/). This dataset is CC BY-SA 4.0 (inherited share-alike from its inputs); the repository's default license does not apply to it.
 
@@ -19,9 +19,9 @@ re-derive after gazetteer syncs (pleiades/trismegistos/cigs — the stale-ingest
 Canonical inputs at derivation:
 
 - `cigs` @ `29878f18cc54b523aa86887a3ec25505b5523e21280f215280c39224ad063c54`
-- `pleiades` @ `d5170d25c3a3e6ad8f950922d0099f2c05c74aa074a64ea8962aef72b361b310`
+- `pleiades` @ `99912965a14080750b733eac5e0db9bb62b514ac7cbd5807971819085fcd66d5`
 - `trismegistos` @ `c935b7e95adcc403edb8ad18da4082234b9d4b30ee80ffc76bcceba09b53b3cf`
 
-Recipe: places-lpf v1: LPF v1.3 FeatureCollection + LP-TSV v0.5 at claim grain over the published axis slice (license classes open+attribution), titles/coords from place_index, closeMatch from place_crosswalk; collection sha256=6f6661539011221981a7dfae54272e8d95a662b655040287f05a1093e76a6ab4
+Recipe: places-lpf v1: LPF v1.3 FeatureCollection + LP-TSV v0.5 at claim grain over the published axis slice (license classes open+attribution), titles/coords from place_index, closeMatch from place_crosswalk; collection sha256=4b0343d9e9955c9e3afe69c32fc8cfc4fbf8870bc5b1935f21e287a7d20bb077
 
-Derivation fingerprint: `857cb9d51a1eab27bce281c21ea28259c67c2510116699b7ccd9d01fddb5cc3d`.
+Derivation fingerprint: `80fe05cdf9acde9a0a3f5d1f236106d22da6c47f5c9d99d20b17966f9a7756ff`.

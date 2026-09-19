@@ -119,7 +119,7 @@
   ],
   "nabu": {
     "producer": "nabu data build sux/sign-table",
-    "nabu_version": "1.4.0",
+    "nabu_version": "1.6.0",
     "derivation": {
       "inputs": {
         "osl": {

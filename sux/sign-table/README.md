@@ -1,6 +1,6 @@
 # Compiled cuneiform sign cards — OSL identity, concordances, attestation counts
 
-`sux/sign-table` — gold-derived tier, anchoring: none. Produced by `nabu data build sux/sign-table` (Nabu 1.4.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`sux/sign-table` — gold-derived tier, anchoring: none. Produced by `nabu data build sux/sign-table` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/).
 

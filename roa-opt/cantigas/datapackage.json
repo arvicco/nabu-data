@@ -19,10 +19,10 @@
     {
       "title": "Cantigas Medievais Galego-Portuguesas (Projeto Littera)",
       "path": "https://cantigas.fcsh.unl.pt",
-      "version": "46dcaac9688533c07ed3510bab87e5d0cdff113e787b390fcc86b0b15237ba33",
+      "version": "89a62161614f81686106f3c7fcb8bd2f01a99302cdf06604d6d2a47f30451c5c",
       "licenses": [
         {
-          "name": "Free with attribution — the coordinator's grant (Graça Videira Lopes, Projeto Littera, IEM/FCSH-NOVA, 2026-07-27, №45-2): \"Our site is free for all. So, with full attribution, you can do whatever you like with the data.\" Cite (the project's own format): Lopes, Graça Videira; Ferreira, Manuel Pedro et al. (2011–), Cantigas Medievais Galego Portuguesas [online database]. Lisboa: Instituto de Estudos Medievais, FCSH/NOVA. [Information retrieved on (date)] Available at: cantigas.fcsh.unl.pt."
+          "name": "Free with attribution — the coordinator's grant (Graça Videira Lopes, Projeto Littera, IEM/FCSH-NOVA, by email 2026-07-27): \"Our site is free for all. So, with full attribution, you can do whatever you like with the data.\" Cite (the project's own format): Lopes, Graça Videira; Ferreira, Manuel Pedro et al. (2011–), Cantigas Medievais Galego Portuguesas [online database]. Lisboa: Instituto de Estudos Medievais, FCSH/NOVA. [Information retrieved on (date)] Available at: cantigas.fcsh.unl.pt."
         }
       ]
     }
@@ -204,16 +204,16 @@
   ],
   "nabu": {
     "producer": "nabu data build roa-opt/cantigas",
-    "nabu_version": "1.4.0",
+    "nabu_version": "1.6.0",
     "derivation": {
       "inputs": {
         "cantigas": {
-          "canonical_sha": "46dcaac9688533c07ed3510bab87e5d0cdff113e787b390fcc86b0b15237ba33",
+          "canonical_sha": "89a62161614f81686106f3c7fcb8bd2f01a99302cdf06604d6d2a47f30451c5c",
           "cone": "cantigas"
         }
       },
       "recipe": "roa-opt/cantigas v1: every live cantigas catalog row projected to four tables, documents in numeric cdcant order, passages in sequence order — lines.csv one row per verse line (URN + Passage_SHA256 anchor; Line/Stanza = the EDITION's own numbering, cross-checked against the printed every-5th ordinals at ingest; Number_Gap = the P56-1 refrain-gap annotation where the edition's numbering runs ahead of the display; Primary_Text = the passage bytes); cantigas.csv one row per cantiga (Cdcant, incipit, Author_ID -> authors.csv, normalized genre, '; '-joined form lines, rubric; the unattributed page keeps an empty Author_ID); authors.csv the distinct (cdaut, name) registry in cdaut order; manuscripts.csv one row per (cantiga, witness) from the sigla lines — commas split witnesses, '(…)' becomes Parenthesized=true, the leading capital run is Cancioneiro, the remainder is Number VERBATIM (a slash run like 575/576 stays ONE witness; bis/letter/= forms kept as printed; a bare siglum has an empty Number; anything else fails loudly). IDs l-<cdcant>-<line> / c-<cdcant> / a-<cdaut> / m-<cdcant>-<siglum>-<number>, positional -<n> on verbatim repeats.",
-      "fingerprint": "8fb9ee89a18cb1d7769c47cbe114d8098807a85771d29ff8e08571f542ee335a"
+      "fingerprint": "492245269fff86a21e1a2713247777531154e9de527f971525ccf2daee5aace0"
     },
     "anchoring": {
       "kind": "urn+sha"

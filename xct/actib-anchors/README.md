@@ -1,6 +1,6 @@
 # ACTib ↔ Derge Kangyur anchor table (stable anchors for the segmented eKangyur)
 
-`xct/actib-anchors` — gold-derived tier, anchoring: urn+sha. Produced by `nabu data build xct/actib-anchors` (Nabu 1.3.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`xct/actib-anchors` — gold-derived tier, anchoring: urn+sha. Produced by `nabu data build xct/actib-anchors` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/).
 
@@ -84,11 +84,11 @@ carries no license file — the record, not in-zip text, is the grant.
 
 ## The census — the measured anchoring quality
 
-Of 461304 passages: 461199 compared —
-458954 exact (99.51% of compared),
-836 near (letter edit distance in `Distance`; histogram
-{"1" => 603, "2" => 165, "3" => 52, "4" => 11, "5" => 1, "6" => 2, "8" => 1, "32" => 1}), 1409 partial
-(one letter stream contains the other) — plus 102 missing
+Of 458972 passages: 458868 compared —
+456692 exact (99.53% of compared),
+771 near (letter edit distance in `Distance`; histogram
+{"1" => 541, "2" => 163, "3" => 52, "4" => 11, "5" => 1, "6" => 2, "8" => 1}), 1405 partial
+(one letter stream contains the other) — plus 101 missing
 (no ACTib content at the mapped line) and 3 badref
 (refs outside the citation grammar: `urn:nabu:derge-kangyur:toh3:7.39b.6:b2`, `urn:nabu:derge-kangyur:toh567:188a.7:b2`, `urn:nabu:derge-kangyur:toh7a:13.309b.1:b2`). Missing and badref
 rows are censused here and in `nabu.eval`, never faked as anchor rows.
