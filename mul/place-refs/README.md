@@ -1,6 +1,6 @@
 # Per-document place references across the multilingual catalog, gazetteer-ready
 
-`mul/place-refs` — gold-derived tier, anchoring: document-urn. Produced by `nabu data build mul/place-refs` (Nabu 1.4.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`mul/place-refs` — gold-derived tier, anchoring: document-urn. Produced by `nabu data build mul/place-refs` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/). This dataset is CC BY-SA 4.0 (inherited share-alike from its inputs); the repository's default license does not apply to it.
 
@@ -18,8 +18,8 @@ re-derive after place-moving events (a sync wave, a nabu-places registry sync + 
 
 Canonical inputs at derivation:
 
-- `nabu-places` @ `b196b9a41270ab7831383e3a853d35391fc712ab`
+- `nabu-places` @ `1fb5f287fd43717f1c102ee4333622c40bd3c1c2`
 
 Recipe: place-refs v1: project document_axes.place_ref through Nabu::PlaceRefs at (document, claim) grain, license classes open+attribution only, ordered (urn, axis row), sharded ≤250000 rows/file (№R-29); published-slice sha256=b4d2a9e76455a0ef26661d8fffc06d2f295c36d633eb58aa7ba76c8b1d308b51
 
-Derivation fingerprint: `17ed9a0cf18e17a4ab0ca2a40f915a5a362907e33e14bb561b8799f419d9d607`.
+Derivation fingerprint: `a8cc82b2718d95681f704d5a54736a1711d5a9c52763153d032d37b05c01c309`.

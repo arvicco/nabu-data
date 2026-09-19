@@ -59,13 +59,18 @@ vs silver/automatic) in the manifest and, where relevant, per row.
 | `sux/value-signs` | Cuneiform value→sign table flattened from the Oracc Sign List (ex-OGSL, CC0) — one row per (value, sign) pair with codepoints, deprecation and ambiguity in-band, plus sign and print-concordance sidecars | CC BY 4.0 | **published** |
 | `xct/actib-anchors` | The first re-publication: stable anchors for ACTib's segmented eKangyur — 461,301 rows tying every Derge Kangyur passage (URN + content fingerprint) to its ACTib (volume, page, line), match census in-band (99.51% exact), plus the 2,245-row divergence/proofreading table | CC BY 4.0 | **published** |
 | `roa-opt/cantigas` | The first machine-readable edition of the complete secular Galician-Portuguese lyric (Projeto Littera, by written grant) — 34,162 verse lines with stanza structure and citation-fidelity eval in-band, 1,682 cantigas, 158 authors, and the 3,333-row corpus-wide cancioneiro concordance | CC BY 4.0 | **published** |
-| `mul/lect-assignments` | Per-document historical-stage (lect) assignments across the whole multilingual catalog — 482,287 URN-anchored rows with basis and note in-band; the corpus-scale stage stratification no other project publishes | CC BY-SA 4.0 | **published** |
-| `mul/place-refs` | Per-document place references, gazetteer-ready — 969,929 (URN, namespaced claim) rows over 7,309 places, verbatim names and upstream-vs-registry basis in-band | CC BY-SA 4.0 | **published** |
+| `mul/lect-assignments` | Per-document historical-stage (lect) assignments across the whole multilingual catalog — 363,749 URN-anchored rows (v2 re-cut over the corrected rule set) with basis and note in-band; the corpus-scale stage stratification no other project publishes | CC BY-SA 4.0 | **published** |
+| `mul/kind-classifications` | Per-document kind classifications — the fourth document axis: 730,333 URN-anchored rows over a 21-family ruled class list (funerary/epitaph, literary/poetry, divination/extispicy, ...), multi-label, the verbatim upstream genre label riding every row | CC BY-SA 4.0 | **published** |
+| `mul/cuneiform-senses` | Cuneiform sense glosses from Wiktionary's Sumerian, Akkadian and Hittite lanes — 4,329 verbatim-gloss rows with headword, POS and anchoring entry URN; the share-alike sidecar beside the CC-BY sign table | CC BY-SA 4.0 | **published** |
+| `mul/place-refs` | Per-document place references, gazetteer-ready — 969,930 (URN, namespaced claim) rows over 7,309 places, verbatim names and upstream-vs-registry basis in-band | CC BY-SA 4.0 | **published** |
 | `mul/places-lpf` | The referenced places as Linked Places Format v1.3 + LP-TSV (the WHG upload shapes) — 7,309 Features with cited attested spellings, coordinates, when-spans and closeMatch links | CC BY-SA 4.0 | **published** |
-| `mul/document-dates` | Normalized document datings — 703,372 signed year-span rows with the verbatim upstream dating string riding every row | CC BY-SA 4.0 | **published** |
-| `mul/char-postings` | Han character × corpus doc-frequency census — 38,397 rows spanning Classical Chinese, Japanese, Old Tibetan and Old Japanese collections | CC BY-SA 4.0 | **published** |
+| `mul/document-dates` | Normalized document datings — 769,196 signed year-span rows with the verbatim upstream dating string riding every row | CC BY-SA 4.0 | **published** |
+| `mul/char-postings` | Character × corpus doc-frequency census over the non-ASCII index lanes — 129,803 rows per (source, character, language), from Classical Chinese and Japanese through the Greek, Latin-adjacent and Slavonic collections | CC BY-SA 4.0 | **published** |
 | `sux/sign-table` | Compiled cuneiform sign cards — one row per OSL sign with codepoints, print-list numbers, CDLI readings and per-source attestation doc-counts over the open corpora | CC BY 4.0 | **published** |
 | `egy/unikemet-signs` | The Egyptian sign spine — 5,067 Unicode hieroglyph codepoints with Gardiner-style codes, descriptions, functions, values and the JSesh/Hieroglyphica/IFAO concordances | CC BY 4.0 | **published** |
+| `egy/hiero-frequency` | Gardiner-code token and document frequencies over the hieroglyphic corpora (AES subcorpora + rollup) — 8,266 rows | CC BY-SA 4.0 | **published** |
+| `mul/language-dossiers` | The curated per-language context overlay — 2,443 prose records (family, context, script notes) behind the library's language cards | CC BY-SA 4.0 | **published** |
+| `mul/script-dossiers` | The curated per-script overlay — 76 records behind the script cards | CC BY 4.0 | **published** |
 
 ## Licensing
 

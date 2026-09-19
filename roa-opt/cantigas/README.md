@@ -1,6 +1,6 @@
 # Cantigas Medievais Galego-Portuguesas — the Littera edition as structured tables (verse lines, cantigas, authors, cancioneiro concordance)
 
-`roa-opt/cantigas` — gold tier, anchoring: urn+sha. Produced by `nabu data build roa-opt/cantigas` (Nabu 1.4.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`roa-opt/cantigas` — gold tier, anchoring: urn+sha. Produced by `nabu data build roa-opt/cantigas` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/).
 
@@ -38,7 +38,7 @@ place: the corpus-wide concordance of which cantiga survives in
 which cancioneiro under which number — the join surface for
 manuscript-transmission questions across the whole tradition.
 
-The first full-corpus re-publication: the complete secular lyric of medieval Galician-Portuguese — ~1,680 cantigas, ~34K verse lines from the three great cancioneiros — projected from the Littera critical edition (cantigas.fcsh.unl.pt) into the corpus's first machine-readable form (the scholarly database is superb and browser-only: no TEI, no export), under the coordinator's written any-use grant (№45-2) with the project's own citation format riding every file — verse lines anchored urn+sha into the catalog, the cantiga/author registries, and the corpus-wide cancioneiro concordance parsed from the edition's manuscript sigla, with the citation-fidelity census (printed-number confirmations, refrain gaps, empty lines, the unattributed page) published in-band as nabu.eval.
+The first full-corpus re-publication: the complete secular lyric of medieval Galician-Portuguese — ~1,680 cantigas, ~34K verse lines from the three great cancioneiros — projected from the Littera critical edition (cantigas.fcsh.unl.pt) into the corpus's first machine-readable form (the scholarly database is superb and browser-only: no TEI, no export), under the coordinator's written any-use grant of 2026-07-27 with the project's own citation format riding every file — verse lines anchored urn+sha into the catalog, the cantiga/author registries, and the corpus-wide cancioneiro concordance parsed from the edition's manuscript sigla, with the citation-fidelity census (printed-number confirmations, refrain gaps, empty lines, the unattributed page) published in-band as nabu.eval.
 
 ## Maintenance
 
@@ -48,11 +48,11 @@ re-derive after a cantigas re-sync (Littera is a living edition that corrects pa
 
 Canonical inputs at derivation:
 
-- `cantigas` @ `46dcaac9688533c07ed3510bab87e5d0cdff113e787b390fcc86b0b15237ba33`
+- `cantigas` @ `89a62161614f81686106f3c7fcb8bd2f01a99302cdf06604d6d2a47f30451c5c`
 
 Recipe: roa-opt/cantigas v1: every live cantigas catalog row projected to four tables, documents in numeric cdcant order, passages in sequence order — lines.csv one row per verse line (URN + Passage_SHA256 anchor; Line/Stanza = the EDITION's own numbering, cross-checked against the printed every-5th ordinals at ingest; Number_Gap = the P56-1 refrain-gap annotation where the edition's numbering runs ahead of the display; Primary_Text = the passage bytes); cantigas.csv one row per cantiga (Cdcant, incipit, Author_ID -> authors.csv, normalized genre, '; '-joined form lines, rubric; the unattributed page keeps an empty Author_ID); authors.csv the distinct (cdaut, name) registry in cdaut order; manuscripts.csv one row per (cantiga, witness) from the sigla lines — commas split witnesses, '(…)' becomes Parenthesized=true, the leading capital run is Cancioneiro, the remainder is Number VERBATIM (a slash run like 575/576 stays ONE witness; bis/letter/= forms kept as printed; a bare siglum has an empty Number; anything else fails loudly). IDs l-<cdcant>-<line> / c-<cdcant> / a-<cdaut> / m-<cdcant>-<siglum>-<number>, positional -<n> on verbatim repeats.
 
-Derivation fingerprint: `8fb9ee89a18cb1d7769c47cbe114d8098807a85771d29ff8e08571f542ee335a`.
+Derivation fingerprint: `492245269fff86a21e1a2713247777531154e9de527f971525ccf2daee5aace0`.
 
 ## The tables — one edition, four projections
 
@@ -98,7 +98,7 @@ concordance never guesses.
 
 This corpus is published with the written permission of the
 project's coordinator (Graça Videira Lopes, 2026-07-27, license
-thread №45-2): "Our site is free for all. So, with full
+email of 2026-07-27): "Our site is free for all. So, with full
 attribution, you can do whatever you like with the data." Use of
 this dataset therefore carries the project's own citation format,
 verbatim (fill the retrieval-date slot with the date you took this

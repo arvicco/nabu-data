@@ -1,0 +1,160 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "mul-cuneiform-senses",
+  "title": "Cuneiform sense glosses from Wiktionary (Sumerian, Akkadian, Hittite)",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wiktionary Sumerian — kaikki.org machine-readable extract",
+      "path": "https://kaikki.org/dictionary/Sumerian/kaikki.org-dictionary-Sumerian.jsonl",
+      "version": "fc7df301cb53e1b52571dfc028775582f1cb70b5447616617ac8760758ef9657",
+      "licenses": [
+        {
+          "name": "CC-BY-SA + GFDL (verbatim kaikki.org/dictionary/: \"This data is made available under the same licenses as Wiktionary - both CC-BY-SA and GFDL.\")"
+        }
+      ]
+    },
+    {
+      "title": "Wiktionary Akkadian — kaikki.org machine-readable extract",
+      "path": "https://kaikki.org/dictionary/Akkadian/kaikki.org-dictionary-Akkadian.jsonl",
+      "version": "f0ce3d225a98d94c9cb8d05f189b27338af1cd11c887d16f912a5614985cd38b",
+      "licenses": [
+        {
+          "name": "CC-BY-SA + GFDL (verbatim kaikki.org/dictionary/: \"This data is made available under the same licenses as Wiktionary - both CC-BY-SA and GFDL.\")"
+        }
+      ]
+    },
+    {
+      "title": "Wiktionary Hittite — kaikki.org machine-readable extract",
+      "path": "https://kaikki.org/dictionary/Hittite/kaikki.org-dictionary-Hittite.jsonl",
+      "version": "5c668aee83dc09dda06ad2de24174a66b92ce0db97c2ff541ff11afe2192bc41",
+      "licenses": [
+        {
+          "name": "CC-BY-SA + GFDL (verbatim kaikki.org/dictionary/: \"This data is made available under the same licenses as Wiktionary - both CC-BY-SA and GFDL.\")"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "cuneiform_senses",
+      "path": "cuneiform-senses.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Headword",
+            "type": "string"
+          },
+          {
+            "name": "Language_ID",
+            "type": "string"
+          },
+          {
+            "name": "Part_Of_Speech",
+            "type": "string"
+          },
+          {
+            "name": "Description",
+            "type": "string"
+          },
+          {
+            "name": "URN",
+            "type": "string"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build mul/cuneiform-senses",
+    "nabu_version": "1.6.0",
+    "derivation": {
+      "inputs": {
+        "wiktionary-akk": {
+          "canonical_sha": "f0ce3d225a98d94c9cb8d05f189b27338af1cd11c887d16f912a5614985cd38b",
+          "cone": "wiktionary-akk"
+        },
+        "wiktionary-hit": {
+          "canonical_sha": "5c668aee83dc09dda06ad2de24174a66b92ce0db97c2ff541ff11afe2192bc41",
+          "cone": "wiktionary-hit"
+        },
+        "wiktionary-sux": {
+          "canonical_sha": "fc7df301cb53e1b52571dfc028775582f1cb70b5447616617ac8760758ef9657",
+          "cone": "wiktionary-sux"
+        }
+      },
+      "recipe": "cuneiform-senses v1: republish the sense glosses of the wiktionary-sux, wiktionary-akk, wiktionary-hit shelves verbatim, one row per sense, ordered (shelf, headword, entry); published-slice sha256=cea053837b4b49e85a6eb5a80cc1d1cf783167db91165d873f9058a0b5afc7bd",
+      "fingerprint": "26c089bde7a20f7fe1da47158b967e61306ad645a5b05b8c3eadf83cdcde2e04"
+    },
+    "anchoring": {
+      "kind": "entry-urn"
+    },
+    "tier": "gold",
+    "counts": {
+      "rows": 4329
+    },
+    "eval": {
+      "rows_by_language": {
+        "akk": 1348,
+        "hit": 481,
+        "sux": 2499
+      }
+    }
+  }
+}

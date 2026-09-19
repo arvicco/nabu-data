@@ -127,7 +127,7 @@
   ],
   "nabu": {
     "producer": "nabu data build egy/unikemet-signs",
-    "nabu_version": "1.4.0",
+    "nabu_version": "1.6.0",
     "derivation": {
       "inputs": {
         "unikemet": {

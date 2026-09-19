@@ -1,6 +1,6 @@
 # Curated script dossiers — the human-written context per writing system
 
-`mul/script-dossiers` — curated tier, anchoring: script-tag. Produced by `nabu data build mul/script-dossiers` (Nabu 1.5.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`mul/script-dossiers` — curated tier, anchoring: script-tag. Produced by `nabu data build mul/script-dossiers` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/).
 

@@ -1,6 +1,6 @@
 # Curated language dossiers — the human-written name/family/context per language
 
-`mul/language-dossiers` — curated tier, anchoring: language-code. Produced by `nabu data build mul/language-dossiers` (Nabu 1.5.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
+`mul/language-dossiers` — curated tier, anchoring: language-code. Produced by `nabu data build mul/language-dossiers` (Nabu 1.6.0); the producer-side contract is docs/nabu-data.md in the Nabu repository.
 
 License: CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/). This dataset is CC BY-SA 4.0 (inherited share-alike from its inputs); the repository's default license does not apply to it.
 
