@@ -87,24 +87,24 @@
     "nabu_version": "1.6.0",
     "derivation": {
       "inputs": {},
-      "recipe": "kind-classifications v1: project facet=kind document_facets rows at URN grain (config/kind_classes.yml + kind_map.yml folds, №R-63/№R-66), license classes open+attribution only, unmapped excluded, ordered (urn, facet row); published-slice sha256=220b7184ccca5d5ffd962c7710c29ee3c12bb6f899424e80248c696d113d5187",
-      "fingerprint": "1aa7332d1e71df60b5164133f9d100a109bbd9ad2eb2136c397eb393a5d85799"
+      "recipe": "kind-classifications v1: project facet=kind document_facets rows at URN grain (config/kind_classes.yml + kind_map.yml folds, owner-ruled 2026-09-13/2026-09-18), license classes open+attribution only, unmapped excluded, ordered (urn, facet row); published-slice sha256=3d6ba93c7857488db50d4e36ec5cab4b03a897170869dd7686d1d99a98dbc00c",
+      "fingerprint": "f40b1884a0422e2f2f4985ffc3921f93f26f42d4cddf59582c593f1948188557"
     },
     "anchoring": {
       "kind": "document-urn"
     },
     "tier": "gold-derived",
     "counts": {
-      "rows": 730333
+      "rows": 735589
     },
     "eval": {
-      "kind_rows": 1965340,
-      "published_rows": 730332,
+      "kind_rows": 1929538,
+      "published_rows": 735589,
       "excluded_rows": {
-        "nc": 1220477,
+        "nc": 1182456,
         "research_private": 368
       },
-      "unmapped_rows_excluded": 14163
+      "unmapped_rows_excluded": 11125
     }
   }
 }

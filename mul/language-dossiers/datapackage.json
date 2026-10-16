@@ -91,10 +91,10 @@
     },
     "tier": "curated",
     "counts": {
-      "rows": 2443
+      "rows": 2442
     },
     "eval": {
-      "dossiers_scanned": 619,
+      "dossiers_scanned": 657,
       "dossiers_published": 619,
       "published_rows": 2442,
       "rows_by_parameter": {

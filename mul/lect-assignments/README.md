@@ -8,7 +8,7 @@ License: CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/). This da
 
 Ancient-language corpora rarely say which historical stage of a language a text belongs to — an Akkadian tablet may be Old Babylonian or Neo-Babylonian, a Sanskrit hymn Vedic or Classical, and the difference matters to anyone studying how these languages changed. This dataset publishes Nabu's per-document stage assignments across its whole multilingual catalog: for each document (cited by its stable URN), the specific historical variety it is assigned to, plus the basis of the assignment — a period rule reading the corpus's own metadata, or an inference from the document's date — so every row says how much to trust it. No other project publishes stage assignments at corpus scale.
 
-Publishes the per-document journal behind Nabu's lect facet — ~482K (URN, language-code) → historical-stage assignments (Old vs Neo-Babylonian, Ur III vs OB Sumerian, Vedic vs Classical Sanskrit, ...) with the basis and note in-band per row — the corpus-scale stage stratification no other project publishes; the id grammar and registry are public in nabu-lects (cited). License classes open+attribution only (nc/odbl/research_private slices excluded row-by-row, censused in nabu.eval); CC BY-SA 4.0 — the №R-24 carve-out dataset carrying the share-alike lanes (edh, aes, ...).
+Publishes the per-document journal behind Nabu's lect facet — ~482K (URN, language-code) → historical-stage assignments (Old vs Neo-Babylonian, Ur III vs OB Sumerian, Vedic vs Classical Sanskrit, ...) with the basis and note in-band per row — the corpus-scale stage stratification no other project publishes; the id grammar and registry are public in nabu-lects (cited). License classes open+attribution only (nc/odbl/research_private slices excluded row-by-row, censused in nabu.eval); CC BY-SA 4.0 — the share-alike carve-out dataset (owner ruling 2026-08-11) carrying the share-alike lanes (edh, aes, ...).
 
 ## Maintenance
 
@@ -18,6 +18,6 @@ re-derive after journal-moving events (a sync wave re-running lect rules, new ow
 
 Own authorship — no canonical corpus inputs.
 
-Recipe: lect-assignments v1: project the lect journal at URN grain, license classes open+attribution only, ordered (urn, code); published-slice sha256=d312649da025e31dc5a9d3eec8430094c14951e00ec80adb3741b53da455961c
+Recipe: lect-assignments v1: project the lect journal at URN grain, license classes open+attribution only, ordered (urn, code); published-slice sha256=ad68c6200d34f816b11226476aac4c33e2f54fb967b7d4be4e83e4d5034a7147
 
-Derivation fingerprint: `5fd4b13c38c28cfb9a24770cc040d0948214bf8f44bc4323ebf53137ec567913`.
+Derivation fingerprint: `ceb6ff2671063f0d21556680d3f67b6be5bff4b5037db2c5d4daf9ad7b32a66e`.

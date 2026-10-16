@@ -1,0 +1,172 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "hbo-form-lemma",
+  "title": "Biblical Hebrew form→lemma table derived from the Open Scriptures Hebrew Bible",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Open Scriptures Hebrew Bible (Westminster Leningrad Codex + OSHM morphology)",
+      "path": "https://github.com/openscriptures/morphhb",
+      "version": "3d15126fb1ef74867fc1434be1942e837932691f",
+      "licenses": [
+        {
+          "name": "WLC text: Public Domain (\"This work is based on The Westminster Leningrad Codex, which is in the public domain.\" — LICENSE.md). Lemma/morphology layer: CC BY 4.0 (\"Lemma and morphology data are licensed under a Creative Commons Attribution 4.0 International license. For attribution purposes, credit the Open Scriptures Hebrew Bible Project.\" — README.md)"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "form-lemma",
+      "path": "form-lemma.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Language_ID",
+            "type": "string"
+          },
+          {
+            "name": "Form",
+            "type": "string"
+          },
+          {
+            "name": "Lemma",
+            "type": "string"
+          },
+          {
+            "name": "Head_Lemma",
+            "type": "string"
+          },
+          {
+            "name": "Morph",
+            "type": "string"
+          },
+          {
+            "name": "Count",
+            "type": "integer"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "Form",
+          "Lemma",
+          "Morph"
+        ]
+      }
+    },
+    {
+      "name": "lemmas",
+      "path": "lemmas.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Language_ID",
+            "type": "string"
+          },
+          {
+            "name": "Head_Lemma",
+            "type": "string"
+          },
+          {
+            "name": "Count",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "Head_Lemma"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build hbo/form-lemma",
+    "nabu_version": "1.6.0",
+    "derivation": {
+      "inputs": {
+        "oshb": {
+          "canonical_sha": "3d15126fb1ef74867fc1434be1942e837932691f",
+          "cone": "oshb"
+        }
+      },
+      "recipe": "hbo/form-lemma v1: sweep the stored token annotations of every live passage of the oshb source ALONE (no other source's Hebrew — BHSA is CC BY-NC and contributes nothing); keep the running-text tokens bearing a lemma whose OSHM language prefix is Hebrew — Aramaic tokens and the qere apparatus readings mint no row, both censused; carry Form/Lemma/Morph byte-verbatim (hbo is NFC-exempt, never re-normalized); count attestations at the distinct (Form, Lemma, Morph) grain into form-lemma.csv and at the Head_Lemma (final \"/\" segment of the augmented Strong's lemma) grain into lemmas.csv.",
+      "fingerprint": "c49d001443714aac8c98c23a59524bbd8e988a863b1eae5f26761864450f64b2"
+    },
+    "anchoring": {
+      "kind": "none"
+    },
+    "tier": "gold-derived",
+    "counts": {
+      "rows": 120458
+    },
+    "eval": {
+      "input_source": "oshb",
+      "passages_scanned": 23213,
+      "hebrew_tokens_counted": 300679,
+      "aramaic_tokens_excluded": 4828,
+      "qere_readings_excluded": 1278,
+      "lemma_less_tokens_excluded": 0,
+      "excluded_hebrew_documents": {
+        "bhsa": 38,
+        "dss": 857,
+        "sefaria": 247,
+        "ud": 3
+      }
+    }
+  }
+}

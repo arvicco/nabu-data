@@ -1,0 +1,243 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "sga-form-lemma",
+  "title": "Old Irish form→lemma table from two gold editions of the St Gall Priscian glosses",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "St Gall Priscian Glosses (St Gallen, Stiftsbibliothek 904) — digital edition v2.1",
+      "path": "https://github.com/padraicmoran/stgallpriscian",
+      "version": "fdb2502e7ef97c4cd09ac25511271d1548759fc1",
+      "licenses": [
+        {
+          "name": "MIT License / Copyright (c) 2023 Pádraic Moran (repo LICENSE, covers the repository including the database dump db_priscian_v2.sql), verbatim grant: \"Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software […] subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\" Edition: Rijcklof Hofman, Pádraic Moran, Bernhard Bauer."
+        }
+      ]
+    },
+    {
+      "title": "CorPH — Corpus PalaeoHibernicum (ChronHib, Maynooth)",
+      "path": "https://github.com/chronhib-MU/Chronhib-Website",
+      "version": "e7ef75d5f9a6ea97210f028b7389fa9539fbe8c0",
+      "licenses": [
+        {
+          "name": "MIT License / Copyright (c) 2020 [Chronologicon Hibernicum] (repo LICENSE, covers the dump)"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "form-lemma",
+      "path": "form-lemma.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Language_ID",
+            "type": "string"
+          },
+          {
+            "name": "Edition",
+            "type": "string"
+          },
+          {
+            "name": "Form",
+            "type": "string"
+          },
+          {
+            "name": "Lemma",
+            "type": "string"
+          },
+          {
+            "name": "Homonym",
+            "type": "string"
+          },
+          {
+            "name": "Part_Of_Speech",
+            "type": "string"
+          },
+          {
+            "name": "Analysis",
+            "type": "string"
+          },
+          {
+            "name": "Count",
+            "type": "integer"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "Edition",
+          "Form",
+          "Lemma",
+          "Homonym",
+          "Part_Of_Speech",
+          "Analysis"
+        ]
+      }
+    },
+    {
+      "name": "divergences",
+      "path": "divergences.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Thesaurus_Ref",
+            "type": "string"
+          },
+          {
+            "name": "Stgall_Form",
+            "type": "string"
+          },
+          {
+            "name": "Stgall_Lemma",
+            "type": "string"
+          },
+          {
+            "name": "Stgall_Homonym",
+            "type": "string"
+          },
+          {
+            "name": "Stgall_Analysis",
+            "type": "string"
+          },
+          {
+            "name": "Corph_Form",
+            "type": "string"
+          },
+          {
+            "name": "Corph_Lemma",
+            "type": "string"
+          },
+          {
+            "name": "Corph_Homonym",
+            "type": "string"
+          },
+          {
+            "name": "Corph_Analysis",
+            "type": "string"
+          },
+          {
+            "name": "Stgall_URN",
+            "type": "string"
+          },
+          {
+            "name": "Corph_URN",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build sga/form-lemma",
+    "nabu_version": "1.6.0",
+    "derivation": {
+      "inputs": {
+        "corph": {
+          "canonical_sha": "e7ef75d5f9a6ea97210f028b7389fa9539fbe8c0",
+          "cone": "corph"
+        },
+        "stgall-priscian": {
+          "canonical_sha": "fdb2502e7ef97c4cd09ac25511271d1548759fc1",
+          "cone": "stgall-priscian"
+        }
+      },
+      "recipe": "sga/form-lemma v1: sweep the stored gold token annotations of every live stgall-priscian passage and of CorPH's St Gall text (document 0007) in the catalog; keep the lemma-bearing Old Irish tokens (every St Gall analysis; CorPH tokens whose LEMMATA language is Early Irish); count attestations at the distinct (Edition, Form, Lemma, Homonym, Part_Of_Speech, Analysis) grain into form-lemma.csv. Agreement census: join the editions on the Thesaurus Palaeohibernicus reference (St Gall annotations thesaurus; CorPH locus 1 minus the Sg siglum; zero padding dropped on both sides), pool tokens per ref, align greedily in edition order by folded form (NFD, marks stripped, lower-cased, letters only), compare lemmas as identical / equal folded / divergent; census into nabu.eval, divergent pairs into divergences.csv.",
+      "fingerprint": "6e4664dc4d580514bbe9fc26cbad1a6ad3a85c2e7f4ff20a6dfb34ddd703782f"
+    },
+    "anchoring": {
+      "kind": "none"
+    },
+    "tier": "gold-derived",
+    "counts": {
+      "rows": 15910
+    },
+    "eval": {
+      "join": "Thesaurus Palaeohibernicus ii reference (St Gall annotations.thesaurus; CorPH annotations.locus[0] minus \"Sg \"; zero padding dropped on both sides)",
+      "refs": {
+        "stgall_priscian": 3529,
+        "corph": 3527,
+        "matched": 3420,
+        "stgall_only": 109,
+        "corph_only": 107,
+        "matched_pooled": 41,
+        "matched_with_tokens": 3370
+      },
+      "tokens": {
+        "stgall_priscian": 17500,
+        "corph": 17781,
+        "stgall_priscian_in_matched_refs": 17247,
+        "corph_in_matched_refs": 17359,
+        "aligned": 15480,
+        "unaligned_stgall_priscian": 1767,
+        "unaligned_corph": 1879
+      },
+      "lemmas": {
+        "identical": 10880,
+        "equal_folded": 1691,
+        "agree": 12571,
+        "diverge": 2909,
+        "agreement_rate": 0.8121
+      }
+    }
+  }
+}

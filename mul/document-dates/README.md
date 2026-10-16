@@ -8,16 +8,16 @@ License: CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/). This da
 
 When was each ancient document written? This dataset publishes Nabu's normalized answer across its whole multilingual catalog: for each dated document (cited by its stable URN), the year span the corpus's own dating resolves to — signed years, negative for BCE — together with the verbatim upstream dating string it was derived from, so every normalization can be checked against its source. Time-series and period-stratified corpus work gets one uniform dating table instead of a dozen per-corpus conventions.
 
-Publishes the dating layer behind Nabu's timeline — ~700K dated documents as normalized signed year spans (negative = BCE) with the VERBATIM upstream dating string riding every row, so each normalization is checkable against its source. License classes open+attribution only — the nc slices AND the rundata ODbL lane (a copyleft class of its own) are excluded row-by-row, censused in nabu.eval; CC BY-SA 4.0 — the №R-24 carve-out carrying the share-alike lanes (edh, tla-hf, aes, ...).
+Publishes the dating layer behind Nabu's timeline — ~700K dated documents as normalized signed year spans (negative = BCE) with the VERBATIM upstream dating string riding every row, so each normalization is checkable against its source. License classes open+attribution only — the nc slices AND the rundata ODbL lane (a copyleft class of its own) are excluded row-by-row, censused in nabu.eval; CC BY-SA 4.0 — the share-alike carve-out (2026-08-11) carrying the share-alike lanes (edh, tla-hf, aes, ...).
 
 ## Maintenance
 
-re-derive after dating-moving events (sync waves, infer-dates rule changes — the №R-28 regnal upgrade lands here on its next build); the published-slice digest makes an unchanged projection a fingerprint no-op
+re-derive after dating-moving events (sync waves, infer-dates rule changes — the regnal-precision upgrade ruled 2026-08-11 lands here on its next build); the published-slice digest makes an unchanged projection a fingerprint no-op
 
 ## Provenance
 
 Own authorship — no canonical corpus inputs.
 
-Recipe: document-dates v1: project dated document_axes rows at URN grain, license classes open+attribution only, ordered (urn, axis row); published-slice sha256=f6499bcb447d00fd87e329563f7225aa598fc3c250dbb88307942160576c672b
+Recipe: document-dates v1: project dated document_axes rows at URN grain, license classes open+attribution only, ordered (urn, axis row); published-slice sha256=7ac41f4d672b9776e54ea25b7301b86e1b97a22f690095fb9fc02f31bbc43137
 
-Derivation fingerprint: `7f8873308e7c35eb7263da6140d147d5d5bc35a904b4dc55e5560629b5efa49e`.
+Derivation fingerprint: `f9aecf06d0fe70c65e5b8458f27e7b76d4955d1dfe60c0a4d25f8d44046aa728`.

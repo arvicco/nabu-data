@@ -154852,8 +154852,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -8.424973000000001,
-          41.550875000000005
+          -8.427227736193487,
+          41.54768458986333
         ]
       },
       "when": {
@@ -159712,6 +159712,7 @@
       "properties": {
         "title": "Corduba/Col. Patricia",
         "fclasses": [
+          "S",
           "P"
         ],
         "nabu_ref": "pleiades:256128"
@@ -202899,8 +202900,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          23.723914356100423,
-          37.97163725472171
+          23.723954796773654,
+          37.97164747289856
         ]
       },
       "when": {
@@ -212486,8 +212487,8 @@
       "properties": {
         "title": "Pelusium",
         "fclasses": [
-          "P",
           "S",
+          "P",
           "H"
         ],
         "nabu_ref": "pleiades:727192"
@@ -212521,8 +212522,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          32.5473404,
-          31.0427587
+          32.54710454970744,
+          31.042627089650125
         ]
       },
       "when": {
@@ -215584,14 +215585,6 @@
           ]
         },
         {
-          "toponym": "Herakleopolites",
-          "citations": [
-            {
-              "label": "papyri-ddbdp"
-            }
-          ]
-        },
-        {
           "toponym": "Oxyrhynchos (Oxyrhynchites, Ägypten)",
           "citations": [
             {
@@ -215807,14 +215800,6 @@
         },
         {
           "toponym": "Herakleopolites?",
-          "citations": [
-            {
-              "label": "papyri-ddbdp"
-            }
-          ]
-        },
-        {
-          "toponym": "Heraklepolites ?, Ägypten",
           "citations": [
             {
               "label": "papyri-ddbdp"
@@ -219056,14 +219041,6 @@
         },
         {
           "toponym": "Oxyrhynchos (Oxyrynchites, Ägypten)",
-          "citations": [
-            {
-              "label": "papyri-ddbdp"
-            }
-          ]
-        },
-        {
-          "toponym": "Oxyrhynchos (Ägypten, Oxyrhynchites)",
           "citations": [
             {
               "label": "papyri-ddbdp"
@@ -227320,7 +227297,7 @@
               "in": "0101"
             },
             "end": {
-              "in": "0306"
+              "in": "0303"
             }
           }
         ]
@@ -228753,6 +228730,46 @@
       }
     },
     {
+      "@id": "https://pleiades.stoa.org/places/756565",
+      "type": "Feature",
+      "properties": {
+        "title": "Diospolites Nomos",
+        "fclasses": [
+          "A"
+        ],
+        "nabu_ref": "pleiades:756565"
+      },
+      "names": [
+        {
+          "toponym": "Diopolites parvus",
+          "citations": [
+            {
+              "label": "papyri-ddbdp"
+            }
+          ]
+        }
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.27685537867955,
+          26.01244672309172
+        ]
+      },
+      "when": {
+        "timespans": [
+          {
+            "start": {
+              "in": "0222"
+            },
+            "end": {
+              "in": "0235"
+            }
+          }
+        ]
+      }
+    },
+    {
       "@id": "https://pleiades.stoa.org/places/756566",
       "type": "Feature",
       "properties": {
@@ -229147,7 +229164,7 @@
       },
       "names": [
         {
-          "toponym": "Fundort: Hypsele, Ägypten; Schreibort: Lykopolites, Ägypten",
+          "toponym": "Fundort: Hypsele (Hypselites) Ägypten; Schreibort: Lykopolites, Ägypten",
           "citations": [
             {
               "label": "papyri-ddbdp"
@@ -229204,14 +229221,6 @@
       "names": [
         {
           "toponym": "Itos (Thebais)",
-          "citations": [
-            {
-              "label": "papyri-ddbdp"
-            }
-          ]
-        },
-        {
-          "toponym": "Itos? (Thebais)",
           "citations": [
             {
               "label": "papyri-ddbdp"
@@ -232625,7 +232634,7 @@
         "timespans": [
           {
             "start": {
-              "in": "0101"
+              "in": "-0332"
             },
             "end": {
               "in": "0400"
@@ -233302,6 +233311,14 @@
       },
       "names": [
         {
+          "toponym": "Akoris (Hermopolites)",
+          "citations": [
+            {
+              "label": "papyri-ddbdp"
+            }
+          ]
+        },
+        {
           "toponym": "Dios Polis",
           "citations": [
             {
@@ -233411,6 +233428,14 @@
             {
               "label": "edh"
             },
+            {
+              "label": "papyri-ddbdp"
+            }
+          ]
+        },
+        {
+          "toponym": "Thebes (?)",
+          "citations": [
             {
               "label": "papyri-ddbdp"
             }
@@ -234106,6 +234131,46 @@
             },
             "end": {
               "in": "0138"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "https://pleiades.stoa.org/places/786055",
+      "type": "Feature",
+      "properties": {
+        "title": "Krokodilopolis/Terkythis",
+        "fclasses": [
+          "P"
+        ],
+        "nabu_ref": "pleiades:786055"
+      },
+      "names": [
+        {
+          "toponym": "Schreibort: Krokodilopolis (Pathyrites, Ägypten); Fundort: Pathyris (Pathyrites, Ägypten)",
+          "citations": [
+            {
+              "label": "papyri-ddbdp"
+            }
+          ]
+        }
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.439209500000004,
+          25.5524075
+        ]
+      },
+      "when": {
+        "timespans": [
+          {
+            "start": {
+              "in": "-0107"
+            },
+            "end": {
+              "in": "-0098"
             }
           }
         ]
@@ -254635,7 +254700,7 @@
       },
       "names": [
         {
-          "toponym": "Krokodilopolis (Arsinoites, Ägypten)",
+          "toponym": "Schreibort: Krokodilopolis (Pathyrites, Ägypten); Fundort: Pathyris (Pathyrites, Ägypten)",
           "citations": [
             {
               "label": "papyri-ddbdp"
@@ -262785,14 +262850,6 @@
         },
         {
           "toponym": "Oxyrhynchos (bzw. Mendesios?)",
-          "citations": [
-            {
-              "label": "papyri-ddbdp"
-            }
-          ]
-        },
-        {
-          "toponym": "Oxyrhynchos (Ägypten, Oxyrhynchites)",
           "citations": [
             {
               "label": "papyri-ddbdp"
@@ -271193,6 +271250,14 @@
       },
       "names": [
         {
+          "toponym": "Akoris (Hermopolites)",
+          "citations": [
+            {
+              "label": "papyri-ddbdp"
+            }
+          ]
+        },
+        {
           "toponym": "Fundort: Theben (Kerameia, Ägypten)",
           "citations": [
             {
@@ -271230,6 +271295,14 @@
             {
               "label": "elephantine"
             },
+            {
+              "label": "papyri-ddbdp"
+            }
+          ]
+        },
+        {
+          "toponym": "Thebes (?)",
+          "citations": [
             {
               "label": "papyri-ddbdp"
             }
@@ -271759,7 +271832,7 @@
               "in": "0101"
             },
             "end": {
-              "in": "0306"
+              "in": "0303"
             }
           }
         ]
@@ -273578,14 +273651,6 @@
           ]
         },
         {
-          "toponym": "Heraklepolites ?, Ägypten",
-          "citations": [
-            {
-              "label": "papyri-ddbdp"
-            }
-          ]
-        },
-        {
           "toponym": "Kaites oder Oxyrhynchites (?)",
           "citations": [
             {
@@ -275198,7 +275263,7 @@
         "timespans": [
           {
             "start": {
-              "in": "0101"
+              "in": "-0332"
             },
             "end": {
               "in": "0400"
@@ -280018,6 +280083,40 @@
             },
             "end": {
               "in": "-0134"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@id": "https://www.trismegistos.org/place/2998",
+      "type": "Feature",
+      "properties": {
+        "title": "Diospolites",
+        "fclasses": [
+          "A"
+        ],
+        "nabu_ref": "tm:2998"
+      },
+      "names": [
+        {
+          "toponym": "Diopolites parvus",
+          "citations": [
+            {
+              "label": "papyri-ddbdp"
+            }
+          ]
+        }
+      ],
+      "geometry": null,
+      "when": {
+        "timespans": [
+          {
+            "start": {
+              "in": "0222"
+            },
+            "end": {
+              "in": "0235"
             }
           }
         ]
@@ -292632,14 +292731,6 @@
           ]
         },
         {
-          "toponym": "Herakleopolites",
-          "citations": [
-            {
-              "label": "papyri-ddbdp"
-            }
-          ]
-        },
-        {
           "toponym": "Oxyrhynchos (Oxyrhynchites, Ägypten)",
           "citations": [
             {
@@ -293536,7 +293627,7 @@
       },
       "names": [
         {
-          "toponym": "Fundort: Hypsele, Ägypten; Schreibort: Lykopolites, Ägypten",
+          "toponym": "Fundort: Hypsele (Hypselites) Ägypten; Schreibort: Lykopolites, Ägypten",
           "citations": [
             {
               "label": "papyri-ddbdp"
@@ -293947,14 +294038,6 @@
       "names": [
         {
           "toponym": "Itos (Thebais)",
-          "citations": [
-            {
-              "label": "papyri-ddbdp"
-            }
-          ]
-        },
-        {
-          "toponym": "Itos? (Thebais)",
           "citations": [
             {
               "label": "papyri-ddbdp"

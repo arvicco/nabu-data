@@ -95,23 +95,23 @@
     "nabu_version": "1.6.0",
     "derivation": {
       "inputs": {},
-      "recipe": "document-dates v1: project dated document_axes rows at URN grain, license classes open+attribution only, ordered (urn, axis row); published-slice sha256=f6499bcb447d00fd87e329563f7225aa598fc3c250dbb88307942160576c672b",
-      "fingerprint": "7f8873308e7c35eb7263da6140d147d5d5bc35a904b4dc55e5560629b5efa49e"
+      "recipe": "document-dates v1: project dated document_axes rows at URN grain, license classes open+attribution only, ordered (urn, axis row); published-slice sha256=7ac41f4d672b9776e54ea25b7301b86e1b97a22f690095fb9fc02f31bbc43137",
+      "fingerprint": "f9aecf06d0fe70c65e5b8458f27e7b76d4955d1dfe60c0a4d25f8d44046aa728"
     },
     "anchoring": {
       "kind": "document-urn"
     },
     "tier": "gold-derived",
     "counts": {
-      "rows": 769196
+      "rows": 830658
     },
     "eval": {
-      "dated_axis_rows": 1334830,
-      "published_rows": 769195,
+      "dated_axis_rows": 1400049,
+      "published_rows": 830658,
       "excluded_rows": {
-        "nc": 532807,
+        "nc": 536093,
         "odbl": 30513,
-        "research_private": 2315
+        "research_private": 2785
       }
     }
   }

@@ -19,7 +19,7 @@
     {
       "title": "Digital Corpus of Sanskrit (DCS) — gold lemmatized CoNLL-U",
       "path": "https://github.com/OliverHellwig/sanskrit",
-      "version": "04e0778d3dc971030229179e25eea043d06ff397",
+      "version": "8aeed5a1343d0e48b64eb32af8c00e8c6eb29359",
       "licenses": [
         {
           "name": "CC BY 4.0 (verbatim, dcs/data/conllu/readme.md: \"The data in this directory are licensed under the Creative Commons BY 4.0 (CC BY 4.0) license.\"; citation requested: Oliver Hellwig, The Digital Corpus of Sanskrit, 2010-2024)"
@@ -151,19 +151,19 @@
     "derivation": {
       "inputs": {
         "dcs": {
-          "canonical_sha": "04e0778d3dc971030229179e25eea043d06ff397",
+          "canonical_sha": "8aeed5a1343d0e48b64eb32af8c00e8c6eb29359",
           "cone": "dcs"
         }
       },
       "recipe": "san/form-lemma v1: sweep the stored gold token annotations of every live DCS passage in the catalog (annotations_json; the dcs adapter's chapter-info.xml gold gate admits only gold-lexicon chapters, so every token is human-verified); keep exactly the tokens bearing a lemma — lemma-less sandhi-surface lines (CoNLL-U `_`, ~15% of raw token lines upstream) mint no row; read Unsandhied and LemmaId from MISC; count gold attestations at the distinct (Form, Unsandhied, Lemma, Lemma_ID, UPOS) grain into form-lemma.csv and at the (Lemma_ID, Lemma) grain into lemmas.csv.",
-      "fingerprint": "31cb919e257960d99154ca4520f88e75c83196953d4b7fa25029ff26212bccba"
+      "fingerprint": "eb9ec89b4c64ed3404e7d3657ef9d484f644c9886684b03772c172b0eb8d2a74"
     },
     "anchoring": {
       "kind": "none"
     },
     "tier": "gold-derived",
     "counts": {
-      "rows": 527364
+      "rows": 532529
     }
   }
 }
