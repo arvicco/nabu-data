@@ -1,0 +1,4904 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "mul-reflex-chains",
+  "title": "Reconstruction→reflex edges of the held etymological dictionaries, joined to the gold corpus",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [],
+  "resources": [
+    {
+      "name": "reflex_chains",
+      "path": "reflex-chains.csv.gz",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "gz",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Dictionary",
+            "type": "string"
+          },
+          {
+            "name": "URN",
+            "type": "string"
+          },
+          {
+            "name": "Headword",
+            "type": "string"
+          },
+          {
+            "name": "Headword_Language",
+            "type": "string"
+          },
+          {
+            "name": "Seq",
+            "type": "integer"
+          },
+          {
+            "name": "Lang_Code",
+            "type": "string"
+          },
+          {
+            "name": "Language_ID",
+            "type": "string"
+          },
+          {
+            "name": "Form",
+            "type": "string"
+          },
+          {
+            "name": "Roman",
+            "type": "string"
+          },
+          {
+            "name": "Form_Folded",
+            "type": "string"
+          },
+          {
+            "name": "Roman_Folded",
+            "type": "string"
+          },
+          {
+            "name": "Borrowed",
+            "type": "boolean"
+          },
+          {
+            "name": "Uncertain",
+            "type": "boolean"
+          },
+          {
+            "name": "Attested",
+            "type": "integer"
+          },
+          {
+            "name": "Attested_Via",
+            "type": "string"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build mul/reflex-chains",
+    "nabu_version": "1.6.0",
+    "derivation": {
+      "inputs": {},
+      "recipe": "reflex-chains v1: project dictionary_reflexes of live entries at (dictionary, entry, seq) grain, license classes open+attribution only, ordered (dictionary, entry id, seq); Attested = sum of lemma_rollup grade gold occurrences from open+attribution sources whose folded lemma equals the reflex word_folded, else roman_folded, under the same catalog language code (stored-key equality only); published-slice sha256=898086b03d8cafffbbd3956f1ecfebcb130a6a3c9b6236d30577136795ec8039",
+      "fingerprint": "e1fba7a0337e82e32db90e7a0540066b10d22d54eac76f0dfb4114c4d5d67898"
+    },
+    "anchoring": {
+      "kind": "none"
+    },
+    "tier": "gold-derived",
+    "counts": {
+      "rows": 1226690
+    },
+    "eval": {
+      "reflex_rows": 1236175,
+      "withdrawn_entry_rows_skipped": 0,
+      "published_rows": 1226690,
+      "published_rows_by_source": {
+        "iecor": 26325,
+        "liv": 374,
+        "sabellic-loans": 85,
+        "starling": 126103,
+        "westoldturkic": 1936,
+        "wiktionary-akk": 2197,
+        "wiktionary-bo": 307,
+        "wiktionary-cu": 2210,
+        "wiktionary-hit": 38,
+        "wiktionary-recon": 1045368,
+        "wiktionary-sux": 247,
+        "wold": 21500
+      },
+      "excluded_rows": {
+        "nc": 9485
+      },
+      "excluded_rows_by_source": {
+        "nc/derom": 3582,
+        "nc/edl": 2653,
+        "nc/mw": 3250
+      },
+      "attestation": {
+        "attested": 36686,
+        "via_form": 36490,
+        "via_roman": 196,
+        "display_only": 1139,
+        "attested_only_in_screened_sources": 26315
+      },
+      "attestation_by_language": {
+        "aae": {
+          "attested": 0,
+          "missed": 170
+        },
+        "aav": {
+          "attested": 0,
+          "missed": 67
+        },
+        "ab": {
+          "attested": 0,
+          "missed": 460
+        },
+        "abe": {
+          "attested": 0,
+          "missed": 2
+        },
+        "abq": {
+          "attested": 0,
+          "missed": 405
+        },
+        "abs": {
+          "attested": 0,
+          "missed": 26
+        },
+        "acw": {
+          "attested": 0,
+          "missed": 27
+        },
+        "acy": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ady": {
+          "attested": 0,
+          "missed": 445
+        },
+        "ae": {
+          "attested": 0,
+          "missed": 1533
+        },
+        "ae-old": {
+          "attested": 0,
+          "missed": 161
+        },
+        "ae-yng": {
+          "attested": 0,
+          "missed": 289
+        },
+        "aee": {
+          "attested": 0,
+          "missed": 7
+        },
+        "af": {
+          "attested": 0,
+          "missed": 9007
+        },
+        "afb": {
+          "attested": 0,
+          "missed": 2
+        },
+        "agx": {
+          "attested": 0,
+          "missed": 630
+        },
+        "aho": {
+          "attested": 0,
+          "missed": 43
+        },
+        "ahr": {
+          "attested": 0,
+          "missed": 14
+        },
+        "aib": {
+          "attested": 0,
+          "missed": 1
+        },
+        "aig": {
+          "attested": 0,
+          "missed": 40
+        },
+        "aih": {
+          "attested": 0,
+          "missed": 7
+        },
+        "aii": {
+          "attested": 0,
+          "missed": 24
+        },
+        "ain": {
+          "attested": 0,
+          "missed": 13
+        },
+        "aio": {
+          "attested": 0,
+          "missed": 3
+        },
+        "ak": {
+          "attested": 0,
+          "missed": 4
+        },
+        "ake": {
+          "attested": 0,
+          "missed": 8
+        },
+        "akk": {
+          "attested": 8,
+          "missed": 41
+        },
+        "akk-nas": {
+          "attested": 0,
+          "missed": 1
+        },
+        "akl": {
+          "attested": 0,
+          "missed": 2
+        },
+        "akt": {
+          "attested": 0,
+          "missed": 6
+        },
+        "akv": {
+          "attested": 0,
+          "missed": 369
+        },
+        "ale": {
+          "attested": 0,
+          "missed": 15
+        },
+        "aln": {
+          "attested": 0,
+          "missed": 178
+        },
+        "alr": {
+          "attested": 0,
+          "missed": 1125
+        },
+        "als": {
+          "attested": 0,
+          "missed": 46
+        },
+        "alt": {
+          "attested": 0,
+          "missed": 1079
+        },
+        "am": {
+          "attested": 0,
+          "missed": 196
+        },
+        "amh": {
+          "attested": 0,
+          "missed": 114
+        },
+        "ami": {
+          "attested": 0,
+          "missed": 32
+        },
+        "ams": {
+          "attested": 0,
+          "missed": 2
+        },
+        "an": {
+          "attested": 0,
+          "missed": 35
+        },
+        "ang": {
+          "attested": 4,
+          "missed": 19117
+        },
+        "ani": {
+          "attested": 0,
+          "missed": 341
+        },
+        "anp": {
+          "attested": 0,
+          "missed": 4
+        },
+        "aoc": {
+          "attested": 0,
+          "missed": 8
+        },
+        "aot": {
+          "attested": 0,
+          "missed": 8
+        },
+        "apc": {
+          "attested": 0,
+          "missed": 2
+        },
+        "apy": {
+          "attested": 0,
+          "missed": 1
+        },
+        "aqc": {
+          "attested": 0,
+          "missed": 412
+        },
+        "ar": {
+          "attested": 0,
+          "missed": 207
+        },
+        "ara": {
+          "attested": 0,
+          "missed": 1775
+        },
+        "arc": {
+          "attested": 0,
+          "missed": 74
+        },
+        "arc-bib": {
+          "attested": 0,
+          "missed": 3
+        },
+        "arc-cpa": {
+          "attested": 0,
+          "missed": 1
+        },
+        "arc-imp": {
+          "attested": 0,
+          "missed": 3
+        },
+        "arc-jla": {
+          "attested": 0,
+          "missed": 1
+        },
+        "arq": {
+          "attested": 0,
+          "missed": 3
+        },
+        "arw": {
+          "attested": 0,
+          "missed": 135
+        },
+        "ary": {
+          "attested": 0,
+          "missed": 706
+        },
+        "arz": {
+          "attested": 0,
+          "missed": 3
+        },
+        "as": {
+          "attested": 0,
+          "missed": 69
+        },
+        "ask": {
+          "attested": 0,
+          "missed": 179
+        },
+        "asm": {
+          "attested": 0,
+          "missed": 170
+        },
+        "ast": {
+          "attested": 0,
+          "missed": 81
+        },
+        "atb": {
+          "attested": 0,
+          "missed": 1
+        },
+        "atn": {
+          "attested": 0,
+          "missed": 1
+        },
+        "atv": {
+          "attested": 0,
+          "missed": 3
+        },
+        "av": {
+          "attested": 0,
+          "missed": 546
+        },
+        "ava": {
+          "attested": 0,
+          "missed": 355
+        },
+        "avd": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ave": {
+          "attested": 0,
+          "missed": 146
+        },
+        "awa": {
+          "attested": 0,
+          "missed": 18
+        },
+        "awn": {
+          "attested": 0,
+          "missed": 3
+        },
+        "axm": {
+          "attested": 0,
+          "missed": 53
+        },
+        "az": {
+          "attested": 0,
+          "missed": 1081
+        },
+        "azj": {
+          "attested": 0,
+          "missed": 22
+        },
+        "ba": {
+          "attested": 0,
+          "missed": 1107
+        },
+        "bal": {
+          "attested": 0,
+          "missed": 61
+        },
+        "ban": {
+          "attested": 0,
+          "missed": 63
+        },
+        "bar": {
+          "attested": 0,
+          "missed": 7954
+        },
+        "bat-eas": {
+          "attested": 0,
+          "missed": 1
+        },
+        "bat-pro": {
+          "attested": 0,
+          "missed": 19
+        },
+        "bbc": {
+          "attested": 0,
+          "missed": 2
+        },
+        "bbl": {
+          "attested": 0,
+          "missed": 413
+        },
+        "bca": {
+          "attested": 0,
+          "missed": 5
+        },
+        "bcl": {
+          "attested": 0,
+          "missed": 13
+        },
+        "bdk": {
+          "attested": 0,
+          "missed": 383
+        },
+        "bdq": {
+          "attested": 0,
+          "missed": 1
+        },
+        "be": {
+          "attested": 0,
+          "missed": 8139
+        },
+        "bel": {
+          "attested": 0,
+          "missed": 170
+        },
+        "ben": {
+          "attested": 0,
+          "missed": 173
+        },
+        "bew": {
+          "attested": 0,
+          "missed": 33
+        },
+        "bg": {
+          "attested": 0,
+          "missed": 5663
+        },
+        "bgn": {
+          "attested": 0,
+          "missed": 169
+        },
+        "bh": {
+          "attested": 0,
+          "missed": 24
+        },
+        "bhd": {
+          "attested": 0,
+          "missed": 14
+        },
+        "bho": {
+          "attested": 0,
+          "missed": 171
+        },
+        "bhw": {
+          "attested": 0,
+          "missed": 2
+        },
+        "bi": {
+          "attested": 0,
+          "missed": 272
+        },
+        "bkd": {
+          "attested": 0,
+          "missed": 1
+        },
+        "blt": {
+          "attested": 0,
+          "missed": 25
+        },
+        "bn": {
+          "attested": 0,
+          "missed": 108
+        },
+        "bnn": {
+          "attested": 0,
+          "missed": 10
+        },
+        "bnt": {
+          "attested": 0,
+          "missed": 31
+        },
+        "bnt-phu": {
+          "attested": 0,
+          "missed": 12
+        },
+        "bod": {
+          "attested": 0,
+          "missed": 54
+        },
+        "bph": {
+          "attested": 0,
+          "missed": 147
+        },
+        "bqi": {
+          "attested": 0,
+          "missed": 204
+        },
+        "br": {
+          "attested": 0,
+          "missed": 130
+        },
+        "bra": {
+          "attested": 0,
+          "missed": 1
+        },
+        "brc": {
+          "attested": 0,
+          "missed": 1342
+        },
+        "bre": {
+          "attested": 0,
+          "missed": 493
+        },
+        "brh": {
+          "attested": 0,
+          "missed": 182
+        },
+        "bsh": {
+          "attested": 0,
+          "missed": 304
+        },
+        "bsh-kat": {
+          "attested": 0,
+          "missed": 82
+        },
+        "bsy": {
+          "attested": 0,
+          "missed": 1
+        },
+        "bua": {
+          "attested": 0,
+          "missed": 1736
+        },
+        "bug": {
+          "attested": 0,
+          "missed": 1
+        },
+        "bul": {
+          "attested": 129,
+          "missed": 187
+        },
+        "bxd": {
+          "attested": 0,
+          "missed": 2
+        },
+        "bzj": {
+          "attested": 0,
+          "missed": 3
+        },
+        "ca": {
+          "attested": 0,
+          "missed": 520
+        },
+        "car": {
+          "attested": 0,
+          "missed": 665
+        },
+        "cat": {
+          "attested": 0,
+          "missed": 344
+        },
+        "cau-nec-pro": {
+          "attested": 0,
+          "missed": 3
+        },
+        "cau-nkh-pro": {
+          "attested": 0,
+          "missed": 1
+        },
+        "cau-nwc-pro": {
+          "attested": 0,
+          "missed": 1
+        },
+        "cbk": {
+          "attested": 0,
+          "missed": 3
+        },
+        "ccc": {
+          "attested": 0,
+          "missed": 2
+        },
+        "ccm": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ccs-pro": {
+          "attested": 0,
+          "missed": 4
+        },
+        "cdy": {
+          "attested": 0,
+          "missed": 8
+        },
+        "ce": {
+          "attested": 0,
+          "missed": 779
+        },
+        "ceb": {
+          "attested": 0,
+          "missed": 95
+        },
+        "cel-bry-pro": {
+          "attested": 0,
+          "missed": 87
+        },
+        "cel-gau": {
+          "attested": 0,
+          "missed": 47
+        },
+        "cel-pro": {
+          "attested": 0,
+          "missed": 1061
+        },
+        "ces": {
+          "attested": 0,
+          "missed": 418
+        },
+        "chg": {
+          "attested": 0,
+          "missed": 27
+        },
+        "chk": {
+          "attested": 0,
+          "missed": 24
+        },
+        "chm-pro": {
+          "attested": 0,
+          "missed": 2
+        },
+        "chr": {
+          "attested": 0,
+          "missed": 24
+        },
+        "chu": {
+          "attested": 469,
+          "missed": 4265
+        },
+        "cic": {
+          "attested": 0,
+          "missed": 62
+        },
+        "cim": {
+          "attested": 0,
+          "missed": 5582
+        },
+        "cji": {
+          "attested": 0,
+          "missed": 436
+        },
+        "cjs": {
+          "attested": 0,
+          "missed": 628
+        },
+        "ckb": {
+          "attested": 0,
+          "missed": 352
+        },
+        "ckm": {
+          "attested": 0,
+          "missed": 51
+        },
+        "ckt": {
+          "attested": 0,
+          "missed": 1742
+        },
+        "ckv": {
+          "attested": 0,
+          "missed": 14
+        },
+        "clh": {
+          "attested": 0,
+          "missed": 2
+        },
+        "cmg": {
+          "attested": 0,
+          "missed": 2181
+        },
+        "cmn": {
+          "attested": 0,
+          "missed": 1603
+        },
+        "cmn-TW": {
+          "attested": 0,
+          "missed": 10
+        },
+        "cms": {
+          "attested": 0,
+          "missed": 13
+        },
+        "cnx": {
+          "attested": 0,
+          "missed": 192
+        },
+        "co": {
+          "attested": 0,
+          "missed": 3
+        },
+        "cop": {
+          "attested": 0,
+          "missed": 4
+        },
+        "cor": {
+          "attested": 0,
+          "missed": 221
+        },
+        "cpg": {
+          "attested": 0,
+          "missed": 179
+        },
+        "cpi": {
+          "attested": 0,
+          "missed": 47
+        },
+        "crh": {
+          "attested": 0,
+          "missed": 9
+        },
+        "crp-cpr": {
+          "attested": 0,
+          "missed": 19
+        },
+        "crp-cpr-kya": {
+          "attested": 0,
+          "missed": 1
+        },
+        "crp-mar": {
+          "attested": 0,
+          "missed": 402
+        },
+        "crp-rsn": {
+          "attested": 0,
+          "missed": 87
+        },
+        "crp-slb": {
+          "attested": 0,
+          "missed": 135
+        },
+        "crp-tpr": {
+          "attested": 0,
+          "missed": 8
+        },
+        "crs": {
+          "attested": 0,
+          "missed": 9
+        },
+        "cs": {
+          "attested": 0,
+          "missed": 6050
+        },
+        "cs-ear": {
+          "attested": 0,
+          "missed": 1
+        },
+        "csb": {
+          "attested": 0,
+          "missed": 2567
+        },
+        "ctu": {
+          "attested": 0,
+          "missed": 90
+        },
+        "cu-bgm": {
+          "attested": 0,
+          "missed": 19
+        },
+        "cv": {
+          "attested": 0,
+          "missed": 907
+        },
+        "cy": {
+          "attested": 0,
+          "missed": 2758
+        },
+        "cym": {
+          "attested": 0,
+          "missed": 179
+        },
+        "cyo": {
+          "attested": 0,
+          "missed": 1
+        },
+        "czk": {
+          "attested": 0,
+          "missed": 16
+        },
+        "da": {
+          "attested": 0,
+          "missed": 10032
+        },
+        "dan": {
+          "attested": 38,
+          "missed": 131
+        },
+        "dar": {
+          "attested": 0,
+          "missed": 568
+        },
+        "dcr": {
+          "attested": 0,
+          "missed": 5756
+        },
+        "ddj": {
+          "attested": 0,
+          "missed": 87
+        },
+        "ddo": {
+          "attested": 0,
+          "missed": 524
+        },
+        "de": {
+          "attested": 0,
+          "missed": 33437
+        },
+        "de-CH": {
+          "attested": 0,
+          "missed": 16
+        },
+        "de-at": {
+          "attested": 0,
+          "missed": 4
+        },
+        "deu": {
+          "attested": 0,
+          "missed": 513
+        },
+        "djd": {
+          "attested": 0,
+          "missed": 233
+        },
+        "djk": {
+          "attested": 0,
+          "missed": 1745
+        },
+        "dlg": {
+          "attested": 0,
+          "missed": 464
+        },
+        "dlm": {
+          "attested": 0,
+          "missed": 157
+        },
+        "dmk": {
+          "attested": 0,
+          "missed": 1
+        },
+        "dmw": {
+          "attested": 0,
+          "missed": 23
+        },
+        "dra-pro": {
+          "attested": 0,
+          "missed": 1
+        },
+        "drt": {
+          "attested": 0,
+          "missed": 1
+        },
+        "dru": {
+          "attested": 0,
+          "missed": 5
+        },
+        "dsb": {
+          "attested": 0,
+          "missed": 2804
+        },
+        "dta": {
+          "attested": 0,
+          "missed": 930
+        },
+        "dum": {
+          "attested": 0,
+          "missed": 15858
+        },
+        "dus": {
+          "attested": 0,
+          "missed": 331
+        },
+        "duu": {
+          "attested": 0,
+          "missed": 1
+        },
+        "dv": {
+          "attested": 0,
+          "missed": 29
+        },
+        "dz": {
+          "attested": 0,
+          "missed": 4
+        },
+        "ecr": {
+          "attested": 0,
+          "missed": 1
+        },
+        "egl": {
+          "attested": 0,
+          "missed": 29
+        },
+        "egy": {
+          "attested": 0,
+          "missed": 2
+        },
+        "el": {
+          "attested": 0,
+          "missed": 425
+        },
+        "el-crt": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ell": {
+          "attested": 0,
+          "missed": 751
+        },
+        "elx": {
+          "attested": 0,
+          "missed": 13
+        },
+        "elx-ach": {
+          "attested": 0,
+          "missed": 8
+        },
+        "elx-neo": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ems": {
+          "attested": 0,
+          "missed": 1
+        },
+        "en": {
+          "attested": 0,
+          "missed": 91479
+        },
+        "en-HK": {
+          "attested": 0,
+          "missed": 6
+        },
+        "en-geo": {
+          "attested": 0,
+          "missed": 4
+        },
+        "eng": {
+          "attested": 0,
+          "missed": 1331
+        },
+        "enm": {
+          "attested": 0,
+          "missed": 66000
+        },
+        "enm-esc": {
+          "attested": 0,
+          "missed": 76
+        },
+        "enm-nor": {
+          "attested": 0,
+          "missed": 6
+        },
+        "eo": {
+          "attested": 0,
+          "missed": 350
+        },
+        "es": {
+          "attested": 0,
+          "missed": 2699
+        },
+        "esh": {
+          "attested": 0,
+          "missed": 4
+        },
+        "esu": {
+          "attested": 0,
+          "missed": 27
+        },
+        "et": {
+          "attested": 0,
+          "missed": 1139
+        },
+        "ett": {
+          "attested": 0,
+          "missed": 10
+        },
+        "eu": {
+          "attested": 0,
+          "missed": 13
+        },
+        "eve": {
+          "attested": 0,
+          "missed": 1270
+        },
+        "evn": {
+          "attested": 0,
+          "missed": 1673
+        },
+        "fa": {
+          "attested": 0,
+          "missed": 662
+        },
+        "fa-cls": {
+          "attested": 0,
+          "missed": 220
+        },
+        "fa-ira": {
+          "attested": 0,
+          "missed": 63
+        },
+        "fao": {
+          "attested": 0,
+          "missed": 173
+        },
+        "far": {
+          "attested": 0,
+          "missed": 2
+        },
+        "fas": {
+          "attested": 0,
+          "missed": 220
+        },
+        "fax": {
+          "attested": 0,
+          "missed": 68
+        },
+        "fay": {
+          "attested": 0,
+          "missed": 172
+        },
+        "fi": {
+          "attested": 0,
+          "missed": 1620
+        },
+        "fit": {
+          "attested": 0,
+          "missed": 3
+        },
+        "fkv": {
+          "attested": 0,
+          "missed": 13
+        },
+        "fng": {
+          "attested": 0,
+          "missed": 28
+        },
+        "fo": {
+          "attested": 0,
+          "missed": 5361
+        },
+        "fon": {
+          "attested": 0,
+          "missed": 4
+        },
+        "fpe": {
+          "attested": 0,
+          "missed": 760
+        },
+        "fr": {
+          "attested": 0,
+          "missed": 6078
+        },
+        "fra": {
+          "attested": 0,
+          "missed": 1334
+        },
+        "frk": {
+          "attested": 0,
+          "missed": 71
+        },
+        "frm": {
+          "attested": 0,
+          "missed": 4024
+        },
+        "fro": {
+          "attested": 0,
+          "missed": 3481
+        },
+        "fro-nor": {
+          "attested": 0,
+          "missed": 35
+        },
+        "fro-pic": {
+          "attested": 0,
+          "missed": 8
+        },
+        "frp": {
+          "attested": 0,
+          "missed": 223
+        },
+        "frr": {
+          "attested": 0,
+          "missed": 3903
+        },
+        "frr-fam": {
+          "attested": 0,
+          "missed": 2
+        },
+        "frr-goe": {
+          "attested": 0,
+          "missed": 2
+        },
+        "frr-hel": {
+          "attested": 0,
+          "missed": 1
+        },
+        "frr-kar": {
+          "attested": 0,
+          "missed": 2
+        },
+        "frr-syl": {
+          "attested": 0,
+          "missed": 2
+        },
+        "frr-wie": {
+          "attested": 0,
+          "missed": 3
+        },
+        "frs": {
+          "attested": 0,
+          "missed": 177
+        },
+        "fur": {
+          "attested": 0,
+          "missed": 201
+        },
+        "fwe": {
+          "attested": 0,
+          "missed": 9
+        },
+        "fy": {
+          "attested": 0,
+          "missed": 10098
+        },
+        "ga": {
+          "attested": 0,
+          "missed": 5044
+        },
+        "gag": {
+          "attested": 0,
+          "missed": 673
+        },
+        "gau": {
+          "attested": 0,
+          "missed": 216
+        },
+        "gbm": {
+          "attested": 0,
+          "missed": 22
+        },
+        "gbz": {
+          "attested": 0,
+          "missed": 3
+        },
+        "gcf": {
+          "attested": 0,
+          "missed": 18
+        },
+        "gcr": {
+          "attested": 0,
+          "missed": 35
+        },
+        "gd": {
+          "attested": 0,
+          "missed": 3951
+        },
+        "gdb": {
+          "attested": 0,
+          "missed": 318
+        },
+        "gdo": {
+          "attested": 0,
+          "missed": 259
+        },
+        "geh": {
+          "attested": 0,
+          "missed": 6
+        },
+        "gem": {
+          "attested": 0,
+          "missed": 49
+        },
+        "gem-pro": {
+          "attested": 0,
+          "missed": 2348
+        },
+        "gem-sue": {
+          "attested": 0,
+          "missed": 3
+        },
+        "gez": {
+          "attested": 0,
+          "missed": 11
+        },
+        "gha": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ghc": {
+          "attested": 0,
+          "missed": 38
+        },
+        "gil": {
+          "attested": 0,
+          "missed": 18
+        },
+        "gin": {
+          "attested": 0,
+          "missed": 449
+        },
+        "gkm": {
+          "attested": 0,
+          "missed": 60
+        },
+        "gl": {
+          "attested": 0,
+          "missed": 442
+        },
+        "gla": {
+          "attested": 0,
+          "missed": 173
+        },
+        "gld": {
+          "attested": 0,
+          "missed": 1453
+        },
+        "gle": {
+          "attested": 0,
+          "missed": 171
+        },
+        "glh": {
+          "attested": 0,
+          "missed": 178
+        },
+        "glk": {
+          "attested": 0,
+          "missed": 24
+        },
+        "glv": {
+          "attested": 0,
+          "missed": 174
+        },
+        "gme-bur": {
+          "attested": 0,
+          "missed": 7
+        },
+        "gme-cgo": {
+          "attested": 0,
+          "missed": 62
+        },
+        "gmh": {
+          "attested": 10240,
+          "missed": 17241
+        },
+        "gml": {
+          "attested": 9691,
+          "missed": 10873
+        },
+        "gmq": {
+          "attested": 0,
+          "missed": 74
+        },
+        "gmq-gut": {
+          "attested": 0,
+          "missed": 1759
+        },
+        "gmq-jmk": {
+          "attested": 0,
+          "missed": 475
+        },
+        "gmq-mno": {
+          "attested": 0,
+          "missed": 210
+        },
+        "gmq-oda": {
+          "attested": 0,
+          "missed": 2857
+        },
+        "gmq-ogt": {
+          "attested": 0,
+          "missed": 391
+        },
+        "gmq-osw": {
+          "attested": 0,
+          "missed": 6739
+        },
+        "gmq-osw-lat": {
+          "attested": 0,
+          "missed": 1
+        },
+        "gmq-pro": {
+          "attested": 0,
+          "missed": 395
+        },
+        "gmq-scy": {
+          "attested": 0,
+          "missed": 741
+        },
+        "gmw-bgh": {
+          "attested": 0,
+          "missed": 19
+        },
+        "gmw-cfr": {
+          "attested": 0,
+          "missed": 13289
+        },
+        "gmw-ecg": {
+          "attested": 0,
+          "missed": 1386
+        },
+        "gmw-fin": {
+          "attested": 0,
+          "missed": 134
+        },
+        "gmw-gts": {
+          "attested": 0,
+          "missed": 280
+        },
+        "gmw-jdt": {
+          "attested": 0,
+          "missed": 2004
+        },
+        "gmw-msc": {
+          "attested": 0,
+          "missed": 30622
+        },
+        "gmw-pro": {
+          "attested": 0,
+          "missed": 4930
+        },
+        "gmw-rfr": {
+          "attested": 0,
+          "missed": 3393
+        },
+        "gmw-stm": {
+          "attested": 0,
+          "missed": 34
+        },
+        "gmw-tsx": {
+          "attested": 0,
+          "missed": 670
+        },
+        "gmw-vog": {
+          "attested": 0,
+          "missed": 10
+        },
+        "gmw-zps": {
+          "attested": 0,
+          "missed": 266
+        },
+        "gmy": {
+          "attested": 0,
+          "missed": 121
+        },
+        "goh": {
+          "attested": 0,
+          "missed": 17124
+        },
+        "gor": {
+          "attested": 0,
+          "missed": 5
+        },
+        "got": {
+          "attested": 0,
+          "missed": 2967
+        },
+        "gqi": {
+          "attested": 0,
+          "missed": 22
+        },
+        "grc": {
+          "attested": 0,
+          "missed": 3141
+        },
+        "grc-aeo": {
+          "attested": 0,
+          "missed": 18
+        },
+        "grc-arp": {
+          "attested": 0,
+          "missed": 1
+        },
+        "grc-att": {
+          "attested": 0,
+          "missed": 16
+        },
+        "grc-dor": {
+          "attested": 0,
+          "missed": 14
+        },
+        "grc-ela": {
+          "attested": 0,
+          "missed": 1
+        },
+        "grc-epc": {
+          "attested": 0,
+          "missed": 15
+        },
+        "grc-ion": {
+          "attested": 0,
+          "missed": 5
+        },
+        "grc-koi": {
+          "attested": 0,
+          "missed": 1
+        },
+        "grc-kre": {
+          "attested": 0,
+          "missed": 1
+        },
+        "grk": {
+          "attested": 0,
+          "missed": 1
+        },
+        "grk-ita": {
+          "attested": 0,
+          "missed": 14
+        },
+        "grk-mar": {
+          "attested": 0,
+          "missed": 8
+        },
+        "grk-pro": {
+          "attested": 0,
+          "missed": 1176
+        },
+        "gsw": {
+          "attested": 0,
+          "missed": 8564
+        },
+        "gsw-fr": {
+          "attested": 0,
+          "missed": 1016
+        },
+        "gu": {
+          "attested": 0,
+          "missed": 94
+        },
+        "gul": {
+          "attested": 0,
+          "missed": 48
+        },
+        "gv": {
+          "attested": 0,
+          "missed": 1817
+        },
+        "gwc": {
+          "attested": 0,
+          "missed": 176
+        },
+        "gwt": {
+          "attested": 0,
+          "missed": 171
+        },
+        "gyn": {
+          "attested": 0,
+          "missed": 721
+        },
+        "hac": {
+          "attested": 0,
+          "missed": 240
+        },
+        "hak": {
+          "attested": 0,
+          "missed": 11
+        },
+        "hau": {
+          "attested": 0,
+          "missed": 108
+        },
+        "haw": {
+          "attested": 0,
+          "missed": 291
+        },
+        "haz": {
+          "attested": 0,
+          "missed": 4
+        },
+        "hbo": {
+          "attested": 0,
+          "missed": 30
+        },
+        "he": {
+          "attested": 0,
+          "missed": 87
+        },
+        "he-IL": {
+          "attested": 0,
+          "missed": 8
+        },
+        "he-mis": {
+          "attested": 0,
+          "missed": 19
+        },
+        "hi": {
+          "attested": 0,
+          "missed": 219
+        },
+        "hif": {
+          "attested": 0,
+          "missed": 293
+        },
+        "hil": {
+          "attested": 0,
+          "missed": 11
+        },
+        "hin": {
+          "attested": 0,
+          "missed": 176
+        },
+        "hit": {
+          "attested": 0,
+          "missed": 880
+        },
+        "hmn": {
+          "attested": 0,
+          "missed": 1
+        },
+        "hmn-pro": {
+          "attested": 0,
+          "missed": 5
+        },
+        "hmx-mie-pro": {
+          "attested": 0,
+          "missed": 8
+        },
+        "hmx-pro": {
+          "attested": 0,
+          "missed": 21
+        },
+        "hnj": {
+          "attested": 0,
+          "missed": 3
+        },
+        "hns": {
+          "attested": 0,
+          "missed": 213
+        },
+        "hr": {
+          "attested": 0,
+          "missed": 1
+        },
+        "hrv": {
+          "attested": 0,
+          "missed": 239
+        },
+        "hrx": {
+          "attested": 0,
+          "missed": 6633
+        },
+        "hrz": {
+          "attested": 0,
+          "missed": 5
+        },
+        "hsb": {
+          "attested": 0,
+          "missed": 2730
+        },
+        "ht": {
+          "attested": 0,
+          "missed": 27
+        },
+        "hu": {
+          "attested": 0,
+          "missed": 865
+        },
+        "hun": {
+          "attested": 0,
+          "missed": 1565
+        },
+        "huq": {
+          "attested": 0,
+          "missed": 1
+        },
+        "huz": {
+          "attested": 0,
+          "missed": 508
+        },
+        "hwc": {
+          "attested": 0,
+          "missed": 85
+        },
+        "hy": {
+          "attested": 0,
+          "missed": 498
+        },
+        "hye": {
+          "attested": 0,
+          "missed": 170
+        },
+        "hyw": {
+          "attested": 0,
+          "missed": 170
+        },
+        "hyx-pro": {
+          "attested": 0,
+          "missed": 48
+        },
+        "ia": {
+          "attested": 0,
+          "missed": 3
+        },
+        "iba": {
+          "attested": 0,
+          "missed": 10
+        },
+        "id": {
+          "attested": 0,
+          "missed": 1022
+        },
+        "ie": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ii": {
+          "attested": 0,
+          "missed": 12
+        },
+        "iir-nur-pro": {
+          "attested": 0,
+          "missed": 105
+        },
+        "iir-pro": {
+          "attested": 0,
+          "missed": 2100
+        },
+        "ili": {
+          "attested": 0,
+          "missed": 3
+        },
+        "ilo": {
+          "attested": 0,
+          "missed": 3
+        },
+        "ims": {
+          "attested": 0,
+          "missed": 17
+        },
+        "imy": {
+          "attested": 0,
+          "missed": 4
+        },
+        "inc-apa": {
+          "attested": 0,
+          "missed": 4
+        },
+        "inc-ash": {
+          "attested": 0,
+          "missed": 20
+        },
+        "inc-hnd": {
+          "attested": 0,
+          "missed": 30
+        },
+        "inc-kho": {
+          "attested": 0,
+          "missed": 3
+        },
+        "inc-mas": {
+          "attested": 0,
+          "missed": 1
+        },
+        "inc-mbn": {
+          "attested": 0,
+          "missed": 2
+        },
+        "inc-mit": {
+          "attested": 0,
+          "missed": 1
+        },
+        "inc-oaw": {
+          "attested": 0,
+          "missed": 14
+        },
+        "inc-obn": {
+          "attested": 0,
+          "missed": 2
+        },
+        "inc-ogu": {
+          "attested": 0,
+          "missed": 23
+        },
+        "inc-ohi": {
+          "attested": 0,
+          "missed": 3
+        },
+        "inc-opa": {
+          "attested": 0,
+          "missed": 1
+        },
+        "inc-pro": {
+          "attested": 0,
+          "missed": 2041
+        },
+        "ine": {
+          "attested": 0,
+          "missed": 53
+        },
+        "ine-ana-pro": {
+          "attested": 0,
+          "missed": 105
+        },
+        "ine-bsl-pro": {
+          "attested": 0,
+          "missed": 1120
+        },
+        "ine-pae": {
+          "attested": 0,
+          "missed": 2
+        },
+        "ine-pro": {
+          "attested": 0,
+          "missed": 6144
+        },
+        "ine-toc-pro": {
+          "attested": 0,
+          "missed": 249
+        },
+        "inh": {
+          "attested": 0,
+          "missed": 670
+        },
+        "io": {
+          "attested": 0,
+          "missed": 409
+        },
+        "ira": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ira-mpr-pro": {
+          "attested": 0,
+          "missed": 8
+        },
+        "ira-pro": {
+          "attested": 0,
+          "missed": 1568
+        },
+        "ira-shr-pro": {
+          "attested": 0,
+          "missed": 3
+        },
+        "ira-shy-pro": {
+          "attested": 0,
+          "missed": 3
+        },
+        "ira-sym-pro": {
+          "attested": 0,
+          "missed": 3
+        },
+        "iru": {
+          "attested": 0,
+          "missed": 20
+        },
+        "is": {
+          "attested": 0,
+          "missed": 7545
+        },
+        "isk": {
+          "attested": 0,
+          "missed": 14
+        },
+        "isl": {
+          "attested": 109,
+          "missed": 65
+        },
+        "ist": {
+          "attested": 0,
+          "missed": 8
+        },
+        "it": {
+          "attested": 0,
+          "missed": 1787
+        },
+        "ita": {
+          "attested": 0,
+          "missed": 267
+        },
+        "itc-ala": {
+          "attested": 0,
+          "missed": 15
+        },
+        "itc-lan": {
+          "attested": 0,
+          "missed": 1
+        },
+        "itc-ola": {
+          "attested": 0,
+          "missed": 96
+        },
+        "itc-pra": {
+          "attested": 0,
+          "missed": 4
+        },
+        "itc-pro": {
+          "attested": 0,
+          "missed": 1504
+        },
+        "itc-psa": {
+          "attested": 0,
+          "missed": 11
+        },
+        "itc-sbl": {
+          "attested": 0,
+          "missed": 1
+        },
+        "itl": {
+          "attested": 0,
+          "missed": 643
+        },
+        "ium": {
+          "attested": 0,
+          "missed": 7
+        },
+        "izh": {
+          "attested": 0,
+          "missed": 176
+        },
+        "ja": {
+          "attested": 0,
+          "missed": 6475
+        },
+        "jam": {
+          "attested": 0,
+          "missed": 544
+        },
+        "jav": {
+          "attested": 0,
+          "missed": 187
+        },
+        "jbn": {
+          "attested": 0,
+          "missed": 1
+        },
+        "jdt": {
+          "attested": 0,
+          "missed": 3
+        },
+        "jig": {
+          "attested": 0,
+          "missed": 21
+        },
+        "jje": {
+          "attested": 0,
+          "missed": 16
+        },
+        "jpa": {
+          "attested": 0,
+          "missed": 2
+        },
+        "jpx-hcj": {
+          "attested": 0,
+          "missed": 1
+        },
+        "jpx-ryu-pro": {
+          "attested": 0,
+          "missed": 2
+        },
+        "juc": {
+          "attested": 0,
+          "missed": 280
+        },
+        "jut": {
+          "attested": 0,
+          "missed": 120
+        },
+        "jv": {
+          "attested": 0,
+          "missed": 92
+        },
+        "jvd": {
+          "attested": 0,
+          "missed": 378
+        },
+        "jvn": {
+          "attested": 0,
+          "missed": 514
+        },
+        "ka": {
+          "attested": 0,
+          "missed": 1302
+        },
+        "kaa": {
+          "attested": 0,
+          "missed": 1036
+        },
+        "kab": {
+          "attested": 0,
+          "missed": 1
+        },
+        "kac": {
+          "attested": 0,
+          "missed": 1
+        },
+        "kap": {
+          "attested": 0,
+          "missed": 579
+        },
+        "kas": {
+          "attested": 0,
+          "missed": 170
+        },
+        "kat": {
+          "attested": 0,
+          "missed": 77
+        },
+        "kaw": {
+          "attested": 0,
+          "missed": 25
+        },
+        "kbd": {
+          "attested": 0,
+          "missed": 451
+        },
+        "kca-eas": {
+          "attested": 0,
+          "missed": 2
+        },
+        "kca-nor": {
+          "attested": 0,
+          "missed": 1
+        },
+        "kdr": {
+          "attested": 0,
+          "missed": 837
+        },
+        "ket": {
+          "attested": 0,
+          "missed": 491
+        },
+        "keu": {
+          "attested": 0,
+          "missed": 4
+        },
+        "kfa": {
+          "attested": 0,
+          "missed": 998
+        },
+        "kfc": {
+          "attested": 0,
+          "missed": 835
+        },
+        "kfe": {
+          "attested": 0,
+          "missed": 1349
+        },
+        "kfm": {
+          "attested": 0,
+          "missed": 4
+        },
+        "kfy": {
+          "attested": 0,
+          "missed": 36
+        },
+        "kgn": {
+          "attested": 0,
+          "missed": 4
+        },
+        "khb": {
+          "attested": 0,
+          "missed": 98
+        },
+        "khk": {
+          "attested": 0,
+          "missed": 39
+        },
+        "khm": {
+          "attested": 0,
+          "missed": 69
+        },
+        "kho": {
+          "attested": 0,
+          "missed": 320
+        },
+        "kho-lat": {
+          "attested": 0,
+          "missed": 2
+        },
+        "kht": {
+          "attested": 0,
+          "missed": 1
+        },
+        "khv": {
+          "attested": 0,
+          "missed": 420
+        },
+        "khw": {
+          "attested": 0,
+          "missed": 190
+        },
+        "kim": {
+          "attested": 0,
+          "missed": 430
+        },
+        "kjh": {
+          "attested": 0,
+          "missed": 1000
+        },
+        "kjj": {
+          "attested": 0,
+          "missed": 268
+        },
+        "kjv": {
+          "attested": 0,
+          "missed": 25
+        },
+        "kjz": {
+          "attested": 0,
+          "missed": 1
+        },
+        "kk": {
+          "attested": 0,
+          "missed": 1204
+        },
+        "kkh": {
+          "attested": 0,
+          "missed": 7
+        },
+        "kl": {
+          "attested": 0,
+          "missed": 305
+        },
+        "kle": {
+          "attested": 0,
+          "missed": 514
+        },
+        "klj": {
+          "attested": 0,
+          "missed": 374
+        },
+        "klr": {
+          "attested": 0,
+          "missed": 500
+        },
+        "kls": {
+          "attested": 0,
+          "missed": 18
+        },
+        "km": {
+          "attested": 0,
+          "missed": 116
+        },
+        "kmc": {
+          "attested": 0,
+          "missed": 1
+        },
+        "kmr": {
+          "attested": 0,
+          "missed": 545
+        },
+        "kn": {
+          "attested": 0,
+          "missed": 3182
+        },
+        "knc": {
+          "attested": 0,
+          "missed": 74
+        },
+        "ko": {
+          "attested": 0,
+          "missed": 6679
+        },
+        "ko-ear": {
+          "attested": 0,
+          "missed": 9
+        },
+        "ko-ham": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ko-pyo": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ko-yuk": {
+          "attested": 0,
+          "missed": 2
+        },
+        "koi": {
+          "attested": 0,
+          "missed": 18
+        },
+        "kok": {
+          "attested": 0,
+          "missed": 11
+        },
+        "kos": {
+          "attested": 0,
+          "missed": 18
+        },
+        "kpt": {
+          "attested": 0,
+          "missed": 325
+        },
+        "kpv": {
+          "attested": 0,
+          "missed": 41
+        },
+        "kpy": {
+          "attested": 0,
+          "missed": 1414
+        },
+        "kqr": {
+          "attested": 0,
+          "missed": 1
+        },
+        "krc": {
+          "attested": 0,
+          "missed": 726
+        },
+        "kri": {
+          "attested": 0,
+          "missed": 598
+        },
+        "krl": {
+          "attested": 0,
+          "missed": 164
+        },
+        "kru": {
+          "attested": 0,
+          "missed": 787
+        },
+        "kry": {
+          "attested": 0,
+          "missed": 429
+        },
+        "ks": {
+          "attested": 0,
+          "missed": 23
+        },
+        "ku": {
+          "attested": 0,
+          "missed": 2
+        },
+        "kum": {
+          "attested": 0,
+          "missed": 862
+        },
+        "kva": {
+          "attested": 0,
+          "missed": 186
+        },
+        "kw": {
+          "attested": 0,
+          "missed": 157
+        },
+        "kww": {
+          "attested": 0,
+          "missed": 36
+        },
+        "kxc": {
+          "attested": 0,
+          "missed": 105
+        },
+        "kxd": {
+          "attested": 0,
+          "missed": 2
+        },
+        "kxm": {
+          "attested": 0,
+          "missed": 1
+        },
+        "kxu": {
+          "attested": 0,
+          "missed": 937
+        },
+        "kxv": {
+          "attested": 0,
+          "missed": 606
+        },
+        "ky": {
+          "attested": 0,
+          "missed": 1285
+        },
+        "kzg": {
+          "attested": 0,
+          "missed": 2
+        },
+        "la-eme": {
+          "attested": 0,
+          "missed": 8
+        },
+        "la-lat": {
+          "attested": 0,
+          "missed": 103
+        },
+        "la-med": {
+          "attested": 0,
+          "missed": 616
+        },
+        "la-new": {
+          "attested": 0,
+          "missed": 2
+        },
+        "la-vul": {
+          "attested": 0,
+          "missed": 211
+        },
+        "lad": {
+          "attested": 0,
+          "missed": 74
+        },
+        "lao": {
+          "attested": 0,
+          "missed": 72
+        },
+        "lat": {
+          "attested": 1177,
+          "missed": 6547
+        },
+        "lav": {
+          "attested": 0,
+          "missed": 171
+        },
+        "lb": {
+          "attested": 0,
+          "missed": 15204
+        },
+        "lbe": {
+          "attested": 0,
+          "missed": 596
+        },
+        "lep": {
+          "attested": 0,
+          "missed": 467
+        },
+        "lew": {
+          "attested": 0,
+          "missed": 16
+        },
+        "lez": {
+          "attested": 0,
+          "missed": 596
+        },
+        "li": {
+          "attested": 0,
+          "missed": 3737
+        },
+        "lic": {
+          "attested": 0,
+          "missed": 8
+        },
+        "lif": {
+          "attested": 0,
+          "missed": 510
+        },
+        "lij": {
+          "attested": 0,
+          "missed": 8
+        },
+        "lis": {
+          "attested": 0,
+          "missed": 6
+        },
+        "lit": {
+          "attested": 0,
+          "missed": 175
+        },
+        "liv": {
+          "attested": 0,
+          "missed": 152
+        },
+        "lki": {
+          "attested": 0,
+          "missed": 21
+        },
+        "lld": {
+          "attested": 0,
+          "missed": 240
+        },
+        "lmo": {
+          "attested": 0,
+          "missed": 234
+        },
+        "lng": {
+          "attested": 0,
+          "missed": 41
+        },
+        "lo": {
+          "attested": 0,
+          "missed": 161
+        },
+        "lou": {
+          "attested": 0,
+          "missed": 2
+        },
+        "lrc": {
+          "attested": 0,
+          "missed": 77
+        },
+        "lrl": {
+          "attested": 0,
+          "missed": 169
+        },
+        "lsa": {
+          "attested": 0,
+          "missed": 2
+        },
+        "lt": {
+          "attested": 0,
+          "missed": 3757
+        },
+        "ltc": {
+          "attested": 0,
+          "missed": 195
+        },
+        "ltg": {
+          "attested": 0,
+          "missed": 769
+        },
+        "ltz": {
+          "attested": 0,
+          "missed": 170
+        },
+        "lud": {
+          "attested": 0,
+          "missed": 18
+        },
+        "luz": {
+          "attested": 0,
+          "missed": 16
+        },
+        "lv": {
+          "attested": 0,
+          "missed": 2727
+        },
+        "lzz": {
+          "attested": 0,
+          "missed": 670
+        },
+        "mad": {
+          "attested": 0,
+          "missed": 2
+        },
+        "mag": {
+          "attested": 0,
+          "missed": 175
+        },
+        "mai": {
+          "attested": 0,
+          "missed": 203
+        },
+        "mak": {
+          "attested": 0,
+          "missed": 3
+        },
+        "mar": {
+          "attested": 0,
+          "missed": 172
+        },
+        "max": {
+          "attested": 0,
+          "missed": 1
+        },
+        "mba": {
+          "attested": 0,
+          "missed": 1
+        },
+        "mbf": {
+          "attested": 0,
+          "missed": 4
+        },
+        "mcm": {
+          "attested": 0,
+          "missed": 21
+        },
+        "mdf": {
+          "attested": 0,
+          "missed": 13
+        },
+        "mdh": {
+          "attested": 0,
+          "missed": 1
+        },
+        "mep": {
+          "attested": 0,
+          "missed": 128
+        },
+        "mfa": {
+          "attested": 0,
+          "missed": 4
+        },
+        "mfe": {
+          "attested": 0,
+          "missed": 22
+        },
+        "mg": {
+          "attested": 0,
+          "missed": 24
+        },
+        "mga": {
+          "attested": 0,
+          "missed": 1661
+        },
+        "mh": {
+          "attested": 0,
+          "missed": 174
+        },
+        "mha": {
+          "attested": 0,
+          "missed": 461
+        },
+        "mhn": {
+          "attested": 0,
+          "missed": 1364
+        },
+        "mhr": {
+          "attested": 0,
+          "missed": 6
+        },
+        "mi": {
+          "attested": 0,
+          "missed": 516
+        },
+        "mid": {
+          "attested": 0,
+          "missed": 4
+        },
+        "min": {
+          "attested": 0,
+          "missed": 5
+        },
+        "mis-rou": {
+          "attested": 0,
+          "missed": 1
+        },
+        "mis-tnw": {
+          "attested": 0,
+          "missed": 2
+        },
+        "mis-xnu": {
+          "attested": 0,
+          "missed": 2
+        },
+        "mjg": {
+          "attested": 0,
+          "missed": 776
+        },
+        "mjg-mgl": {
+          "attested": 0,
+          "missed": 3
+        },
+        "mjg-mgr": {
+          "attested": 0,
+          "missed": 4
+        },
+        "mjt": {
+          "attested": 0,
+          "missed": 731
+        },
+        "mjy": {
+          "attested": 0,
+          "missed": 7
+        },
+        "mk": {
+          "attested": 0,
+          "missed": 2999
+        },
+        "mkd": {
+          "attested": 0,
+          "missed": 537
+        },
+        "mkh-ban-pro": {
+          "attested": 0,
+          "missed": 1
+        },
+        "mkh-kat-pro": {
+          "attested": 0,
+          "missed": 1
+        },
+        "mkh-mvi": {
+          "attested": 0,
+          "missed": 10
+        },
+        "mkh-pal-pro": {
+          "attested": 0,
+          "missed": 1
+        },
+        "mkh-pro": {
+          "attested": 0,
+          "missed": 1
+        },
+        "mkh-vie-pro": {
+          "attested": 0,
+          "missed": 25
+        },
+        "mkj": {
+          "attested": 0,
+          "missed": 72
+        },
+        "mkn": {
+          "attested": 0,
+          "missed": 9
+        },
+        "ml": {
+          "attested": 0,
+          "missed": 2899
+        },
+        "mlc": {
+          "attested": 0,
+          "missed": 1
+        },
+        "mlp": {
+          "attested": 0,
+          "missed": 33
+        },
+        "mmr": {
+          "attested": 0,
+          "missed": 1
+        },
+        "mn": {
+          "attested": 0,
+          "missed": 2364
+        },
+        "mn-kha": {
+          "attested": 0,
+          "missed": 8
+        },
+        "mnc": {
+          "attested": 0,
+          "missed": 1434
+        },
+        "mnj": {
+          "attested": 0,
+          "missed": 6
+        },
+        "mns-nor": {
+          "attested": 0,
+          "missed": 5
+        },
+        "mns-pro": {
+          "attested": 0,
+          "missed": 1
+        },
+        "mns-sou": {
+          "attested": 0,
+          "missed": 2
+        },
+        "mnw": {
+          "attested": 0,
+          "missed": 3
+        },
+        "mql": {
+          "attested": 0,
+          "missed": 4
+        },
+        "mqs": {
+          "attested": 0,
+          "missed": 1
+        },
+        "mr": {
+          "attested": 0,
+          "missed": 57
+        },
+        "mrj": {
+          "attested": 0,
+          "missed": 3
+        },
+        "mrw": {
+          "attested": 0,
+          "missed": 3
+        },
+        "ms": {
+          "attested": 0,
+          "missed": 273
+        },
+        "mt": {
+          "attested": 0,
+          "missed": 53
+        },
+        "mtq": {
+          "attested": 0,
+          "missed": 7
+        },
+        "mtr": {
+          "attested": 0,
+          "missed": 14
+        },
+        "mui": {
+          "attested": 0,
+          "missed": 6
+        },
+        "mul": {
+          "attested": 0,
+          "missed": 37
+        },
+        "mvi": {
+          "attested": 0,
+          "missed": 3
+        },
+        "mvy": {
+          "attested": 0,
+          "missed": 3
+        },
+        "mwl": {
+          "attested": 0,
+          "missed": 9
+        },
+        "mwr": {
+          "attested": 0,
+          "missed": 22
+        },
+        "mww": {
+          "attested": 0,
+          "missed": 18
+        },
+        "my": {
+          "attested": 0,
+          "missed": 48
+        },
+        "myv": {
+          "attested": 0,
+          "missed": 19
+        },
+        "myz": {
+          "attested": 0,
+          "missed": 22
+        },
+        "mzn": {
+          "attested": 0,
+          "missed": 215
+        },
+        "mzs": {
+          "attested": 0,
+          "missed": 47
+        },
+        "nah": {
+          "attested": 0,
+          "missed": 25
+        },
+        "nan": {
+          "attested": 0,
+          "missed": 28
+        },
+        "nan-hbl": {
+          "attested": 0,
+          "missed": 11
+        },
+        "nan-tws": {
+          "attested": 0,
+          "missed": 2
+        },
+        "nap": {
+          "attested": 0,
+          "missed": 209
+        },
+        "nb": {
+          "attested": 0,
+          "missed": 6198
+        },
+        "nds": {
+          "attested": 0,
+          "missed": 20286
+        },
+        "nds-de": {
+          "attested": 0,
+          "missed": 8103
+        },
+        "nds-nl": {
+          "attested": 0,
+          "missed": 232
+        },
+        "ne": {
+          "attested": 0,
+          "missed": 75
+        },
+        "neg": {
+          "attested": 0,
+          "missed": 1220
+        },
+        "nep": {
+          "attested": 0,
+          "missed": 281
+        },
+        "ngh": {
+          "attested": 0,
+          "missed": 2
+        },
+        "niv": {
+          "attested": 0,
+          "missed": 8
+        },
+        "njt": {
+          "attested": 0,
+          "missed": 18
+        },
+        "nko": {
+          "attested": 0,
+          "missed": 4
+        },
+        "nl": {
+          "attested": 0,
+          "missed": 20919
+        },
+        "nl-BE": {
+          "attested": 0,
+          "missed": 6
+        },
+        "nld": {
+          "attested": 0,
+          "missed": 518
+        },
+        "nli": {
+          "attested": 0,
+          "missed": 4
+        },
+        "nmz": {
+          "attested": 0,
+          "missed": 4
+        },
+        "nn": {
+          "attested": 0,
+          "missed": 6845
+        },
+        "nno": {
+          "attested": 0,
+          "missed": 170
+        },
+        "no": {
+          "attested": 0,
+          "missed": 4439
+        },
+        "nob": {
+          "attested": 0,
+          "missed": 170
+        },
+        "nod": {
+          "attested": 0,
+          "missed": 37
+        },
+        "nog": {
+          "attested": 0,
+          "missed": 955
+        },
+        "non": {
+          "attested": 1974,
+          "missed": 6668
+        },
+        "non-oen": {
+          "attested": 0,
+          "missed": 60
+        },
+        "non-own": {
+          "attested": 0,
+          "missed": 53
+        },
+        "nr": {
+          "attested": 0,
+          "missed": 4
+        },
+        "nrf": {
+          "attested": 0,
+          "missed": 437
+        },
+        "nrf-jer": {
+          "attested": 0,
+          "missed": 1
+        },
+        "nrn": {
+          "attested": 0,
+          "missed": 485
+        },
+        "nrp": {
+          "attested": 0,
+          "missed": 1
+        },
+        "nut": {
+          "attested": 0,
+          "missed": 6
+        },
+        "nv": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ny": {
+          "attested": 0,
+          "missed": 115
+        },
+        "oaa": {
+          "attested": 0,
+          "missed": 1056
+        },
+        "oac": {
+          "attested": 0,
+          "missed": 917
+        },
+        "obt": {
+          "attested": 0,
+          "missed": 134
+        },
+        "oc": {
+          "attested": 0,
+          "missed": 395
+        },
+        "oc-gas": {
+          "attested": 0,
+          "missed": 2
+        },
+        "oc-pro": {
+          "attested": 0,
+          "missed": 2
+        },
+        "oc-viv": {
+          "attested": 0,
+          "missed": 1
+        },
+        "och": {
+          "attested": 0,
+          "missed": 324
+        },
+        "och-lat": {
+          "attested": 0,
+          "missed": 1
+        },
+        "oco": {
+          "attested": 0,
+          "missed": 9
+        },
+        "odt": {
+          "attested": 0,
+          "missed": 8943
+        },
+        "ofs": {
+          "attested": 0,
+          "missed": 9334
+        },
+        "oge": {
+          "attested": 0,
+          "missed": 11
+        },
+        "ohu": {
+          "attested": 0,
+          "missed": 346
+        },
+        "ojp": {
+          "attested": 662,
+          "missed": 653
+        },
+        "okm": {
+          "attested": 0,
+          "missed": 1134
+        },
+        "okn": {
+          "attested": 0,
+          "missed": 2
+        },
+        "oko": {
+          "attested": 0,
+          "missed": 2
+        },
+        "oko-lat": {
+          "attested": 0,
+          "missed": 1
+        },
+        "okz": {
+          "attested": 0,
+          "missed": 5
+        },
+        "olo": {
+          "attested": 0,
+          "missed": 26
+        },
+        "olt": {
+          "attested": 0,
+          "missed": 188
+        },
+        "omr": {
+          "attested": 0,
+          "missed": 22
+        },
+        "onb": {
+          "attested": 0,
+          "missed": 17
+        },
+        "or": {
+          "attested": 0,
+          "missed": 82
+        },
+        "orm": {
+          "attested": 0,
+          "missed": 25
+        },
+        "oru": {
+          "attested": 0,
+          "missed": 15
+        },
+        "orv": {
+          "attested": 0,
+          "missed": 4242
+        },
+        "os": {
+          "attested": 0,
+          "missed": 166
+        },
+        "os-dig": {
+          "attested": 0,
+          "missed": 63
+        },
+        "os-iro": {
+          "attested": 0,
+          "missed": 56
+        },
+        "osc": {
+          "attested": 0,
+          "missed": 433
+        },
+        "osp": {
+          "attested": 0,
+          "missed": 240
+        },
+        "oss": {
+          "attested": 0,
+          "missed": 341
+        },
+        "osx": {
+          "attested": 3179,
+          "missed": 8356
+        },
+        "ota": {
+          "attested": 0,
+          "missed": 121
+        },
+        "otk": {
+          "attested": 0,
+          "missed": 23
+        },
+        "oty": {
+          "attested": 0,
+          "missed": 2
+        },
+        "oui": {
+          "attested": 0,
+          "missed": 58
+        },
+        "ovd": {
+          "attested": 0,
+          "missed": 1237
+        },
+        "owl": {
+          "attested": 0,
+          "missed": 100
+        },
+        "pa": {
+          "attested": 0,
+          "missed": 119
+        },
+        "pal": {
+          "attested": 0,
+          "missed": 614
+        },
+        "pal-Latn": {
+          "attested": 0,
+          "missed": 18
+        },
+        "pam": {
+          "attested": 0,
+          "missed": 11
+        },
+        "pan": {
+          "attested": 0,
+          "missed": 178
+        },
+        "pap": {
+          "attested": 0,
+          "missed": 1112
+        },
+        "pau": {
+          "attested": 0,
+          "missed": 56
+        },
+        "pbu": {
+          "attested": 0,
+          "missed": 170
+        },
+        "pcc": {
+          "attested": 0,
+          "missed": 126
+        },
+        "pcd": {
+          "attested": 0,
+          "missed": 116
+        },
+        "pci": {
+          "attested": 0,
+          "missed": 912
+        },
+        "pcm": {
+          "attested": 0,
+          "missed": 42
+        },
+        "pdc": {
+          "attested": 0,
+          "missed": 2579
+        },
+        "pdt": {
+          "attested": 0,
+          "missed": 5196
+        },
+        "pea": {
+          "attested": 0,
+          "missed": 20
+        },
+        "peg": {
+          "attested": 0,
+          "missed": 660
+        },
+        "peh": {
+          "attested": 0,
+          "missed": 379
+        },
+        "peo": {
+          "attested": 12,
+          "missed": 308
+        },
+        "pes": {
+          "attested": 0,
+          "missed": 173
+        },
+        "pey": {
+          "attested": 0,
+          "missed": 805
+        },
+        "pfl": {
+          "attested": 0,
+          "missed": 1029
+        },
+        "pgd": {
+          "attested": 0,
+          "missed": 2
+        },
+        "pgn": {
+          "attested": 0,
+          "missed": 70
+        },
+        "phk": {
+          "attested": 0,
+          "missed": 8
+        },
+        "phl": {
+          "attested": 0,
+          "missed": 172
+        },
+        "phn": {
+          "attested": 0,
+          "missed": 7
+        },
+        "pi": {
+          "attested": 0,
+          "missed": 134
+        },
+        "pih": {
+          "attested": 0,
+          "missed": 16
+        },
+        "pis": {
+          "attested": 0,
+          "missed": 752
+        },
+        "pl": {
+          "attested": 4220,
+          "missed": 4246
+        },
+        "pl-gor": {
+          "attested": 0,
+          "missed": 3
+        },
+        "pl-gre": {
+          "attested": 0,
+          "missed": 1
+        },
+        "pl-les": {
+          "attested": 0,
+          "missed": 2
+        },
+        "pl-mas": {
+          "attested": 0,
+          "missed": 4
+        },
+        "pli": {
+          "attested": 0,
+          "missed": 231
+        },
+        "plk": {
+          "attested": 0,
+          "missed": 1
+        },
+        "plq": {
+          "attested": 0,
+          "missed": 21
+        },
+        "plt": {
+          "attested": 0,
+          "missed": 37
+        },
+        "pms": {
+          "attested": 0,
+          "missed": 97
+        },
+        "pnt": {
+          "attested": 0,
+          "missed": 218
+        },
+        "pol": {
+          "attested": 0,
+          "missed": 373
+        },
+        "por": {
+          "attested": 0,
+          "missed": 789
+        },
+        "pox": {
+          "attested": 0,
+          "missed": 1099
+        },
+        "pra": {
+          "attested": 0,
+          "missed": 147
+        },
+        "pra-ard": {
+          "attested": 0,
+          "missed": 3
+        },
+        "pra-mag": {
+          "attested": 0,
+          "missed": 1
+        },
+        "pra-mah": {
+          "attested": 0,
+          "missed": 26
+        },
+        "pra-niy": {
+          "attested": 0,
+          "missed": 4
+        },
+        "pra-sau": {
+          "attested": 0,
+          "missed": 31
+        },
+        "prc": {
+          "attested": 0,
+          "missed": 11
+        },
+        "prg": {
+          "attested": 0,
+          "missed": 1152
+        },
+        "prn": {
+          "attested": 0,
+          "missed": 244
+        },
+        "pro": {
+          "attested": 0,
+          "missed": 367
+        },
+        "ps": {
+          "attested": 0,
+          "missed": 160
+        },
+        "psh": {
+          "attested": 0,
+          "missed": 4
+        },
+        "psi": {
+          "attested": 0,
+          "missed": 6
+        },
+        "pt": {
+          "attested": 0,
+          "missed": 1424
+        },
+        "pwn": {
+          "attested": 0,
+          "missed": 9
+        },
+        "pyu": {
+          "attested": 0,
+          "missed": 9
+        },
+        "qfa-kor-pro": {
+          "attested": 0,
+          "missed": 1
+        },
+        "qfa-lic-pro": {
+          "attested": 0,
+          "missed": 2
+        },
+        "qfa-onb-pro": {
+          "attested": 0,
+          "missed": 2
+        },
+        "qfa-yen-pro": {
+          "attested": 0,
+          "missed": 2
+        },
+        "qsb-grc": {
+          "attested": 0,
+          "missed": 1
+        },
+        "que": {
+          "attested": 0,
+          "missed": 64
+        },
+        "qwm": {
+          "attested": 0,
+          "missed": 2
+        },
+        "qwm-arm": {
+          "attested": 0,
+          "missed": 1
+        },
+        "qwm-mam": {
+          "attested": 0,
+          "missed": 1
+        },
+        "rcf": {
+          "attested": 0,
+          "missed": 2
+        },
+        "rgn": {
+          "attested": 0,
+          "missed": 9
+        },
+        "rhg": {
+          "attested": 0,
+          "missed": 14
+        },
+        "rif": {
+          "attested": 0,
+          "missed": 1
+        },
+        "rjs": {
+          "attested": 0,
+          "missed": 14
+        },
+        "rm": {
+          "attested": 0,
+          "missed": 102
+        },
+        "rmg": {
+          "attested": 0,
+          "missed": 3
+        },
+        "rmn": {
+          "attested": 0,
+          "missed": 2
+        },
+        "rmq": {
+          "attested": 0,
+          "missed": 1
+        },
+        "rmy": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ro": {
+          "attested": 0,
+          "missed": 1246
+        },
+        "roa-bbn": {
+          "attested": 0,
+          "missed": 29
+        },
+        "roa-brg": {
+          "attested": 0,
+          "missed": 20
+        },
+        "roa-fcm": {
+          "attested": 0,
+          "missed": 26
+        },
+        "roa-gal": {
+          "attested": 0,
+          "missed": 3
+        },
+        "roa-leo": {
+          "attested": 0,
+          "missed": 7
+        },
+        "roa-oca": {
+          "attested": 0,
+          "missed": 28
+        },
+        "roa-oit": {
+          "attested": 0,
+          "missed": 17
+        },
+        "roa-ole": {
+          "attested": 0,
+          "missed": 7
+        },
+        "roa-opt": {
+          "attested": 0,
+          "missed": 153
+        },
+        "roa-poi": {
+          "attested": 0,
+          "missed": 6
+        },
+        "rom": {
+          "attested": 0,
+          "missed": 31
+        },
+        "ron": {
+          "attested": 0,
+          "missed": 176
+        },
+        "rop": {
+          "attested": 0,
+          "missed": 34
+        },
+        "rsk": {
+          "attested": 0,
+          "missed": 2077
+        },
+        "ru": {
+          "attested": 0,
+          "missed": 10491
+        },
+        "rue": {
+          "attested": 0,
+          "missed": 2525
+        },
+        "ruo": {
+          "attested": 0,
+          "missed": 7
+        },
+        "rup": {
+          "attested": 0,
+          "missed": 78
+        },
+        "ruq": {
+          "attested": 0,
+          "missed": 187
+        },
+        "rus": {
+          "attested": 0,
+          "missed": 1003
+        },
+        "rut": {
+          "attested": 0,
+          "missed": 646
+        },
+        "ryn": {
+          "attested": 0,
+          "missed": 2
+        },
+        "rys": {
+          "attested": 0,
+          "missed": 3
+        },
+        "ryu": {
+          "attested": 0,
+          "missed": 45
+        },
+        "sa-cls": {
+          "attested": 0,
+          "missed": 16
+        },
+        "sa-ved": {
+          "attested": 0,
+          "missed": 159
+        },
+        "sah": {
+          "attested": 0,
+          "missed": 1013
+        },
+        "san": {
+          "attested": 3351,
+          "missed": 1868
+        },
+        "saz": {
+          "attested": 0,
+          "missed": 15
+        },
+        "sbv": {
+          "attested": 0,
+          "missed": 7
+        },
+        "sc": {
+          "attested": 0,
+          "missed": 6
+        },
+        "scb": {
+          "attested": 0,
+          "missed": 1
+        },
+        "sce": {
+          "attested": 0,
+          "missed": 469
+        },
+        "scl": {
+          "attested": 0,
+          "missed": 2
+        },
+        "scn": {
+          "attested": 0,
+          "missed": 111
+        },
+        "sco": {
+          "attested": 0,
+          "missed": 145504
+        },
+        "sco-nor": {
+          "attested": 0,
+          "missed": 1
+        },
+        "scx": {
+          "attested": 0,
+          "missed": 5
+        },
+        "scz": {
+          "attested": 0,
+          "missed": 484
+        },
+        "sd": {
+          "attested": 0,
+          "missed": 7
+        },
+        "sdc": {
+          "attested": 0,
+          "missed": 1
+        },
+        "sdg": {
+          "attested": 0,
+          "missed": 1
+        },
+        "sdh": {
+          "attested": 0,
+          "missed": 408
+        },
+        "sdn": {
+          "attested": 0,
+          "missed": 1
+        },
+        "se": {
+          "attested": 0,
+          "missed": 67
+        },
+        "sem-dum": {
+          "attested": 0,
+          "missed": 1
+        },
+        "sem-pro": {
+          "attested": 0,
+          "missed": 1
+        },
+        "sem-srb": {
+          "attested": 0,
+          "missed": 2
+        },
+        "sem-tay": {
+          "attested": 0,
+          "missed": 2
+        },
+        "sem-tha": {
+          "attested": 0,
+          "missed": 1
+        },
+        "sem-wes-pro": {
+          "attested": 0,
+          "missed": 2
+        },
+        "sg": {
+          "attested": 0,
+          "missed": 2
+        },
+        "sga": {
+          "attested": 320,
+          "missed": 196
+        },
+        "sgh": {
+          "attested": 0,
+          "missed": 62
+        },
+        "sgh-bar": {
+          "attested": 0,
+          "missed": 1
+        },
+        "sgh-ros": {
+          "attested": 0,
+          "missed": 9
+        },
+        "sgr": {
+          "attested": 0,
+          "missed": 5
+        },
+        "sgs": {
+          "attested": 0,
+          "missed": 402
+        },
+        "sgy": {
+          "attested": 0,
+          "missed": 13
+        },
+        "sh": {
+          "attested": 0,
+          "missed": 10438
+        },
+        "shi": {
+          "attested": 0,
+          "missed": 1
+        },
+        "shn": {
+          "attested": 0,
+          "missed": 62
+        },
+        "si": {
+          "attested": 0,
+          "missed": 60
+        },
+        "sia": {
+          "attested": 0,
+          "missed": 1
+        },
+        "sin": {
+          "attested": 0,
+          "missed": 184
+        },
+        "sit": {
+          "attested": 0,
+          "missed": 31
+        },
+        "sit-jap": {
+          "attested": 0,
+          "missed": 3
+        },
+        "siy": {
+          "attested": 0,
+          "missed": 4
+        },
+        "sjd": {
+          "attested": 0,
+          "missed": 110
+        },
+        "sje": {
+          "attested": 0,
+          "missed": 6
+        },
+        "sjo": {
+          "attested": 0,
+          "missed": 55
+        },
+        "sjt": {
+          "attested": 0,
+          "missed": 10
+        },
+        "sju": {
+          "attested": 0,
+          "missed": 10
+        },
+        "sk": {
+          "attested": 0,
+          "missed": 4978
+        },
+        "skb": {
+          "attested": 0,
+          "missed": 9
+        },
+        "skr": {
+          "attested": 0,
+          "missed": 4
+        },
+        "skw": {
+          "attested": 0,
+          "missed": 839
+        },
+        "sl": {
+          "attested": 876,
+          "missed": 1181
+        },
+        "sla": {
+          "attested": 0,
+          "missed": 301
+        },
+        "sla-pro": {
+          "attested": 0,
+          "missed": 1758
+        },
+        "sli": {
+          "attested": 0,
+          "missed": 38
+        },
+        "slk": {
+          "attested": 0,
+          "missed": 253
+        },
+        "slr": {
+          "attested": 0,
+          "missed": 313
+        },
+        "slv": {
+          "attested": 0,
+          "missed": 367
+        },
+        "sm": {
+          "attested": 0,
+          "missed": 23
+        },
+        "sma": {
+          "attested": 0,
+          "missed": 39
+        },
+        "smi": {
+          "attested": 0,
+          "missed": 2
+        },
+        "smi-pro": {
+          "attested": 0,
+          "missed": 242
+        },
+        "smj": {
+          "attested": 0,
+          "missed": 21
+        },
+        "smn": {
+          "attested": 0,
+          "missed": 14
+        },
+        "sms": {
+          "attested": 0,
+          "missed": 53
+        },
+        "smy": {
+          "attested": 0,
+          "missed": 6
+        },
+        "sn": {
+          "attested": 0,
+          "missed": 20
+        },
+        "sog": {
+          "attested": 0,
+          "missed": 438
+        },
+        "sog-Latn": {
+          "attested": 0,
+          "missed": 18
+        },
+        "spa": {
+          "attested": 0,
+          "missed": 2303
+        },
+        "spx": {
+          "attested": 0,
+          "missed": 70
+        },
+        "sq": {
+          "attested": 0,
+          "missed": 1067
+        },
+        "sqi": {
+          "attested": 0,
+          "missed": 170
+        },
+        "sqj-pro": {
+          "attested": 0,
+          "missed": 466
+        },
+        "sqo": {
+          "attested": 0,
+          "missed": 1
+        },
+        "sqt": {
+          "attested": 0,
+          "missed": 1
+        },
+        "sr": {
+          "attested": 0,
+          "missed": 2
+        },
+        "src": {
+          "attested": 0,
+          "missed": 344
+        },
+        "srh": {
+          "attested": 0,
+          "missed": 205
+        },
+        "srm": {
+          "attested": 0,
+          "missed": 1613
+        },
+        "srn": {
+          "attested": 0,
+          "missed": 3458
+        },
+        "srp": {
+          "attested": 0,
+          "missed": 135
+        },
+        "srz": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ss": {
+          "attested": 0,
+          "missed": 184
+        },
+        "ssf": {
+          "attested": 0,
+          "missed": 6
+        },
+        "st": {
+          "attested": 0,
+          "missed": 127
+        },
+        "stq": {
+          "attested": 0,
+          "missed": 8225
+        },
+        "sts": {
+          "attested": 0,
+          "missed": 6
+        },
+        "su": {
+          "attested": 0,
+          "missed": 24
+        },
+        "sun": {
+          "attested": 0,
+          "missed": 124
+        },
+        "sux": {
+          "attested": 1,
+          "missed": 7
+        },
+        "suz": {
+          "attested": 0,
+          "missed": 199
+        },
+        "sv": {
+          "attested": 0,
+          "missed": 17350
+        },
+        "sva": {
+          "attested": 0,
+          "missed": 628
+        },
+        "svm": {
+          "attested": 0,
+          "missed": 26
+        },
+        "sw": {
+          "attested": 0,
+          "missed": 50
+        },
+        "swe": {
+          "attested": 225,
+          "missed": 123
+        },
+        "swg": {
+          "attested": 0,
+          "missed": 1731
+        },
+        "swh": {
+          "attested": 0,
+          "missed": 170
+        },
+        "swi": {
+          "attested": 0,
+          "missed": 1
+        },
+        "sxr": {
+          "attested": 0,
+          "missed": 3
+        },
+        "syc": {
+          "attested": 0,
+          "missed": 87
+        },
+        "syl": {
+          "attested": 0,
+          "missed": 16
+        },
+        "szl": {
+          "attested": 0,
+          "missed": 2192
+        },
+        "szy": {
+          "attested": 0,
+          "missed": 12
+        },
+        "ta": {
+          "attested": 0,
+          "missed": 3790
+        },
+        "taa": {
+          "attested": 0,
+          "missed": 1
+        },
+        "tab": {
+          "attested": 0,
+          "missed": 680
+        },
+        "tai-pro": {
+          "attested": 0,
+          "missed": 62
+        },
+        "tai-swe-pro": {
+          "attested": 0,
+          "missed": 32
+        },
+        "tam": {
+          "attested": 0,
+          "missed": 24
+        },
+        "tao": {
+          "attested": 0,
+          "missed": 2
+        },
+        "taq": {
+          "attested": 0,
+          "missed": 25
+        },
+        "tay": {
+          "attested": 0,
+          "missed": 2
+        },
+        "tbq-lob-pro": {
+          "attested": 0,
+          "missed": 1
+        },
+        "tcs": {
+          "attested": 0,
+          "missed": 58
+        },
+        "tcx": {
+          "attested": 0,
+          "missed": 1154
+        },
+        "tcy": {
+          "attested": 0,
+          "missed": 2367
+        },
+        "tdd": {
+          "attested": 0,
+          "missed": 27
+        },
+        "tdh": {
+          "attested": 0,
+          "missed": 621
+        },
+        "te": {
+          "attested": 0,
+          "missed": 2732
+        },
+        "tet": {
+          "attested": 0,
+          "missed": 1
+        },
+        "tew": {
+          "attested": 0,
+          "missed": 1
+        },
+        "tez": {
+          "attested": 0,
+          "missed": 1
+        },
+        "tfn": {
+          "attested": 0,
+          "missed": 2
+        },
+        "tft": {
+          "attested": 0,
+          "missed": 4
+        },
+        "tg": {
+          "attested": 0,
+          "missed": 134
+        },
+        "th": {
+          "attested": 0,
+          "missed": 561
+        },
+        "ti": {
+          "attested": 0,
+          "missed": 17
+        },
+        "tig": {
+          "attested": 0,
+          "missed": 4
+        },
+        "tih": {
+          "attested": 0,
+          "missed": 1
+        },
+        "tin": {
+          "attested": 0,
+          "missed": 365
+        },
+        "tjl": {
+          "attested": 0,
+          "missed": 4
+        },
+        "tk": {
+          "attested": 0,
+          "missed": 1283
+        },
+        "tkl": {
+          "attested": 0,
+          "missed": 23
+        },
+        "tkn": {
+          "attested": 0,
+          "missed": 2
+        },
+        "tkr": {
+          "attested": 0,
+          "missed": 497
+        },
+        "tks": {
+          "attested": 0,
+          "missed": 169
+        },
+        "tl": {
+          "attested": 0,
+          "missed": 233
+        },
+        "tly": {
+          "attested": 0,
+          "missed": 19
+        },
+        "tly-nor": {
+          "attested": 0,
+          "missed": 2
+        },
+        "tly-sou": {
+          "attested": 0,
+          "missed": 1
+        },
+        "tmh": {
+          "attested": 0,
+          "missed": 1
+        },
+        "tmr": {
+          "attested": 0,
+          "missed": 18
+        },
+        "tn": {
+          "attested": 0,
+          "missed": 27
+        },
+        "to": {
+          "attested": 0,
+          "missed": 62
+        },
+        "tpi": {
+          "attested": 0,
+          "missed": 1464
+        },
+        "tr": {
+          "attested": 0,
+          "missed": 1510
+        },
+        "tra": {
+          "attested": 0,
+          "missed": 6
+        },
+        "tri": {
+          "attested": 0,
+          "missed": 1026
+        },
+        "trk": {
+          "attested": 0,
+          "missed": 52
+        },
+        "trk-cmn-pro": {
+          "attested": 0,
+          "missed": 4
+        },
+        "trk-eog": {
+          "attested": 0,
+          "missed": 1
+        },
+        "trk-oat": {
+          "attested": 0,
+          "missed": 14
+        },
+        "trk-pro": {
+          "attested": 0,
+          "missed": 19
+        },
+        "trm": {
+          "attested": 0,
+          "missed": 20
+        },
+        "tru": {
+          "attested": 0,
+          "missed": 5
+        },
+        "trv": {
+          "attested": 0,
+          "missed": 7
+        },
+        "trw": {
+          "attested": 0,
+          "missed": 4
+        },
+        "ts": {
+          "attested": 0,
+          "missed": 2
+        },
+        "tsd": {
+          "attested": 0,
+          "missed": 6
+        },
+        "tsg": {
+          "attested": 0,
+          "missed": 18
+        },
+        "tsu": {
+          "attested": 0,
+          "missed": 7
+        },
+        "tt": {
+          "attested": 0,
+          "missed": 1202
+        },
+        "tts": {
+          "attested": 0,
+          "missed": 9
+        },
+        "tuo": {
+          "attested": 0,
+          "missed": 66
+        },
+        "tur": {
+          "attested": 0,
+          "missed": 51
+        },
+        "tuw-sol": {
+          "attested": 0,
+          "missed": 9
+        },
+        "twd": {
+          "attested": 0,
+          "missed": 7
+        },
+        "twh": {
+          "attested": 0,
+          "missed": 2
+        },
+        "txb": {
+          "attested": 0,
+          "missed": 527
+        },
+        "txg": {
+          "attested": 0,
+          "missed": 7
+        },
+        "txh": {
+          "attested": 0,
+          "missed": 15
+        },
+        "tyj": {
+          "attested": 0,
+          "missed": 7
+        },
+        "tyv": {
+          "attested": 0,
+          "missed": 967
+        },
+        "tyz": {
+          "attested": 0,
+          "missed": 11
+        },
+        "uby": {
+          "attested": 0,
+          "missed": 406
+        },
+        "ude": {
+          "attested": 0,
+          "missed": 847
+        },
+        "udi": {
+          "attested": 0,
+          "missed": 209
+        },
+        "udm": {
+          "attested": 0,
+          "missed": 11
+        },
+        "ug": {
+          "attested": 0,
+          "missed": 1361
+        },
+        "uga": {
+          "attested": 1,
+          "missed": 14
+        },
+        "uk": {
+          "attested": 0,
+          "missed": 10830
+        },
+        "ukr": {
+          "attested": 0,
+          "missed": 174
+        },
+        "ulc": {
+          "attested": 0,
+          "missed": 1154
+        },
+        "uli": {
+          "attested": 0,
+          "missed": 104
+        },
+        "uln": {
+          "attested": 0,
+          "missed": 296
+        },
+        "umc": {
+          "attested": 0,
+          "missed": 35
+        },
+        "umu": {
+          "attested": 0,
+          "missed": 44
+        },
+        "und": {
+          "attested": 0,
+          "missed": 1359
+        },
+        "unk": {
+          "attested": 0,
+          "missed": 12
+        },
+        "unm": {
+          "attested": 0,
+          "missed": 199
+        },
+        "ur": {
+          "attested": 0,
+          "missed": 55
+        },
+        "urd": {
+          "attested": 0,
+          "missed": 301
+        },
+        "urj-fin-pro": {
+          "attested": 0,
+          "missed": 490
+        },
+        "urj-koo": {
+          "attested": 0,
+          "missed": 2
+        },
+        "urj-kuk": {
+          "attested": 0,
+          "missed": 3
+        },
+        "urj-kya": {
+          "attested": 0,
+          "missed": 9
+        },
+        "urj-mdv-pro": {
+          "attested": 0,
+          "missed": 10
+        },
+        "urj-prm-pro": {
+          "attested": 0,
+          "missed": 7
+        },
+        "urj-pro": {
+          "attested": 0,
+          "missed": 45
+        },
+        "urj-ugr-pro": {
+          "attested": 0,
+          "missed": 2
+        },
+        "uum": {
+          "attested": 0,
+          "missed": 1
+        },
+        "uz": {
+          "attested": 0,
+          "missed": 1463
+        },
+        "uz-afg": {
+          "attested": 0,
+          "missed": 11
+        },
+        "ve": {
+          "attested": 0,
+          "missed": 19
+        },
+        "vec": {
+          "attested": 0,
+          "missed": 67
+        },
+        "vep": {
+          "attested": 0,
+          "missed": 29
+        },
+        "vi": {
+          "attested": 0,
+          "missed": 4185
+        },
+        "vic": {
+          "attested": 0,
+          "missed": 1305
+        },
+        "vif": {
+          "attested": 0,
+          "missed": 38
+        },
+        "vls": {
+          "attested": 0,
+          "missed": 982
+        },
+        "vmf": {
+          "attested": 0,
+          "missed": 648
+        },
+        "vo": {
+          "attested": 0,
+          "missed": 26
+        },
+        "vot": {
+          "attested": 0,
+          "missed": 76
+        },
+        "vro": {
+          "attested": 0,
+          "missed": 12
+        },
+        "wa": {
+          "attested": 0,
+          "missed": 339
+        },
+        "wae": {
+          "attested": 0,
+          "missed": 1996
+        },
+        "war": {
+          "attested": 0,
+          "missed": 7
+        },
+        "way": {
+          "attested": 0,
+          "missed": 53
+        },
+        "wba": {
+          "attested": 0,
+          "missed": 42
+        },
+        "wbk": {
+          "attested": 0,
+          "missed": 230
+        },
+        "wbl": {
+          "attested": 0,
+          "missed": 223
+        },
+        "wes": {
+          "attested": 0,
+          "missed": 722
+        },
+        "wlm": {
+          "attested": 0,
+          "missed": 614
+        },
+        "wln": {
+          "attested": 0,
+          "missed": 170
+        },
+        "wlx": {
+          "attested": 0,
+          "missed": 4
+        },
+        "wrr": {
+          "attested": 0,
+          "missed": 93
+        },
+        "wuh": {
+          "attested": 0,
+          "missed": 77
+        },
+        "wym": {
+          "attested": 0,
+          "missed": 3952
+        },
+        "xaa": {
+          "attested": 0,
+          "missed": 2
+        },
+        "xae": {
+          "attested": 0,
+          "missed": 4
+        },
+        "xag": {
+          "attested": 0,
+          "missed": 1
+        },
+        "xal": {
+          "attested": 0,
+          "missed": 1691
+        },
+        "xan": {
+          "attested": 0,
+          "missed": 3
+        },
+        "xbc": {
+          "attested": 0,
+          "missed": 130
+        },
+        "xbm": {
+          "attested": 0,
+          "missed": 371
+        },
+        "xbo": {
+          "attested": 0,
+          "missed": 1
+        },
+        "xce": {
+          "attested": 0,
+          "missed": 8
+        },
+        "xcg": {
+          "attested": 0,
+          "missed": 1
+        },
+        "xcl": {
+          "attested": 0,
+          "missed": 1577
+        },
+        "xco": {
+          "attested": 0,
+          "missed": 231
+        },
+        "xcr": {
+          "attested": 0,
+          "missed": 1
+        },
+        "xct": {
+          "attested": 0,
+          "missed": 2
+        },
+        "xcu": {
+          "attested": 0,
+          "missed": 2
+        },
+        "xdc": {
+          "attested": 0,
+          "missed": 4
+        },
+        "xeb": {
+          "attested": 0,
+          "missed": 1
+        },
+        "xfa": {
+          "attested": 0,
+          "missed": 104
+        },
+        "xgn": {
+          "attested": 0,
+          "missed": 409
+        },
+        "xgn-pro": {
+          "attested": 0,
+          "missed": 1
+        },
+        "xh": {
+          "attested": 0,
+          "missed": 89
+        },
+        "xhc": {
+          "attested": 0,
+          "missed": 2
+        },
+        "xhr": {
+          "attested": 0,
+          "missed": 5
+        },
+        "xhu": {
+          "attested": 0,
+          "missed": 6
+        },
+        "xil": {
+          "attested": 0,
+          "missed": 7
+        },
+        "xka": {
+          "attested": 0,
+          "missed": 1
+        },
+        "xkz": {
+          "attested": 0,
+          "missed": 19
+        },
+        "xlc": {
+          "attested": 0,
+          "missed": 31
+        },
+        "xld": {
+          "attested": 0,
+          "missed": 20
+        },
+        "xln": {
+          "attested": 0,
+          "missed": 8
+        },
+        "xlo": {
+          "attested": 0,
+          "missed": 12
+        },
+        "xlp": {
+          "attested": 0,
+          "missed": 2
+        },
+        "xls": {
+          "attested": 0,
+          "missed": 6
+        },
+        "xlu": {
+          "attested": 0,
+          "missed": 196
+        },
+        "xlu-Latn": {
+          "attested": 0,
+          "missed": 1
+        },
+        "xly": {
+          "attested": 0,
+          "missed": 1
+        },
+        "xme-azr": {
+          "attested": 0,
+          "missed": 5
+        },
+        "xme-ham": {
+          "attested": 0,
+          "missed": 2
+        },
+        "xme-ker": {
+          "attested": 0,
+          "missed": 10
+        },
+        "xme-kls": {
+          "attested": 0,
+          "missed": 1
+        },
+        "xme-klt": {
+          "attested": 0,
+          "missed": 1
+        },
+        "xme-old": {
+          "attested": 0,
+          "missed": 21
+        },
+        "xmf": {
+          "attested": 0,
+          "missed": 926
+        },
+        "xmk": {
+          "attested": 0,
+          "missed": 3
+        },
+        "xmm": {
+          "attested": 0,
+          "missed": 61
+        },
+        "xmn": {
+          "attested": 0,
+          "missed": 168
+        },
+        "xnb": {
+          "attested": 0,
+          "missed": 7
+        },
+        "xng": {
+          "attested": 0,
+          "missed": 1054
+        },
+        "xno": {
+          "attested": 0,
+          "missed": 461
+        },
+        "xpg": {
+          "attested": 0,
+          "missed": 60
+        },
+        "xpi": {
+          "attested": 0,
+          "missed": 7
+        },
+        "xpm": {
+          "attested": 0,
+          "missed": 176
+        },
+        "xpq": {
+          "attested": 0,
+          "missed": 17
+        },
+        "xpr": {
+          "attested": 0,
+          "missed": 363
+        },
+        "xpr-Latn": {
+          "attested": 0,
+          "missed": 1
+        },
+        "xpu": {
+          "attested": 0,
+          "missed": 5
+        },
+        "xqa": {
+          "attested": 0,
+          "missed": 1491
+        },
+        "xrn": {
+          "attested": 0,
+          "missed": 248
+        },
+        "xsb": {
+          "attested": 0,
+          "missed": 2
+        },
+        "xsc-pro": {
+          "attested": 0,
+          "missed": 17
+        },
+        "xsc-sak-pro": {
+          "attested": 0,
+          "missed": 4
+        },
+        "xsc-sar-pro": {
+          "attested": 0,
+          "missed": 8
+        },
+        "xsc-skw-pro": {
+          "attested": 0,
+          "missed": 6
+        },
+        "xsv": {
+          "attested": 0,
+          "missed": 49
+        },
+        "xsy": {
+          "attested": 0,
+          "missed": 4
+        },
+        "xtg": {
+          "attested": 0,
+          "missed": 77
+        },
+        "xto": {
+          "attested": 0,
+          "missed": 377
+        },
+        "xtq": {
+          "attested": 0,
+          "missed": 4
+        },
+        "xug": {
+          "attested": 0,
+          "missed": 2
+        },
+        "xum": {
+          "attested": 0,
+          "missed": 676
+        },
+        "xur": {
+          "attested": 0,
+          "missed": 2
+        },
+        "xve": {
+          "attested": 0,
+          "missed": 43
+        },
+        "xvi": {
+          "attested": 0,
+          "missed": 254
+        },
+        "xvn": {
+          "attested": 0,
+          "missed": 64
+        },
+        "xvo": {
+          "attested": 0,
+          "missed": 26
+        },
+        "xvs": {
+          "attested": 0,
+          "missed": 6
+        },
+        "xwo": {
+          "attested": 0,
+          "missed": 9
+        },
+        "yah": {
+          "attested": 0,
+          "missed": 13
+        },
+        "yai": {
+          "attested": 0,
+          "missed": 169
+        },
+        "ybe": {
+          "attested": 0,
+          "missed": 692
+        },
+        "ybi": {
+          "attested": 0,
+          "missed": 329
+        },
+        "ycl": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ycr": {
+          "attested": 0,
+          "missed": 2
+        },
+        "ydg": {
+          "attested": 0,
+          "missed": 21
+        },
+        "yey": {
+          "attested": 0,
+          "missed": 4
+        },
+        "yha": {
+          "attested": 0,
+          "missed": 1
+        },
+        "yi": {
+          "attested": 0,
+          "missed": 7424
+        },
+        "yka": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ykh": {
+          "attested": 0,
+          "missed": 4
+        },
+        "yms": {
+          "attested": 0,
+          "missed": 2
+        },
+        "yo": {
+          "attested": 0,
+          "missed": 12
+        },
+        "yoi": {
+          "attested": 0,
+          "missed": 4
+        },
+        "yol": {
+          "attested": 0,
+          "missed": 33039
+        },
+        "yox": {
+          "attested": 0,
+          "missed": 2
+        },
+        "yrk-tun": {
+          "attested": 0,
+          "missed": 4
+        },
+        "yrl": {
+          "attested": 0,
+          "missed": 1
+        },
+        "ysc": {
+          "attested": 0,
+          "missed": 1
+        },
+        "yue": {
+          "attested": 0,
+          "missed": 547
+        },
+        "yug": {
+          "attested": 0,
+          "missed": 422
+        },
+        "yux": {
+          "attested": 0,
+          "missed": 3
+        },
+        "yuy": {
+          "attested": 0,
+          "missed": 626
+        },
+        "za": {
+          "attested": 0,
+          "missed": 736
+        },
+        "zea": {
+          "attested": 0,
+          "missed": 137
+        },
+        "zh": {
+          "attested": 0,
+          "missed": 379
+        },
+        "zh-Hans": {
+          "attested": 0,
+          "missed": 9
+        },
+        "zh-Hant": {
+          "attested": 0,
+          "missed": 9
+        },
+        "zkh": {
+          "attested": 0,
+          "missed": 1
+        },
+        "zko": {
+          "attested": 0,
+          "missed": 528
+        },
+        "zkt": {
+          "attested": 0,
+          "missed": 4
+        },
+        "zle-mbe": {
+          "attested": 0,
+          "missed": 122
+        },
+        "zle-mru": {
+          "attested": 0,
+          "missed": 410
+        },
+        "zle-muk": {
+          "attested": 0,
+          "missed": 144
+        },
+        "zle-ono": {
+          "attested": 0,
+          "missed": 570
+        },
+        "zle-ops": {
+          "attested": 0,
+          "missed": 40
+        },
+        "zle-ort": {
+          "attested": 0,
+          "missed": 3881
+        },
+        "zls-chs": {
+          "attested": 0,
+          "missed": 354
+        },
+        "zls-chs-ru": {
+          "attested": 0,
+          "missed": 9
+        },
+        "zlw-mpl": {
+          "attested": 0,
+          "missed": 57
+        },
+        "zlw-ocs": {
+          "attested": 0,
+          "missed": 2924
+        },
+        "zlw-opl": {
+          "attested": 0,
+          "missed": 3129
+        },
+        "zlw-osk": {
+          "attested": 0,
+          "missed": 1980
+        },
+        "zlw-slv": {
+          "attested": 0,
+          "missed": 1283
+        },
+        "zsm": {
+          "attested": 0,
+          "missed": 511
+        },
+        "zu": {
+          "attested": 0,
+          "missed": 163
+        },
+        "zum": {
+          "attested": 0,
+          "missed": 170
+        },
+        "zza": {
+          "attested": 0,
+          "missed": 108
+        }
+      }
+    }
+  }
+}

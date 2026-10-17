@@ -1,0 +1,188 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "non-form-lemma",
+  "title": "Old Norse form→lemma table from Menota's lemmatized manuscript transcriptions",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Menota — the Medieval Nordic Text Archive (clarino.uib.no)",
+      "path": "https://clarino.uib.no/menota/catalogue/menota",
+      "version": "5d6201c54bc7d42fab60dc675e2f5db04e074245f11fdd0b39d5c9b31336ded7",
+      "licenses": [
+        {
+          "name": "CC BY-SA 4.0 — the catalogue's license column (the quotable record, https://clarino.uib.no/menota/catalogue/menota, censused 2026-08-23 on all 91 texts) and every sampled teiHeader <availability><licence target=\"…by-sa/4.0…\">. Cite the editor(s) named in each text's teiHeader and the Medieval Nordic Text Archive, menota.org"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "form-lemma",
+      "path": "form-lemma.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Language_ID",
+            "type": "string"
+          },
+          {
+            "name": "Level",
+            "type": "string"
+          },
+          {
+            "name": "Form",
+            "type": "string"
+          },
+          {
+            "name": "Lemma",
+            "type": "string"
+          },
+          {
+            "name": "Msa",
+            "type": "string"
+          },
+          {
+            "name": "Count",
+            "type": "integer"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "Level",
+          "Form",
+          "Lemma",
+          "Msa"
+        ]
+      }
+    },
+    {
+      "name": "lemmas",
+      "path": "lemmas.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Language_ID",
+            "type": "string"
+          },
+          {
+            "name": "Lemma",
+            "type": "string"
+          },
+          {
+            "name": "Count",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "Lemma"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build non/form-lemma",
+    "nabu_version": "1.6.0",
+    "derivation": {
+      "inputs": {
+        "menota": {
+          "canonical_sha": "5d6201c54bc7d42fab60dc675e2f5db04e074245f11fdd0b39d5c9b31336ded7",
+          "cone": "menota"
+        }
+      },
+      "recipe": "non/form-lemma v1: sweep the stored token annotations of every live passage of the menota source ALONE whose document language is Old West Norse (isl, nor, non — swe/dan documents are out of scope, censused) and whose effective license class is open/attribution; keep the <w> tokens bearing a lemma (lemma-less words and punctuation mint nothing, censused); for each level the word attests (facs, dipl, norm) count one attestation at the distinct (Level, Form, Lemma, Msa) grain into form-lemma.csv, carrying every value byte-verbatim (never re-normalized); count each token once at the Lemma grain into lemmas.csv.",
+      "fingerprint": "01656dfc883cf4946b520ebfc159741d035c3a12e89865ee349f03691a52d515"
+    },
+    "anchoring": {
+      "kind": "none"
+    },
+    "tier": "gold-derived",
+    "counts": {
+      "rows": 335119
+    },
+    "eval": {
+      "input_source": "menota",
+      "passages_scanned": 181492,
+      "lemmatized_tokens_counted": 1014283,
+      "level_tokens": {
+        "dipl": 1014006,
+        "facs": 533982,
+        "norm": 544286
+      },
+      "tokens_by_document_language": {
+        "isl": 493878,
+        "non": 114703,
+        "nor": 405702
+      },
+      "lemma_less_words_excluded": 752093,
+      "punctuation_tokens_skipped": 217449,
+      "out_of_scope_documents_by_language": {
+        "dan": 2,
+        "onw": 1,
+        "swe": 4
+      },
+      "license_excluded_documents": {},
+      "excluded_old_norse_documents": {
+        "local-library": 1,
+        "menotec": 7,
+        "ogham": 1,
+        "rundata": 20441
+      }
+    }
+  }
+}
