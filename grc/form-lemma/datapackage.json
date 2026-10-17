@@ -1,0 +1,197 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "grc-form-lemma",
+  "title": "Ancient Greek form→lemma table from the GLAUx treebanks, with the hand-annotated share counted",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-SA-4.0",
+      "path": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ar Vicco",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "GLAUx — the Greek Language Automated (Keersmaekers)",
+      "path": "https://github.com/alekkeersmaekers/glaux",
+      "version": "b077d8f6ff429a5c7245954bc16bb7d1d7948823",
+      "licenses": [
+        {
+          "name": "CC BY-SA (README, verbatim: \"Most of the data is available under a CC BY-SA license but some texts are more restrictive (e.g. CC BY-NC): the license of each source text is also specified in the metadata file.\") — class attribution; per-text license_override nc for the 72/1,421 texts (5.1%) whose source text OR manual annotation (PROIEL, Gorman) is NC. Cite Keersmaekers 2021, doi:10.18653/v1/2021.lchange-1.6"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "form-lemma",
+      "path": "form-lemma.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Language_ID",
+            "type": "string"
+          },
+          {
+            "name": "Form",
+            "type": "string"
+          },
+          {
+            "name": "Lemma",
+            "type": "string"
+          },
+          {
+            "name": "Postag",
+            "type": "string"
+          },
+          {
+            "name": "Count",
+            "type": "integer"
+          },
+          {
+            "name": "Manual_Count",
+            "type": "integer"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "Form",
+          "Lemma",
+          "Postag"
+        ]
+      }
+    },
+    {
+      "name": "lemmas",
+      "path": "lemmas.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Language_ID",
+            "type": "string"
+          },
+          {
+            "name": "Lemma",
+            "type": "string"
+          },
+          {
+            "name": "Count",
+            "type": "integer"
+          },
+          {
+            "name": "Manual_Count",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "Lemma"
+        ]
+      }
+    },
+    {
+      "name": "languages",
+      "path": "languages.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Glottocode",
+            "type": "string"
+          },
+          {
+            "name": "ISO639P3code",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "sources",
+      "path": "sources.bib",
+      "format": "bibtex",
+      "mediatype": "text/x-bibtex"
+    }
+  ],
+  "nabu": {
+    "producer": "nabu data build grc/form-lemma",
+    "nabu_version": "1.6.0",
+    "derivation": {
+      "inputs": {
+        "glaux": {
+          "canonical_sha": "b077d8f6ff429a5c7245954bc16bb7d1d7948823",
+          "cone": "glaux"
+        }
+      },
+      "recipe": "grc/form-lemma v1: sweep the stored token annotations of every live passage of the glaux source ALONE (no other source's Greek — PROIEL is CC BY-NC-SA and contributes nothing) whose document's effective license class is open/attribution (the nc-overridden GLAUx texts — NC source texts, PROIEL- and Gorman-annotated trees — are excluded, censused); keep the tokens bearing a lemma (artificial elliptic nodes and punctuation carry none, censused); carry Form/Lemma/Postag byte-verbatim; count attestations at the distinct (Form, Lemma, Postag) grain into form-lemma.csv and at the Lemma grain into lemmas.csv, each with a Manual_Count of the attestations in sentences GLAUx marks analysis=\"manual\".",
+      "fingerprint": "ff34afbd4131789340f2e951ff05b33b4dfd6185c2b71c6062160c76420e1596"
+    },
+    "anchoring": {
+      "kind": "none"
+    },
+    "tier": "silver",
+    "counts": {
+      "rows": 792433
+    },
+    "eval": {
+      "input_source": "glaux",
+      "passages_scanned": 846931,
+      "lemma_tokens_counted": 14587905,
+      "manual_tokens_counted": 578146,
+      "sentences_by_analysis": {
+        "auto": 803796,
+        "manual": 43135
+      },
+      "artificial_tokens_excluded": 336625,
+      "punctuation_tokens_excluded": 2161763,
+      "lemma_less_words_excluded": 9696,
+      "license_excluded_documents": {
+        "nc": 72
+      },
+      "excluded_greek_documents": {
+        "cdli": 9,
+        "ceipom": 10,
+        "diorisis": 767,
+        "edh": 1290,
+        "edr": 5584,
+        "eebo-tcp": 2,
+        "elephantine": 3302,
+        "first1k-greek": 1088,
+        "iip": 2986,
+        "isicily": 3191,
+        "local-library": 2,
+        "papyri-ddbdp": 60144,
+        "perseus-greek": 769,
+        "proiel": 3,
+        "sblgnt": 27,
+        "shkz": 1,
+        "ud": 9
+      }
+    }
+  }
+}

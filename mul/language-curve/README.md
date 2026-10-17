@@ -18,6 +18,6 @@ re-derive after sync waves, dating-moving events or a rebuild; the published-sli
 
 Own authorship — no canonical corpus inputs.
 
-Recipe: language-curve v1: project language_curve at (language, century, basis, source) grain, silver-estimate datings folded undated, license classes open+attribution only, ordered (language, century, basis, source); published-slice sha256=6da46f51d6ba88424728e64302f5df8a933316ce6d3fdf8c889463fa3081e300
+Recipe: language-curve v1: project language_curve at (language, century, basis, source) grain, silver-estimate datings folded undated, license classes open+attribution only, ordered (language, century, basis, source); published-slice sha256=26e3f84161f100bded2b852138f47a76ead5b3824155a73ab3d939065b72ed7c
 
-Derivation fingerprint: `030691dfceb800d5312a4a441967e80d774e6ffbb09cc021648231bf418e51e9`.
+Derivation fingerprint: `6fd25e8692da6e0df7910a840da6a953b7b27a716965b2cfa90dace2cd508856`.
