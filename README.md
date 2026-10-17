@@ -91,7 +91,9 @@ repository. Repository citation metadata: [CITATION.cff](CITATION.cff).
 Versioned releases carry Zenodo DOIs — the concept DOI
 [10.5281/zenodo.21757475](https://doi.org/10.5281/zenodo.21757475)
 always resolves to the latest version; cite the version DOI of the
-release you used (v1.3.0, the kind axis + cuneiform senses wave:
+release you used (v1.4.0, the frequency-and-diachrony release:
+[10.5281/zenodo.23440275](https://doi.org/10.5281/zenodo.23440275);
+v1.3.0, the kind axis + cuneiform senses wave:
 [10.5281/zenodo.22843820](https://doi.org/10.5281/zenodo.22843820);
 v1.2.0, the curated dossier overlays:
 [10.5281/zenodo.22251803](https://doi.org/10.5281/zenodo.22251803);
