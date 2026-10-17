@@ -1,7 +1,7 @@
 {
   "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
   "name": "egy-hiero-frequency",
-  "title": "Egyptian hieroglyph frequencies — Gardiner codes censused from AES, per subcorpus",
+  "title": "Egyptian hieroglyph frequencies — Gardiner codes censused from AES per subcorpus, with word-grain and damaged-attestation counts",
   "version": "1.0.0",
   "licenses": [
     {
@@ -22,6 +22,15 @@
       "licenses": [
         {
           "name": "CC BY-SA 4.0 (verbatim, repo README: \"All files: CC-BY-SA 4.0\")"
+        }
+      ]
+    },
+    {
+      "title": "AED — Ägyptische Wortliste (TLA/BBAW dictionary export)",
+      "path": "https://github.com/simondschweitzer/aed-tei",
+      "licenses": [
+        {
+          "name": "CC BY-SA 4.0 (verbatim in-file <availability>: \"Metadata and texts are released as Creative Commons, Attribution-ShareAlike 4.0 (CC BY-SA 4.0)\"; data from the TLA project via github.com/simondschweitzer/aed-tei)"
         }
       ]
     }
@@ -49,7 +58,54 @@
             "type": "integer"
           },
           {
+            "name": "Words",
+            "type": "integer"
+          },
+          {
             "name": "Docs",
+            "type": "integer"
+          },
+          {
+            "name": "Source",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "ID"
+        ]
+      }
+    },
+    {
+      "name": "hiero_glyphs",
+      "path": "hiero-glyphs.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "string"
+          },
+          {
+            "name": "Codepoint",
+            "type": "string"
+          },
+          {
+            "name": "Glyph",
+            "type": "string"
+          },
+          {
+            "name": "Texts",
+            "type": "integer"
+          },
+          {
+            "name": "Signs",
+            "type": "integer"
+          },
+          {
+            "name": "Words",
+            "type": "integer"
+          },
+          {
+            "name": "Unclear",
             "type": "integer"
           },
           {
@@ -101,20 +157,25 @@
     "nabu_version": "1.6.0",
     "derivation": {
       "inputs": {},
-      "recipe": "hiero-frequency v1: census Gardiner codes from aes hiero_inventar annotations at (code, subcorpus) grain, token + attesting-doc counts, `all` roll-up per code, live rows only; doc-attestation sha256=cb1fce54622a03235f1e70565efe3618625805995f912004f15b11cbaaeab2b0",
-      "fingerprint": "9d8ffb14f9ae9d9b9e6bf50b301b5f6a9252801e863e4060ea9f53060366bf92"
+      "recipe": "hiero-frequency v2: census Gardiner codes from aes hiero_inventar annotations at (code, subcorpus) grain, token + word (one aes token = one word; a code counts once per word) + attesting-doc counts, `all` roll-up per code, live rows only; doc-attestation sha256=eb759d2d11f4cc78b1bb770d25ad0dab5a78c2ed269560abd8cb8edddd700ea1; plus hiero-glyphs.csv, the catalog's aed hiero_postings per-glyph census verbatim (texts, signs, words, unclear) sha256=72dfa607d2724387527d656b0215046ab3f7f7a51e832b6a6f845d7c594f55e8",
+      "fingerprint": "5020a9a3c0080fb3d60e472208c079b5500a3beeed9ecb03d1e70c9868370f92"
     },
     "anchoring": {
       "kind": "none"
     },
     "tier": "gold-derived",
     "counts": {
-      "rows": 8266
+      "rows": 9059
     },
     "eval": {
       "documents_scanned": 26011,
       "documents_with_signs": 2900,
-      "tokens_counted": 732112
+      "tokens_counted": 732112,
+      "words_counted": 267042,
+      "glyphs": 794,
+      "glyph_sign_occurrences": 725856,
+      "glyph_unclear_occurrences": 36767,
+      "glyphs_with_unclear": 558
     }
   }
 }

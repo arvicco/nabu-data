@@ -33,6 +33,9 @@ goth-desk,goth,desk,The Gothic corpora are held romanized (conventions §9); the
 grek-name,grek,name,Greek
 grek-context,grek,context,"The Greek alphabet, adapted from Phoenician by the 8th c. BCE — the first alphabet with full vowel letters. Classical texts are polytonic (breathings + three accents); the library's largest single language (Ancient Greek) runs on it, Homer through the papyri."
 grek-desk,grek,desk,Polytonic throughout the ancient shelves; betacode input folds to Greek in search. Letters double as Milesian numerals (the isopsephy table renders per-letter values).
+guru-name,guru,name,Gurmukhi
+guru-context,guru,context,"The Punjabi abugida standardized by Guru Angad in the 16th c. from the Landa mercantile scripts for writing the Sikh scriptural canon; an inherent-vowel system of the Brahmic family, left-to-right, with the canonical corpus (the Adi Granth, 1604) as its founding monument."
+guru-desk,guru,desk,"The shabados shelf holds the scriptural canon natively in Gurmukhi at line grain; its Braj and Persian layers are Gurmukhi TRANSCRIPTIONS, carried by the bra-Guru / fas-Guru codemap rows as language claims on bra and fa with the script fact on the ~ axis."
 hang-name,hang,name,Hangul
 hang-context,hang,context,"The Korean featural alphabet, promulgated 1446 — letters model the articulators, and jamo compose into syllable blocks. Unicode encodes the blocks algorithmically; a syllable decomposes mechanically into its jamo."
 hang-desk,hang,desk,The card derives syllable names and jamo decomposition algorithmically (§3.12 + Jamo.txt); the Korean stratum also rides the Han card (kHangul readings) for Sino-Korean.
@@ -51,6 +54,9 @@ jpan-desk,jpan,desk,"Kana route to identity cards with the reading panel beside 
 latn-name,latn,name,Latin
 latn-context,latn,context,"The Roman alphabet, running left-to-right from the 7th c. BCE to the present; the vast majority of this library's medieval and early-modern shelves are Latin-script, and it doubles as the transliteration surface for many ancient-script corpora."
 latn-desk,latn,desk,"Many shelves hold ancient-language text AS Latin transliteration (the ~latn surface claim); the artifact's original script, where it differs, rides the artifact-script field, not the surface claim."
+mymr-name,mymr,name,Myanmar (Burmese) script
+mymr-context,mymr,context,"The Brahmi-derived abugida of Burma, reaching Old Burmese through Mon letters in the Pagan period — the rounded forms are the mark of palm-leaf incising, where straight strokes split the leaf. The earliest dated Burmese monuments are early 12th-century (the quadrilingual Myazedi inscription, 1113 CE, foremost); the script also carries Mon, Shan, and Pali in Burma."
+mymr-desk,mymr,desk,"The Old Burmese inscription shelf holds its texts directly in the Unicode Myanmar block, so artifact script and byte surface coincide; transliteration rides beside, not instead."
 ogam-name,ogam,name,Ogham
 ogam-context,ogam,context,"The early Irish stroke script, carved along stone edges, chiefly 4th–6th c. CE — some 400 monument inscriptions, mostly names, the earliest written Irish (and some Pictish)."
 ogam-desk,ogam,desk,The ogham shelf holds both the stroke characters and their standard Latin transliterations; a lat~ogam claim exists (Latin text carved in ogham strokes).

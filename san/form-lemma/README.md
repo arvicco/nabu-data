@@ -14,11 +14,11 @@ re-derive after each dcs sync (upstream updates infrequently); mechanical, no re
 
 Canonical inputs at derivation:
 
-- `dcs` @ `04e0778d3dc971030229179e25eea043d06ff397`
+- `dcs` @ `8aeed5a1343d0e48b64eb32af8c00e8c6eb29359`
 
 Recipe: san/form-lemma v1: sweep the stored gold token annotations of every live DCS passage in the catalog (annotations_json; the dcs adapter's chapter-info.xml gold gate admits only gold-lexicon chapters, so every token is human-verified); keep exactly the tokens bearing a lemma — lemma-less sandhi-surface lines (CoNLL-U `_`, ~15% of raw token lines upstream) mint no row; read Unsandhied and LemmaId from MISC; count gold attestations at the distinct (Form, Unsandhied, Lemma, Lemma_ID, UPOS) grain into form-lemma.csv and at the (Lemma_ID, Lemma) grain into lemmas.csv.
 
-Derivation fingerprint: `31cb919e257960d99154ca4520f88e75c83196953d4b7fa25029ff26212bccba`.
+Derivation fingerprint: `eb9ec89b4c64ed3404e7d3657ef9d484f644c9886684b03772c172b0eb8d2a74`.
 
 ## Using this dataset
 

@@ -4468,7 +4468,7 @@ pleiades:236321	Aeminium	pleiades	P			-8.427646	40.209545500000004	https://www.t
 pleiades:236334	Aquae Flaviae	pleiades	P	71	100	-7.4700074999999995	41.74035000000001	""
 pleiades:236352	Asturica (Augusta)	pleiades	P	-30	150	-6.063532	42.458776	""
 pleiades:236361	Avila/Obila?	pleiades	P	1	200	-4.700573	40.655816	""
-pleiades:236377	Bracara Augusta	pleiades	P	1	395	-8.424973000000001	41.550875000000005	https://www.trismegistos.org/place/19954
+pleiades:236377	Bracara Augusta	pleiades	P	1	395	-8.427227736193487	41.54768458986333	https://www.trismegistos.org/place/19954
 pleiades:236405	Capera	pleiades	P;S	71	100	-6.101323636866034	40.16667499460966	""
 pleiades:236419	Cauca	pleiades	P	1	200	-4.519114	41.218346	""
 pleiades:236443	Conimbriga	pleiades	P;S	1	230	-8.493703715346376	40.09890345872793	""
@@ -4584,7 +4584,7 @@ pleiades:256089	Celti?/Leptis?	pleiades	P	1	270	-5.346426	37.70729	""
 pleiades:256091	Ceret	pleiades	P	101	200	-6.137337	36.686622	""
 pleiades:256120	Collippo	pleiades	P	1	50	-8.79861515	39.67366665	""
 pleiades:256124	Conobaria/Colobana	pleiades	P			-6.078318	36.919538	""
-pleiades:256128	Corduba/Col. Patricia	pleiades	P	-130	800	-4.779171	37.884683	""
+pleiades:256128	Corduba/Col. Patricia	pleiades	S;P	-130	800	-4.779171	37.884683	""
 pleiades:256149	Detumo	pleiades	P	-30	700	-5.174338	37.773018	""
 pleiades:256153	Eburobrittium	pleiades	P	1	50	-9.14076428468125	39.364112251477465	""
 pleiades:256155	Emerita Augusta	pleiades	P	-30	630	-6.341032686481391	38.917656206964345	https://www.trismegistos.org/place/19894
@@ -5569,7 +5569,7 @@ pleiades:570685	Sparta	pleiades	P;S	-18	400	22.424672282445528	37.0817824552019	
 pleiades:573493	Pyrgoi	pleiades	P					""
 pleiades:573548	Tenos	pleiades	S	-46	-19			""
 pleiades:579844	Aegina (island)	pleiades	L	-100	200	23.489302083723413	37.73456251315417	""
-pleiades:579885	Athenae	pleiades	P	-300	630	23.723914356100423	37.97163725472171	""
+pleiades:579885	Athenae	pleiades	P	-300	630	23.723954796773654	37.97164747289856	""
 pleiades:579903	Choma?	pleiades	P			23.644489	37.946545	""
 pleiades:579920	Eleusis	pleiades	P	-50	408	23.537401	38.041101	https://www.trismegistos.org/place/10345
 pleiades:580101	Salamis (island)	pleiades	L	100	300	23.484338803881972	37.942665122249835	""
@@ -5779,7 +5779,7 @@ pleiades:727169	Naucratis	pleiades	P	138	375	30.5919275	30.900508000000002	https
 pleiades:727171	Nesyt Nomos	pleiades	A	161	161	31.913671188130166	31.1920482282785	https://www.trismegistos.org/place/2641
 pleiades:727174	Nikiou	pleiades	P	187	187	30.851018	30.411529	""
 pleiades:727181	Onouphites? Nomos	pleiades	A	161	161	31.044289034341595	31.01438126519335	""
-pleiades:727192	Pelusium	pleiades	P;S;H	-130	600	32.5473404	31.0427587	https://www.trismegistos.org/place/1662
+pleiades:727192	Pelusium	pleiades	S;P;H	-130	600	32.54710454970744	31.042627089650125	https://www.trismegistos.org/place/1662
 pleiades:727194	Phakoussa	pleiades	P;S	138	208	31.7973907	30.7269852	https://github.com/arvicco/nabu-places#cigs-FAQ
 pleiades:727196	Pharbaithos	pleiades	P	-243	186	31.620556	30.734257	""
 pleiades:727202	Phthemphoutites Nomos	pleiades	A	-76		31.07212082544721	30.830239156026543	""
@@ -6014,7 +6014,7 @@ pleiades:741626	Theogonis	pleiades	S	-236	800			""
 pleiades:741627	Theoxenis	pleiades	S	255	700			""
 pleiades:741629	Thmoinepsobthis	pleiades	S	336	336			""
 pleiades:741635	Thosbis	pleiades	S	-25	300			""
-pleiades:741636	Thraso	pleiades	S	101	306			""
+pleiades:741636	Thraso	pleiades	S	101	303			""
 pleiades:741637	Toemesis	pleiades	S	131	242			""
 pleiades:741638	Toka	pleiades	S	126	200			""
 pleiades:741640	Toou	pleiades	S	100	100			""
@@ -6036,6 +6036,7 @@ pleiades:756534	Apollonopolis Heptakomias Mikra/Sbeht	pleiades	P	-200	713	31.326
 pleiades:756536	Apotheke	pleiades	P	176	300	31.318371	27.043246	""
 pleiades:756538	Athribis/Triph(i)eion	pleiades	P;S	101	400	31.66542625	26.5113673	https://www.trismegistos.org/place/5162
 pleiades:756542	Bompae	pleiades	P	1	400	31.714189	26.525085	""
+pleiades:756565	Diospolites Nomos	pleiades	A	222	235	32.27685537867955	26.01244672309172	""
 pleiades:756566	Diospolis Mikra	pleiades	P	-187	400	32.312497	26.016881	""
 pleiades:756569	Enseu	pleiades	P	265	700	30.808077	27.774567	""
 pleiades:756574	Hermopolis Magna/Schmun	pleiades	P;S	-550	1100	30.803758051080735	27.781357334509522	https://www.trismegistos.org/place/816
@@ -6108,7 +6109,7 @@ pleiades:776202	Mothis	pleiades	P	301	378	28.980561	25.483192	""
 pleiades:776210	Oasis Magna/Thebaidos	pleiades	H	1	500	30.553944814930116	25.783732501037903	""
 pleiades:776216	(P)Mounesis	pleiades	P	201	400	30.606184	24.684027	""
 pleiades:776223	*Sioua	pleiades	A;P;S	201	400	28.81331486451365	25.664803687192475	https://www.trismegistos.org/place/3559
-pleiades:776235	Trimithis	pleiades	P;S	101	400	28.870883251943305	25.667739548836416	https://www.trismegistos.org/place/2733
+pleiades:776235	Trimithis	pleiades	P;S	-332	400	28.870883251943305	25.667739548836416	https://www.trismegistos.org/place/2733
 pleiades:778414	Chosis	pleiades	S	290	292			""
 pleiades:778436	Mesobe	pleiades	S	154	154			""
 pleiades:779439862	Sheikh Abd el-Qurna	pleiades	S	576	800	32.60255	25.72493	""
@@ -6133,6 +6134,7 @@ pleiades:786043	Isieiou Oros	pleiades	S	301	400	32.857381	24.227779	""
 pleiades:786047	Kaine/Maximianopolis	pleiades	P	335	335	32.701875666666666	26.149885333333334	https://www.trismegistos.org/place/952
 pleiades:786050	Karnak	pleiades	S	1	700	32.658127567772674	25.71822004908206	https://github.com/arvicco/nabu-places#cigs-KAR
 pleiades:786054	Krokodilo	pleiades	S	98	138	33.401161405524086	25.942610967372314	""
+pleiades:786055	Krokodilopolis/Terkythis	pleiades	P	-107	-98	32.439209500000004	25.5524075	""
 pleiades:786059	Latopolis	pleiades	P	-233	725	32.5531993	25.2936689	https://www.trismegistos.org/place/1227
 pleiades:786064	Maximianon	pleiades	S	1	225	33.78754319438619	26.0009357899772	https://www.trismegistos.org/place/3149
 pleiades:786067	Memnonia	pleiades	P	-239	800	32.560331	25.631139	""
@@ -6892,7 +6894,7 @@ tm:240	Apias	tm	P	7				""
 tm:2400	This	tm	P	246	800	31.841893	26.341487	https://pleiades.stoa.org/places/756659
 tm:24019	Mailly-le-Camp	tm	S	-75	-26	4.195654	48.671701	""
 tm:2405	Thmouis	tm	P	101	314	31.5168555	30.9356335	https://pleiades.stoa.org/places/727249
-tm:2417	Thraso	tm	P	101	306			""
+tm:2417	Thraso	tm	P	101	303			""
 tm:24178	Saint-Germain-Source-Seine	tm	S	76	100	4.697057	47.495793	""
 tm:24192	Saint-Marcel-de-Félines	tm	S	-50	-1	4.190588	45.868885	""
 tm:2427	Tilothis - Neilopolis	tm	P		-13	31.12046	29.184652	https://pleiades.stoa.org/places/737089
@@ -6938,7 +6940,7 @@ tm:2720	Hermopolites	tm	A	-400	1200			""
 tm:2722	Oxyrynchites	tm	A	-300	800			https://pleiades.stoa.org/places/736982
 tm:2724	Aphroditopolites	tm	A	-275	700			""
 tm:2729	Ain Labakha	tm	S	301	400			https://pleiades.stoa.org/places/776147
-tm:2733	Trimithis	tm	A	101	400	28.8706203539	25.6676117977	https://pleiades.stoa.org/places/776235
+tm:2733	Trimithis	tm	A	-332	400	28.8706203539	25.6676117977	https://pleiades.stoa.org/places/776235
 tm:2739	El-Baqawat	tm	S	501	600	30.5538735309	25.4823033041	https://pleiades.stoa.org/places/776156
 tm:2761	Kysis	tm	A	98	700	30.702219	24.5664825	https://pleiades.stoa.org/places/776191
 tm:2762	Kellis	tm	P	101	400	29.0756475	25.517958	https://pleiades.stoa.org/places/776189
@@ -7041,6 +7043,7 @@ tm:299	Argeas	tm	P	-222	-184			""
 tm:2991	Heptanomia	tm	A	-200	713			""
 tm:2996	Koptites	tm	A	-187	700			""
 tm:2997	Tentyrites	tm	A	-145	-134			""
+tm:2998	Diospolites	tm	A	222	235			""
 tm:2999	Thinites	tm	A	-182	741			""
 tm:3002	Bompae	tm	P	1	400	31.714189	26.525085	""
 tm:3009	Phenebythis	tm	A	222	222			""

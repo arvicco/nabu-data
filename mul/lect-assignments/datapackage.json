@@ -95,21 +95,23 @@
     "nabu_version": "1.6.0",
     "derivation": {
       "inputs": {},
-      "recipe": "lect-assignments v1: project the lect journal at URN grain, license classes open+attribution only, ordered (urn, code); published-slice sha256=d312649da025e31dc5a9d3eec8430094c14951e00ec80adb3741b53da455961c",
-      "fingerprint": "5fd4b13c38c28cfb9a24770cc040d0948214bf8f44bc4323ebf53137ec567913"
+      "recipe": "lect-assignments v1: project the lect journal at URN grain, license classes open+attribution only, ordered (urn, code); published-slice sha256=ad68c6200d34f816b11226476aac4c33e2f54fb967b7d4be4e83e4d5034a7147",
+      "fingerprint": "ceb6ff2671063f0d21556680d3f67b6be5bff4b5037db2c5d4daf9ad7b32a66e"
     },
     "anchoring": {
       "kind": "document-urn"
     },
     "tier": "gold-derived",
     "counts": {
-      "rows": 363749
+      "rows": 570873
     },
     "eval": {
-      "journal_rows": 387294,
-      "published_rows": 363748,
+      "journal_rows": 618378,
+      "published_rows": 570873,
       "excluded_rows": {
-        "nc": 23546
+        "nc": 46947,
+        "odbl": 239,
+        "research_private": 319
       }
     }
   }

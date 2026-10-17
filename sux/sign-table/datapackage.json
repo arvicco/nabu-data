@@ -135,15 +135,15 @@
     },
     "tier": "gold-derived",
     "counts": {
-      "rows": 3304
+      "rows": 3303
     },
     "eval": {
       "signs": 3303,
       "counting": {
         "docs_counted": 272303,
         "tokens_resolved": 21114549,
-        "tokens_unresolved": 2557830,
-        "tokens_out_of_scope": 3498049,
+        "tokens_unresolved": 2557831,
+        "tokens_out_of_scope": 3498048,
         "scope": "value tokens and bare logogram names; compounds/qualified/numbers out of scope; corpora: cdli/oracc/tlhdig"
       }
     }

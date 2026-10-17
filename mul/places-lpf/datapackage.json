@@ -19,7 +19,7 @@
     {
       "title": "Pleiades — ancient-world gazetteer (place resolver instrument)",
       "path": "https://pleiades.stoa.org/",
-      "version": "99912965a14080750b733eac5e0db9bb62b514ac7cbd5807971819085fcd66d5",
+      "version": "3edc062eec8ca244304e3146ab72e7565d77848bb61bccf58a3bc62354395cfb",
       "licenses": [
         {
           "name": "CC BY 3.0 (downloads page verbatim: \"Creative Commons Attribution 3.0 License (cc-by)\")"
@@ -104,7 +104,7 @@
           "cone": "cigs"
         },
         "pleiades": {
-          "canonical_sha": "99912965a14080750b733eac5e0db9bb62b514ac7cbd5807971819085fcd66d5",
+          "canonical_sha": "3edc062eec8ca244304e3146ab72e7565d77848bb61bccf58a3bc62354395cfb",
           "cone": "pleiades"
         },
         "trismegistos": {
@@ -112,27 +112,27 @@
           "cone": "trismegistos"
         }
       },
-      "recipe": "places-lpf v1: LPF v1.3 FeatureCollection + LP-TSV v0.5 at claim grain over the published axis slice (license classes open+attribution), titles/coords from place_index, closeMatch from place_crosswalk; collection sha256=4b0343d9e9955c9e3afe69c32fc8cfc4fbf8870bc5b1935f21e287a7d20bb077",
-      "fingerprint": "80fe05cdf9acde9a0a3f5d1f236106d22da6c47f5c9d99d20b17966f9a7756ff"
+      "recipe": "places-lpf v1: LPF v1.3 FeatureCollection + LP-TSV v0.5 at claim grain over the published axis slice (license classes open+attribution), titles/coords from place_index, closeMatch from place_crosswalk; collection sha256=03c13ebdb4d8ec7c0df5b24113aca68d727d7b44fe90c0b003a6462758366bfe",
+      "fingerprint": "73f70e9c6ce9319534c059189099696925516285dcac76633867da06d835a77b"
     },
     "anchoring": {
       "kind": "none"
     },
     "tier": "gold-derived",
     "counts": {
-      "rows": 14619
+      "rows": 14624
     },
     "eval": {
-      "features": 7309,
-      "with_geometry": 3115,
-      "with_when": 6150,
+      "features": 7312,
+      "with_geometry": 3117,
+      "with_when": 6153,
       "with_links": 1069,
       "excluded_rows": {
-        "nc": 2330
+        "nc": 2571
       },
       "unmapped_place_types": {
         "unlocated": 239,
-        "label": 36,
+        "label": 37,
         "people": 10,
         "architecturalcomplex": 7,
         "unknown": 5,

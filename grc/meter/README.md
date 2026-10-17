@@ -14,13 +14,13 @@ re-derive after hypotactic / perseus-greek / first1k-greek syncs (the stale-inge
 
 Canonical inputs at derivation:
 
-- `first1k-greek` @ `8ee111eb44ecef4120c844e10749178d95d1f30c`
+- `first1k-greek` @ `03776b39f4047c5cff06f5296fae4b2bae4b08fb`
 - `hypotactic` @ `d167c561107fc636ffd00198ffd1296edaf93451`
-- `perseus-greek` @ `df7270e5df9c6e4e14c85a11a0a4b7f4a1a9f59e`
+- `perseus-greek` @ `01b725d835e6e733062ffd79e0efdbae1ba06e5c`
 
 Recipe: grc/meter v1: resolve every line of canonical/hypotactic/tsv/*.tsv (D. Chamberlain's Greek scansions; the file NAME carries the work via the curated filename→CTS crosswalk published as works.csv — upstream has no citation column) onto the held live grc passages of perseus-greek + first1k-greek by EXACT folded-text match (the house grc search-form fold reduced to letters only; no fuzzy matching — unmatched lines are censused in nabu.eval, never guessed); one row per anchored passage (Homer's verbatim formulaic repeats dedupe to the first-held occurrence; a repeated line still counts as matched); Primary_Text carries Hypotactic's own TSV line bytes (CC BY 4.0), NEVER the Perseus/First1K passage bytes (those corpora are CC-BY-SA — anchoring is by URN + Passage_SHA256 only, so no share-alike text enters this CC BY dataset).
 
-Derivation fingerprint: `91f35032d6c35740cc1da167b76da381ab992bf8552fb5e6ee4893f325de347b`.
+Derivation fingerprint: `f8161e1a7474e97182f48e4af3123d84feed7fdf5ceaaea9a091711f40facc19`.
 
 ## What a row means — the anchoring contract
 
