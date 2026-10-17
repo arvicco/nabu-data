@@ -8,7 +8,7 @@ License: CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/). This da
 
 Ancient documents name the places they were written in or found at, but every corpus records that differently — a verbatim findspot string, a gazetteer URL, sometimes several. This dataset publishes Nabu's compiled projection across its whole multilingual catalog: for each document (cited by its stable URN), each place it references as a clean namespaced identifier (pleiades:, tm:, geonames:, cigs:, np:) ready to join against the public gazetteers, alongside the verbatim name the corpus used and the basis of the link — asserted by the upstream corpus itself, or applied from the nabu-places curation registry. Mapping and GIS pipelines can join texts to gazetteer geometry without re-solving each corpus's ref spelling.
 
-Publishes the compiled doc→place projection behind Nabu's places desk — ~586K (URN, claim) rows, every historical ref spelling (verbatim upstream URLs, multi-URL fields, namespaced mints) folded to clean namespace:id form (pleiades:, tm:, geonames:, cigs:, np:) ready to join gazetteer geometry, with the verbatim upstream name and the Basis (upstream-asserted vs nabu-places-applied) in-band per row. License classes open+attribution only (the iip nc slice excluded row-by-row, censused in nabu.eval); CC BY-SA 4.0 — the №R-24 carve-out (edh/aes/elephantine/ceipom share-alike lanes and the conservative tm:-index inheritance ride inside it).
+Publishes the compiled doc→place projection behind Nabu's places desk — ~586K (URN, claim) rows, every historical ref spelling (verbatim upstream URLs, multi-URL fields, namespaced mints) folded to clean namespace:id form (pleiades:, tm:, geonames:, cigs:, np:) ready to join gazetteer geometry, with the verbatim upstream name and the Basis (upstream-asserted vs nabu-places-applied) in-band per row. License classes open+attribution only (the iip nc slice excluded row-by-row, censused in nabu.eval); CC BY-SA 4.0 — the share-alike carve-out of 2026-08-11 (edh/aes/elephantine/ceipom share-alike lanes and the conservative tm:-index inheritance ride inside it).
 
 ## Maintenance
 
@@ -18,8 +18,8 @@ re-derive after place-moving events (a sync wave, a nabu-places registry sync + 
 
 Canonical inputs at derivation:
 
-- `nabu-places` @ `1fb5f287fd43717f1c102ee4333622c40bd3c1c2`
+- `nabu-places` @ `d2e9d8d13696dc3489d668541a8e5a8408f3e5f6`
 
-Recipe: place-refs v1: project document_axes.place_ref through Nabu::PlaceRefs at (document, claim) grain, license classes open+attribution only, ordered (urn, axis row), sharded ≤250000 rows/file (№R-29); published-slice sha256=b4d2a9e76455a0ef26661d8fffc06d2f295c36d633eb58aa7ba76c8b1d308b51
+Recipe: place-refs v1: project document_axes.place_ref through Nabu::PlaceRefs at (document, claim) grain, license classes open+attribution only, ordered (urn, axis row), sharded ≤250000 rows/file, owner-ruled 2026-08-11); published-slice sha256=150161b2b43b69b67540ad1a094c21c3ccd1a883949916462b8bc7b223311547
 
-Derivation fingerprint: `a8cc82b2718d95681f704d5a54736a1711d5a9c52763153d032d37b05c01c309`.
+Derivation fingerprint: `4d998af52382f633be124db539454c75a33705bab6426e6da718d859be04d088`.

@@ -19,7 +19,7 @@
     {
       "title": "nabu-places — the place-matching decisions registry",
       "path": "https://github.com/arvicco/nabu-places",
-      "version": "1fb5f287fd43717f1c102ee4333622c40bd3c1c2",
+      "version": "d2e9d8d13696dc3489d668541a8e5a8408f3e5f6",
       "licenses": [
         {
           "name": "CC BY 4.0 (repo LICENSE verbatim: \"Creative Commons Attribution 4.0 International (CC BY 4.0)\")"
@@ -108,33 +108,33 @@
     "derivation": {
       "inputs": {
         "nabu-places": {
-          "canonical_sha": "1fb5f287fd43717f1c102ee4333622c40bd3c1c2",
+          "canonical_sha": "d2e9d8d13696dc3489d668541a8e5a8408f3e5f6",
           "cone": "nabu-places"
         }
       },
-      "recipe": "place-refs v1: project document_axes.place_ref through Nabu::PlaceRefs at (document, claim) grain, license classes open+attribution only, ordered (urn, axis row), sharded ≤250000 rows/file (№R-29); published-slice sha256=b4d2a9e76455a0ef26661d8fffc06d2f295c36d633eb58aa7ba76c8b1d308b51",
-      "fingerprint": "a8cc82b2718d95681f704d5a54736a1711d5a9c52763153d032d37b05c01c309"
+      "recipe": "place-refs v1: project document_axes.place_ref through Nabu::PlaceRefs at (document, claim) grain, license classes open+attribution only, ordered (urn, axis row), sharded ≤250000 rows/file, owner-ruled 2026-08-11); published-slice sha256=150161b2b43b69b67540ad1a094c21c3ccd1a883949916462b8bc7b223311547",
+      "fingerprint": "4d998af52382f633be124db539454c75a33705bab6426e6da718d859be04d088"
     },
     "anchoring": {
       "kind": "document-urn"
     },
     "tier": "gold-derived",
     "counts": {
-      "rows": 969930
+      "rows": 970192
     },
     "eval": {
-      "axis_rows": 586770,
-      "published_rows": 969929,
+      "axis_rows": 587108,
+      "published_rows": 970192,
       "excluded_rows": {
-        "nc": 2330,
+        "nc": 2571,
         "unparseable": 47
       },
-      "distinct_places": 7309,
+      "distinct_places": 7312,
       "claims_by_namespace": {
         "cigs": 329123,
         "geonames": 8689,
-        "pleiades": 566489,
-        "tm": 65628
+        "pleiades": 566624,
+        "tm": 65756
       }
     }
   }
