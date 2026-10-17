@@ -18,6 +18,6 @@ re-derive after CJK-lane syncs (the census rebuilds with the fulltext index); th
 
 Own authorship — no canonical corpus inputs.
 
-Recipe: char-postings v1: project the fulltext char_postings census at (source, character) grain, license classes open+attribution only, ordered (source, codepoint); published-slice sha256=a373d7019739cb7c3ab5140014d5ad4899b06248b9665836663ccc111ee8e617
+Recipe: char-postings v1: project the fulltext char_postings census at (source, character) grain, license classes open+attribution only, ordered (source, codepoint); published-slice sha256=f1efe1fc88854da910eab8e48e1d7848fad25c016540f415bc51d57cec2e1e96
 
-Derivation fingerprint: `38b3ef526e94dd8c11fc3d79cd3edfe62cca875e87e3dfb629ac10bf4e2e2e36`.
+Derivation fingerprint: `c40022623c28dcb4acceb7468b398818633bd37639ec30c1b882c37227876ee3`.
