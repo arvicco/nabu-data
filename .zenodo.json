@@ -1,0 +1,25 @@
+{
+  "upload_type": "dataset",
+  "title": "nabu-data",
+  "description": "Derived linguistic datasets over ancient-language corpora — form-to-lemma tables, segmentation layers, script-neutralization rules — grouped by language, published as CSV with Frictionless Data Package v2 manifests carrying full derivation provenance.",
+  "creators": [
+    { "name": "Vicco, Ar" }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": [
+    "ancient languages",
+    "historical linguistics",
+    "lemmatization",
+    "form-lemma tables",
+    "segmentation",
+    "Frictionless Data",
+    "corpus linguistics",
+    "ISO 639-3",
+    "dataset"
+  ],
+  "communities": [
+    { "identifier": "digitalhumanities" },
+    { "identifier": "dhdatasets" },
+    { "identifier": "linguistics" }
+  ]
+}
